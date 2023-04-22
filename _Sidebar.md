@@ -13,7 +13,7 @@
       * [Message Delivery](Message-Delivery-Protocol)
       * [Monitoring](Monitoring-Protocol)
       * [NAT Traversal](NAT-Traversal-Protocol)
-      * [Notifications](Notification-Event-Protocol)
+      * [Notifications](Notification-Protocol)
       * [Persistent Store](Persistent-Store-Protocol)
       * [Remote Log Device](Remote-Log-Device-Protocol)
       * [Secure Connection](Secure-Protocol)

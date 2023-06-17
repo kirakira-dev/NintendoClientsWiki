@@ -67,7 +67,8 @@
 # Types
 
 ## TitleContent ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
-> This structure inherits from [Data](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#data)
+| This structure inherits from [Data](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#data) |
+| --- |
 
 | Type | Name |
 | --- | --- |

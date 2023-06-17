@@ -78,3 +78,4 @@ Ubisoft games always use the original Quazal Rendez-Vous library instead of NEX.
 | 84 | Siege admin |
 | ? | [Web notifications storage](Web-Notification-Storage-Protocol)
 | ? | [User storage admin](User-Storage-Admin-Protocol)
+| ? | [OLS storage](OLS-Storage-Protocol) |

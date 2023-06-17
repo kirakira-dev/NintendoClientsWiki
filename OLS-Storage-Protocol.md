@@ -1,4 +1,4 @@
-## [NEX-Protocols](https://github.com/kinnay/NintendoClients/wiki/NEX-Protocols) > OLSStorageProtocol
+## [NEX-Protocols](https://github.com/kinnay/NintendoClients/wiki/NEX-Protocols) > OLSStorageProtocol (Unknown ID)
 
 | Method ID | Method Name |
 | --- | --- |
@@ -25,17 +25,17 @@
 This method does not take any parameters
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| Sint32 | version |  |
-| [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | sandboxName |  |
+| Type | Name |
+| --- | --- |
+| Sint32 | version |
+| [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | sandboxName |
 
 # (2) SaveLocale
 
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | localeCode |  |
+| Type | Name |
+| --- | --- |
+| [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | localeCode |
 
 ## Response
 This method does not return anything
@@ -43,54 +43,54 @@ This method does not return anything
 # (3) SaveProfile
 
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | update_bitfield |  |
-| Sint8 | level |  |
-| Sint32 | currency |  |
-| Uint32 | costume |  |
-| Uint16 | bronze_medals |  |
-| Uint16 | silver_medals |  |
-| Uint16 | gold_medals |  |
-| Uint16 | diamond_medals |  |
-| Uint32 | run_distance |  |
-| Uint16 | teensies_freed |  |
-| Uint32 | jumps |  |
-| Uint16 | unlocked_pets |  |
-| Uint64 | pets |  |
-| Uint16 | unlocked_costumes |  |
+| Type | Name |
+| --- | --- |
+| Uint32 | update_bitfield |
+| Sint8 | level |
+| Sint32 | currency |
+| Uint32 | costume |
+| Uint16 | bronze_medals |
+| Uint16 | silver_medals |
+| Uint16 | gold_medals |
+| Uint16 | diamond_medals |
+| Uint32 | run_distance |
+| Uint16 | teensies_freed |
+| Uint32 | jumps |
+| Uint16 | unlocked_pets |
+| Uint64 | pets |
+| Uint16 | unlocked_costumes |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint16 | competition_medals_0 |  |
-| Uint16 | competition_medals_1 |  |
-| Uint16 | competition_medals_2 |  |
-| Uint16 | competition_medals_3 |  |
+| Type | Name |
+| --- | --- |
+| Uint16 | competition_medals_0 |
+| Uint16 | competition_medals_1 |
+| Uint16 | competition_medals_2 |
+| Uint16 | competition_medals_3 |
 
 # (4) LoadIDCard
 
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | pid |  |
+| Type | Name |
+| --- | --- |
+| Uint32 | pid |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [OLSRichProfile](#olsrichprofile-structure) | profile |  |
+| Type | Name |
+| --- | --- |
+| [OLSRichProfile](#olsrichprofile-structure) | profile |
 
 # (5) QueryFriendProfiles
 
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSFriend](#olsfriend-structure)&#x3E; | friends |  |
+| Type | Name |
+| --- | --- |
+| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSFriend](#olsfriend-structure)&#x3E; | friends |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSProfile](#olsprofile-structure)&#x3E; | profiles |  |
+| Type | Name |
+| --- | --- |
+| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSProfile](#olsprofile-structure)&#x3E; | profiles |
 
 # (6) QueryUbisoftProfiles
 
@@ -98,18 +98,18 @@ This method does not return anything
 This method does not take any parameters
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSProfile](#olsprofile-structure)&#x3E; | profiles |  |
+| Type | Name |
+| --- | --- |
+| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSProfile](#olsprofile-structure)&#x3E; | profiles |
 
 # (7) CreateMessage
 
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | message_type |  |
-| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;Sint32&#x3E; | receivers |  |
-| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSAttribute](#olsattribute-structure)&#x3E; | attributes |  |
+| Type | Name |
+| --- | --- |
+| Uint32 | message_type |
+| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;Sint32&#x3E; | receivers |
+| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSAttribute](#olsattribute-structure)&#x3E; | attributes |
 
 ## Response
 This method does not return anything
@@ -120,72 +120,72 @@ This method does not return anything
 This method does not take any parameters
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSMessage](#olsmessage-structure)&#x3E; | messages |  |
+| Type | Name |
+| --- | --- |
+| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSMessage](#olsmessage-structure)&#x3E; | messages |
 
 # (9) QueryLeaderboard
 
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | id_leaderboard |  |
+| Type | Name |
+| --- | --- |
+| Uint32 | id_leaderboard |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSLdbRow](#olsldbrow-structure)&#x3E; | result |  |
-| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;float&#x3E; | graduations |  |
-| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;Uint32&#x3E; | envelope |  |
-| Uint32 | unit |  |
-| Uint32 | my_country |  |
-| Uint32 | participants |  |
-| Bool | cacheable |  |
+| Type | Name |
+| --- | --- |
+| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSLdbRow](#olsldbrow-structure)&#x3E; | result |
+| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;float&#x3E; | graduations |
+| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;Uint32&#x3E; | envelope |
+| Uint32 | unit |
+| Uint32 | my_country |
+| Uint32 | participants |
+| Bool | cacheable |
 
 # (10) QuerySmartSelection
 
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | id_leaderboard |  |
+| Type | Name |
+| --- | --- |
+| Uint32 | id_leaderboard |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSSelectionRow](#olsselectionrow-structure)&#x3E; | ghosts |  |
-| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSTomb](#olstomb-structure)&#x3E; | tombs |  |
+| Type | Name |
+| --- | --- |
+| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSSelectionRow](#olsselectionrow-structure)&#x3E; | ghosts |
+| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSTomb](#olstomb-structure)&#x3E; | tombs |
 
 # (11) SaveScore
 
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | id_leaderboard |  |
-| Bool | is_objective_reached |  |
-| float | score |  |
-| float | tomb_x |  |
-| float | tomb_y |  |
-| float | tomb_z |  |
-| Uint32 | id_costume |  |
+| Type | Name |
+| --- | --- |
+| Uint32 | id_leaderboard |
+| Bool | is_objective_reached |
+| float | score |
+| float | tomb_x |
+| float | tomb_y |
+| float | tomb_z |
+| Uint32 | id_costume |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| Bool | save_score |  |
-| Bool | retry |  |
-| Uint32 | medal |  |
-| [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | message_medal |  |
-| [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | message_friends |  |
+| Type | Name |
+| --- | --- |
+| Bool | save_score |
+| Bool | retry |
+| Uint32 | medal |
+| [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | message_medal |
+| [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | message_friends |
 
 # (12) SaveGhost
 
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint64 | id_ghost |  |
-| Uint32 | id_competition |  |
-| Uint32 | id_costume |  |
-| float | score |  |
+| Type | Name |
+| --- | --- |
+| Uint64 | id_ghost |
+| Uint32 | id_competition |
+| Uint32 | id_costume |
+| float | score |
 
 ## Response
 This method does not return anything
@@ -196,50 +196,50 @@ This method does not return anything
 This method does not take any parameters
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSCompetitionInfos](#olscompetitioninfos-structure)&#x3E; | infos |  |
+| Type | Name |
+| --- | --- |
+| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSCompetitionInfos](#olscompetitioninfos-structure)&#x3E; | infos |
 
 # (14) QueryCompetitionsHistory
 
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | begin |  |
-| Uint32 | amount |  |
-| Uint32 | id_competition_meta |  |
+| Type | Name |
+| --- | --- |
+| Uint32 | begin |
+| Uint32 | amount |
+| Uint32 | id_competition_meta |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSCompetitionResult](#olscompetitionresult-structure)&#x3E; | history |  |
-| Uint32 | total |  |
+| Type | Name |
+| --- | --- |
+| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSCompetitionResult](#olscompetitionresult-structure)&#x3E; | history |
+| Uint32 | total |
 
 # (15) QueryCompetitionOfTheDay
 
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | id_competition_meta |  |
+| Type | Name |
+| --- | --- |
+| Uint32 | id_competition_meta |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [OLSCompetition](#olscompetition-structure) | competition |  |
-| Uint32 | remaningSeconds |  |
-| [OLSCompetition](#olscompetition-structure) | tomorrow |  |
+| Type | Name |
+| --- | --- |
+| [OLSCompetition](#olscompetition-structure) | competition |
+| Uint32 | remaningSeconds |
+| [OLSCompetition](#olscompetition-structure) | tomorrow |
 
 # (16) QueryCompetition
 
 ## Request
-| Type | Name | Description |
-| --- | --- | --- |
-| Uint32 | id_competition |  |
+| Type | Name |
+| --- | --- |
+| Uint32 | id_competition |
 
 ## Response
-| Type | Name | Description |
-| --- | --- | --- |
-| [OLSCompetition](#olscompetition-structure) | competition |  |
+| Type | Name |
+| --- | --- |
+| [OLSCompetition](#olscompetition-structure) | competition |
 
 # Types
 

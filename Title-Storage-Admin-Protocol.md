@@ -61,7 +61,7 @@ This method does not take any parameters
 | Type | Name |
 | --- | --- |
 | [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | name |
-| [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) |
+| [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | description |
 | [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | key |
 | [DateTime](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#datetime) | dateAvailable |
 | [DateTime](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#datetime) | dateExpired |

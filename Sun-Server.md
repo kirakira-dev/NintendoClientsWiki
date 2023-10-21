@@ -36,7 +36,7 @@ Response on success:
 
 | Field | Description |
 | --- | --- |
-| timestamp | Current server time |
+| timestamp | Time at which metadata was updated (this happens once every 4 or 5 minutes) |
 | system_update_metas | Array (see below) |
 
 The system_update_metas array has exactly one entry, with the following fields:

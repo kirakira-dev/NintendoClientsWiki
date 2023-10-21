@@ -1,6 +1,8 @@
 [Switch Servers](Server-List#switch) > Title installation
 ---
 
+The sun server has a dedicated page: [[Sun Server]]
+
 ### aqua
 | URL |
 | --- |
@@ -47,11 +49,6 @@
 | URL |
 | --- |
 | `/pushmo/d/<id>.json` |
-
-### sun
-| URL |
-| --- |
-| `/v1/system_update_meta` |
 
 ### superfly
 | URL |

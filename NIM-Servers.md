@@ -1,7 +1,9 @@
 [Switch Servers](Server-List#switch) > Title installation
 ---
 
-The sun server has a dedicated page: [[Sun Server]]
+The sun servers have a dedicated page:
+* [[Sun Server]]
+* [[Atumn Server]]
 
 ### aqua
 | URL |
@@ -19,15 +21,6 @@ The sun server has a dedicated page: [[Sun Server]]
 | `/c1/<id>/c/c/<id>` |
 | `/c2/<id>/c/a/<id>` |
 | `/c2/<id>/c/c/<id>` |
-
-### atumn
-| URL |
-| --- |
-| `/c/a/<id>` |
-| `/c/c/<id>` |
-| `/c/s/<id>` |
-| `/t/a/<id>/<id>` |
-| `/t/s/<id>/<id>` |
 
 ### beach
 | URL |

@@ -1,6 +1,4 @@
 ## Switch
-For development servers, lp1 is replaced by one of the following:
-
 | Environment | Description |
 | --- | --- |
 | lp1 | Live production |

@@ -36,7 +36,18 @@ This packet is sent through UDP broadcast port 30000. It is sent in plain text, 
 | 0x5 | 0x23A | [LanSessionSearchCriteria](#lansessionsearchcriteria) |
 | 0x23F | 0x12A | [Crypto challenge](#crypto-challenge) |
 
+*6.29 - 6.30:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Packet type (0) |
+| 0x1 | 4 | Size of search criteria (0x16) |
+| 0x2 | 0x16 | [LanSessionSearchCriteria](#lansessionsearchcriteria) |
+| 0x18 | 0x12A | [Crypto challenge](#crypto-challenge) |
+
 ### LanSessionSearchCriteria
+*Up to 5.43:*
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Minimum number of participants ([range](#range)) |
@@ -53,6 +64,16 @@ This packet is sent through UDP broadcast port 30000. It is sent in plain text, 
 | 0x218 | 4 * 6 | Attribute range max |
 | 0x230 | 1 * 6 | Is attribute range used |
 | 0x236 | 4 | [Validity flags](#validity-flags) |
+
+*6.29 - 6.30:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | Unknown |
+| 0x8 | 2 | Unknown |
+| 0xA | 2 | Unknown |
+| 0xC | 2 | Unknown |
+| 0xE | 8 | Unknown |
 
 #### Validity flags
 These flags indicate which fields are compared against the active session to determine if there is a match.

@@ -42,7 +42,7 @@ This packet is sent through UDP broadcast port 30000. It is sent in plain text, 
 | --- | --- | --- |
 | 0x0 | 1 | Packet type (0) |
 | 0x1 | 4 | Size of search network setting (0x16) |
-| 0x2 | 0x16 | [LocalSearchNetworkSetting](#localsearchnetworksetting) |
+| 0x2 | 0x16 | [LanSearchNetworkSetting](#lansearchnetworksetting) |
 | 0x18 | 0x12A | [Crypto challenge](#crypto-challenge) |
 
 ### LanSessionSearchCriteria
@@ -89,7 +89,7 @@ These flags indicate which fields are compared against the active session to det
 #### Attribute list
 Each attribute list may contain up to 20 attributes. Every attribute is stored as a 4-byte integer.
 
-### LocalSearchNetworkSetting
+### LanSearchNetworkSetting
 *6.29 - 6.30:*
 
 | Offset | Size | Description |
@@ -114,11 +114,22 @@ These flags indicate which fields are compared against the active session to det
 ## (1) Browse reply
 This packet is sent to the source of the [browse request](#browse-request) in plain text, and is not encapsulated in a [Pia packet](Pia-Protocol).
 
+*Up to 5.31:*
+
 | Type | Description |
 | --- | --- |
 | Uint8 | Packet type (1) |
 | Uint32 | Size of session info |
 | [LanSessionInfo](#lansessioninfo) | Session info |
+| Bytes | [Crypto challenge reply](#crypto-challenge) |
+
+*6.29 - 6.30:*
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Packet type (1) |
+| Uint32 | Size of network property |
+| [LanNetworkProperty](#lannetworkproperty) | Network property |
 | Bytes | [Crypto challenge reply](#crypto-challenge) |
 
 ### LanSessionInfo
@@ -208,6 +219,22 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | 0x1 | 1 | Username encoding type (1=utf8, 2=utf16) |
 | 0x2 | 40 | Username |
 | 0x2A | 8 | Station id |
+
+### LanNetworkProperty
+*6.29 - 6.30:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | Unknown |
+| 0x8 | 0x200 | Unknown |
+| 0x208 | 4 | Unknown |
+| 0x20C | 8 | Unknown |
+| 0x214 | 2 | Unknown |
+| 0x216 | 2 | Unknown |
+| 0x218 | 1 | Unknown |
+| 0x219 | 1 | Unknown |
+| 0x21A | 1 | Unknown |
+| 0x21B | 0x12 | [StationAddress](Pia-Types#stationaddress) |
 
 ### System Communication Version
 | Version | Pia Version |

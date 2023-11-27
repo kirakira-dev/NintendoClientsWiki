@@ -41,8 +41,8 @@ This packet is sent through UDP broadcast port 30000. It is sent in plain text, 
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Packet type (0) |
-| 0x1 | 4 | Size of search criteria (0x16) |
-| 0x2 | 0x16 | [LanSessionSearchCriteria](#lansessionsearchcriteria) |
+| 0x1 | 4 | Size of search network setting (0x16) |
+| 0x2 | 0x16 | [LocalSearchNetworkSetting](#localsearchnetworksetting) |
 | 0x18 | 0x12A | [Crypto challenge](#crypto-challenge) |
 
 ### LanSessionSearchCriteria
@@ -64,16 +64,6 @@ This packet is sent through UDP broadcast port 30000. It is sent in plain text, 
 | 0x218 | 4 * 6 | Attribute range max |
 | 0x230 | 1 * 6 | Is attribute range used |
 | 0x236 | 4 | [Validity flags](#validity-flags) |
-
-*6.29 - 6.30:*
-
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 8 | Unknown |
-| 0x8 | 2 | Unknown |
-| 0xA | 2 | Unknown |
-| 0xC | 2 | Unknown |
-| 0xE | 8 | Unknown |
 
 #### Validity flags
 These flags indicate which fields are compared against the active session to determine if there is a match.
@@ -98,6 +88,28 @@ These flags indicate which fields are compared against the active session to det
 
 #### Attribute list
 Each attribute list may contain up to 20 attributes. Every attribute is stored as a 4-byte integer.
+
+### LocalSearchNetworkSetting
+*6.29 - 6.30:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | Unknown |
+| 0x8 | 2 | Unknown |
+| 0xA | 2 | Unknown |
+| 0xC | 2 | [Validity flags](#validity-flags-1) |
+| 0xE | 8 | Unknown |
+
+#### Validity Flags
+These flags indicate which fields are compared against the active session to determine if there is a match.
+
+| Mask | Description |
+| --- | --- |
+| 0x1 | Ignored |
+| 0x2 | Unknown |
+| 0x4 | Unknown |
+| 0x8 | Unknown |
+| 0x10 | Unknown |
 
 ## (1) Browse reply
 This packet is sent to the source of the [browse request](#browse-request) in plain text, and is not encapsulated in a [Pia packet](Pia-Protocol).

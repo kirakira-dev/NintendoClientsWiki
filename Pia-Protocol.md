@@ -62,12 +62,12 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x10 | 8 | [AES-GCM nonce](#encryption) |
 | 0x18 | 8 | [AES-GCM authentication tag](#encryption) (first 8 bytes) |
 
-*6.16 - 6.25:*
+*6.16 - 6.30:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Magic number: `32 AB 98 64` |
-| 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) (11 or 12) |
+| 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) (11, 12 or 13) |
 | 0x5 | 2 | Destination [variable id](Pia-Terminology#variable-id) |
 | 0x7 | 2 | Source [variable id](Pia-Terminology#variable-id) |
 | 0x9 | 2 | [Packet id](#packet-id) |

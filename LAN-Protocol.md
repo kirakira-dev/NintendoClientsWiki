@@ -110,6 +110,8 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | Bytes | [Crypto challenge reply](#crypto-challenge) |
 
 ### LanSessionInfo
+*Up to 5.2:*
+
 | Type | Description |
 | --- | --- |
 | Uint32 | Game mode |
@@ -118,54 +120,73 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | Uint16 | Current number of participants |
 | Uint16 | Minimum number of participants |
 | Uint16 | Maximum number of participants |
-
-*Up to Pia version 5.2:*
-
-| Type | Description |
-| --- | --- |
 | Uint32 | Session type |
-
-*In Pia version 5.3 and later:*
-
-| Type | Description |
-| --- | --- |
-| Uint8 | [System communication version](#system-communication-version) |
-| Uint8 | Application communication version |
-| Uint16 | Session type |
-
-*In any Pia version:*
-
-| Type | Description |
-| --- | --- |
 | Bytes (0x180) | Application data |
 | Uint32 | Application data size |
 | Bool | Is opened |
-
-*Up to Pia version 5.9:*
-
-| Type | Description |
-| --- | --- |
 | [StationLocation](Pia-Types#stationlocation) | Host address |
+| [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
 
-*In Pia version 5.10 and later:*
+*5.3 - 5.6:*
 
 | Type | Description |
 | --- | --- |
+| Uint32 | Game mode |
+| Uint32 | Session id |
+| Uint32 (x6) | Attributes |
+| Uint16 | Current number of participants |
+| Uint16 | Minimum number of participants |
+| Uint16 | Maximum number of participants |
+| Uint8 | [System communication version](#system-communication-version) |
+| Uint8 | Application communication version |
+| Uint16 | Session type |
+| Bytes (0x180) | Application data |
+| Uint32 | Application data size |
+| Bool | Is opened |
+| [StationLocation](Pia-Types#stationlocation) | Host address |
+| [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
+
+*5.7 - 5.9:*
+
+| Type | Description |
+| --- | --- |
+| Uint32 | Game mode |
+| Uint32 | Session id |
+| Uint32 (x6) | Attributes |
+| Uint16 | Current number of participants |
+| Uint16 | Minimum number of participants |
+| Uint16 | Maximum number of participants |
+| Uint8 | [System communication version](#system-communication-version) |
+| Uint8 | Application communication version |
+| Uint16 | Session type |
+| Bytes (0x180) | Application data |
+| Uint32 | Application data size |
+| Bool | Is opened |
+| [StationLocation](Pia-Types#stationlocation) | Host address |
+| [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
+| Bytes (0x20) | Session param. This is used to derive the session key. |
+
+*5.10 - 5.31:*
+
+| Type | Description |
+| --- | --- |
+| Uint32 | Game mode |
+| Uint32 | Session id |
+| Uint32 (x6) | Attributes |
+| Uint16 | Current number of participants |
+| Uint16 | Minimum number of participants |
+| Uint16 | Maximum number of participants |
+| Uint8 | [System communication version](#system-communication-version) |
+| Uint8 | Application communication version |
+| Uint16 | Session type |
+| Bytes (0x180) | Application data |
+| Uint32 | Application data size |
+| Bool | Is opened |
 | [StationAddress](Pia-Types#stationaddress) | Host address |
 | [PID](NEX-Common-Types#pid) | Host pid |
 | Uint32 | Host cid |
 | Uint32 | Host rvcid |
-
-*In any Pia version:*
-
-| Type | Description |
-| --- | --- |
 | [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
-
-*In Pia 5.7 and later:*
-
-| Type | Description |
-| --- | --- |
 | Bytes (0x20) | Session param. This is used to derive the session key. |
 
 #### LanStationInfo

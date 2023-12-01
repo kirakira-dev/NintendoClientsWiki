@@ -96,7 +96,7 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 | --- | --- | --- |
 | 0x0 | 8 | Unknown |
 | 0x8 | 2 | Maximum number of participants |
-| 0xA | 2 | Unknown |
+| 0xA | 2 | Minimum number of participants |
 | 0xC | 2 | [Validity flags](#validity-flags-1) |
 | 0xE | 8 | Unknown |
 
@@ -107,7 +107,7 @@ These flags indicate which fields are compared against the active session to det
 | --- | --- |
 | 0x1 | Ignored |
 | 0x2 | Unknown |
-| 0x4 | Unknown |
+| 0x4 | Maximum / minimum number of participants |
 | 0x8 | Unknown |
 | 0x10 | Unknown |
 

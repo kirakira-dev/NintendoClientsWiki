@@ -95,7 +95,7 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 8 | Unknown |
-| 0x8 | 2 | Unknown |
+| 0x8 | 2 | Maximum number of participants |
 | 0xA | 2 | Unknown |
 | 0xC | 2 | [Validity flags](#validity-flags-1) |
 | 0xE | 8 | Unknown |
@@ -229,8 +229,8 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | 0x8 | 0x200 | Unknown |
 | 0x208 | 4 | Unknown |
 | 0x20C | 8 | Unknown |
-| 0x214 | 2 | Unknown |
-| 0x216 | 2 | Unknown |
+| 0x214 | 2 | Current number of participants |
+| 0x216 | 2 | Maximum number of participants |
 | 0x218 | 1 | Unknown |
 | 0x219 | 1 | Unknown |
 | 0x21A | 1 | Unknown |

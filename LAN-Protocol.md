@@ -228,13 +228,13 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | 0x0 | 8 | Network id |
 | 0x8 | 0x200 | Application data |
 | 0x208 | 4 | Application data size |
-| 0x20C | 8 | Unknown |
-| 0x214 | 2 | Current number of participants |
-| 0x216 | 2 | Maximum number of participants |
-| 0x218 | 1 | Unknown |
-| 0x219 | 1 | Unknown |
-| 0x21A | 1 | Unknown |
-| 0x21B | 0x12 | [StationAddress](Pia-Types#stationaddress) |
+| 0x20C | 8 | Matchmake key |
+| 0x214 | 2 | Current number of stations |
+| 0x216 | 2 | Maximum number of stations |
+| 0x218 | 1 | Is opened |
+| 0x219 | 1 | Has player number limit |
+| 0x21A | 1 | Current number of players |
+| 0x21B | 0x12 | Host address ([StationAddress](Pia-Types#stationaddress)) |
 
 ### System Communication Version
 | Version | Pia Version |

@@ -94,7 +94,7 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | Unknown |
+| 0x0 | 8 | Matchmake key |
 | 0x8 | 2 | Maximum number of participants |
 | 0xA | 2 | Minimum number of participants |
 | 0xC | 2 | [Validity flags](#validity-flags-1) |
@@ -106,10 +106,10 @@ These flags indicate which fields are compared against the active session to det
 | Mask | Description |
 | --- | --- |
 | 0x1 | Ignored |
-| 0x2 | Unknown |
+| 0x2 | Matchmake key |
 | 0x4 | Maximum / minimum number of participants |
-| 0x8 | Unknown |
-| 0x10 | Unknown |
+| 0x8 | Opened only |
+| 0x10 | Vacant only |
 
 ## (1) Browse reply
 This packet is sent to the source of the [browse request](#browse-request) in plain text, and is not encapsulated in a [Pia packet](Pia-Protocol).

@@ -98,7 +98,7 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 | 0x8 | 2 | Maximum number of participants |
 | 0xA | 2 | Minimum number of participants |
 | 0xC | 2 | [Validity flags](#validity-flags-1) |
-| 0xE | 8 | Unknown |
+| 0xE | 8 | Title id |
 
 #### Validity Flags
 These flags indicate which fields are compared against the active session to determine if there is a match.

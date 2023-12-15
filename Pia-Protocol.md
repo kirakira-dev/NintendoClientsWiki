@@ -217,19 +217,21 @@ Every console in a mesh gets its own station index. The following station index 
 The content of this field depends on the [multicast bit](#message-flags). If the multicast bit is cleared, this field contains the [constant id](Pia-Terminology#constant-id) of the destination console. If the multicast bit is set, this field contains a bitmap where each bit represents one destination console (the bit number of a console is its station index: `1 << station_index`).
 
 ## Encryption
-Packets are encrypted and signed with the [session key](#session-key).
+Packets are encrypted and signed with the [session key](#session-key). The messages are padded with 0xFF before encryption such that their combined size is a multiple of 16 bytes.
 
 *Up to 5.6:*
 
-If encryption is enabled, the [messages](#messages) are encrypted with AES-ECB. The HMAC-MD5 of the whole packet (both header and encrypted payload) is appended to the packet.
+If encryption is enabled, the messages are encrypted with AES-ECB. The HMAC-MD5 of the whole packet (both header and encrypted payload) is appended to the packet.
 
-*5.7 - 5.43:*
+*5.7 - 6.30:*
 
-If encryption is enabled, the [messages](#messages) are encrypted with AES-GCM. The messages are padded with 0xFF before encryption such that their combined size is a multiple of 16 bytes. The authentication tag is stored in the [header](#header). No other signature is appended to the packet.
+If encryption is enabled, the messages are encrypted with AES-GCM. The authentication tag is stored in the [header](#header). No other signature is appended to the packet.
 
-The nonce depends on the network type and is generated as follows:
+### Nonce
 
-*NEX:*
+The AES-GCM nonce depends on the network type and is generated as follows:
+
+*NEX (up to 5.43):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -237,7 +239,7 @@ The nonce depends on the network type and is generated as follows:
 | 0x1 | 3 | `gathering_id & 0xFFFFFF` |
 | 0x4 | 8 | Nonce from [header](#header) |
 
-*LDN:*
+*LDN (up to 5.43):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -252,13 +254,34 @@ The CRC32 hash is calculated over the following data:
 | 0x0 | 4 | Session id (see [application data](LDN-Application-Data-(Pia))) |
 | 0x4 | 6 | MAC address of source |
 
-*LAN:*
+*LDN (6.26):*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | XOR of [network id](LAN-Protocol#lannetworkproperty) and IP address of source |
+| 0x4 | 8 | Nonce from [header](#header) |
+
+*LAN (up to 5.43):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | IP address of source |
 | 0x4 | 1 | [Connection id](#header) |
 | 0x5 | 7 | Last 7 bytes of nonce from [header](#header) |
+
+*LAN (6.26):*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | IP address of source (CRC-32 hash if IPv6 is used) |
+| 0x4 | 8 | Nonce from [header](#header) |
+
+*NPLN (6.26):*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | Network id |
+| 0x4 | 8 | Nonce from [header](#header) |
 
 ### Session Key
 The session key is used for packet encryption and signature calculation.

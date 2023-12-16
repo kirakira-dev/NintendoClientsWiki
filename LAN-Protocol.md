@@ -33,7 +33,7 @@ This packet is sent through port 35000 instead.
 | 0x1 | 4 | Size of search criteria (0x23A) |
 | 0x5 | 0x23A | [LanSessionSearchCriteria](#lansessionsearchcriteria) |
 
-*5.7 - 5.43:*
+*5.7 - 5.44:*
 
 | Offset | Size | Description |
 | --- | --- | --- |

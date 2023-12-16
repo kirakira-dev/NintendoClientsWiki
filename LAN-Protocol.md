@@ -120,7 +120,15 @@ These flags indicate which fields are compared against the active session to det
 ## (1) Browse reply
 This packet is sent to the source of the [browse request](#browse-request) in plain text, and is not encapsulated in a [Pia packet](Pia-Protocol).
 
-*Up to 5.44:*
+*Up to 5.6:*
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Packet type (1) |
+| Uint32 | Size of session info |
+| [LanSessionInfo](#lansessioninfo) | Session info |
+
+*5.7 - 5.44:*
 
 | Type | Description |
 | --- | --- |

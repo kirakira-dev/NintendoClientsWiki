@@ -17,7 +17,13 @@ Every packet starts with a single byte that indicates its type.
 | 7 | [Keep alive message](#7-keep-alive-message) |
 
 ## (0) Browse Request
+*Up to 5.44:*
+
 This packet is sent through UDP broadcast port 30000. It is sent in plain text, and is not encapsulated in a [Pia packet](Pia-Protocol).
+
+*6.16 - 6.30:*
+
+This packet is sent through port 35000 instead.
 
 *Up to 5.6:*
 

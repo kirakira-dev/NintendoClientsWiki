@@ -42,7 +42,7 @@ This packet is sent through port 35000 instead.
 | 0x5 | 0x23A | [LanSessionSearchCriteria](#lansessionsearchcriteria) |
 | 0x23F | 0x12A | [Crypto challenge](#crypto-challenge) |
 
-*6.29 - 6.30:*
+*6.16 - 6.30:*
 
 | Offset | Size | Description |
 | --- | --- | --- |

@@ -49,7 +49,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0x8 | 8 | [AES-GCM nonce](#encryption) |
 | 0x10 | 8 | [AES-GCM authentication tag](#encryption) (first 8 bytes) |
 
-*5.27 - 5.43:*
+*5.27 - 5.44:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -81,7 +81,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 5.11 - 5.17 | 3 |
 | 5.18 - 5.21 | 4 |
 | 5.23 - 5.26 | 5 |
-| 5.27 - 5.43 | 9 |
+| 5.27 - 5.44 | 9 |
 | 6.16 - 6.23 | 11 |
 | 6.25 - 6.26 | 12 |
 | 6.29 - 6.30 | 13 |
@@ -231,7 +231,7 @@ If encryption is enabled, the messages are encrypted with AES-GCM. The authentic
 
 The AES-GCM nonce depends on the network type and is generated as follows:
 
-*NEX (up to 5.43):*
+*NEX (up to 5.44):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -239,7 +239,7 @@ The AES-GCM nonce depends on the network type and is generated as follows:
 | 0x1 | 3 | `gathering_id & 0xFFFFFF` |
 | 0x4 | 8 | Nonce from [header](#header) |
 
-*LDN (up to 5.43):*
+*LDN (up to 5.44):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -261,7 +261,7 @@ The CRC32 hash is calculated over the following data:
 | 0x0 | 4 | XOR of [network id](LAN-Protocol#lannetworkproperty) and IP address of source |
 | 0x4 | 8 | Nonce from [header](#header) |
 
-*LAN (up to 5.43):*
+*LAN (up to 5.44):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -286,7 +286,7 @@ The CRC32 hash is calculated over the following data:
 ### Session Key
 The session key is used for packet encryption and signature calculation.
 
-*Up to 5.43:*
+*Up to 5.44:*
 
 | Mode | Session key |
 | --- | --- |

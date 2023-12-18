@@ -69,9 +69,9 @@ This packet is sent through port 35000 instead.
 | 0x200 | 4 * 6 | Attribute range min |
 | 0x218 | 4 * 6 | Attribute range max |
 | 0x230 | 1 * 6 | Is attribute range used |
-| 0x236 | 4 | [Validity flags](#validity-flags) |
+| 0x236 | 4 | [Search flags](#search-flags) |
 
-#### Validity flags
+#### Search flags
 These flags indicate which fields are compared against the active session to determine if there is a match.
 
 | Mask | Description |
@@ -103,10 +103,10 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 | 0x0 | 8 | Matchmake key |
 | 0x8 | 2 | Maximum number of stations (upper bound) |
 | 0xA | 2 | Maximum number of stations (lower bound) |
-| 0xC | 2 | [Validity flags](#validity-flags-1) |
+| 0xC | 2 | [Search flags](#search-flags-1) |
 | 0xE | 8 | Title id |
 
-#### Validity Flags
+#### Search Flags
 These flags indicate which fields are compared against the active session to determine if there is a match.
 
 | Mask | Description |

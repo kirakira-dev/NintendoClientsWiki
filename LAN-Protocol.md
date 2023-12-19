@@ -203,7 +203,7 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
 | Bytes (0x20) | Session param. This is used to derive the session key. |
 
-*5.10 - 5.31:*
+*5.10 - 5.44:*
 
 | Type | Description |
 | --- | --- |

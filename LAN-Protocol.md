@@ -338,8 +338,8 @@ The crypto challenge is the same in all versions.
 
 | Version | Pia version |
 | --- | --- |
-| 1 | 5.7 - 5.9 |
-| 2 | 5.10 - 5.44 |
+| 1 | 5.7 - 5.10 |
+| 2 | 5.11 - 5.44 |
 | 3 | 6.16 - 6.30 |
 
 ### Challenge

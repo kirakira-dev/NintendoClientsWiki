@@ -140,14 +140,13 @@ The URL type depends on the scheme of the given station url. It is always 0 or 1
 | 3 | `udp` |
 
 ## StationConnectionInfo
-Up to Pia 5.9, a [station location](#stationlocation) contained either a public or private address. The station connection info contains both.
-
-In Pia version 5.10, the station connection info structure was removed, and a single [station location](#stationlocation) contains both the public and private address of a station.
-
+*Up to 5.9:*
 | Type | Description |
 | --- | --- |
 | [StationLocation](#stationlocation) | Public location |
 | [StationLocation](#stationlocation) | Private location |
+
+In later Pia versions, the station connection info structure was removed.
 
 ## ReliableSlidingWindow
 A reliable sliding window is used by various protocols to ensure that all messages arrive in the correct order. Large messages are fragmented. When a reliable sliding window is used, messages are wrapped as follows:

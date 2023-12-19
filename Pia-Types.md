@@ -108,9 +108,9 @@ Up to Pia version 5.9, a station location contained either a public or a private
 | --- | --- |
 | Uint8 | Size of public address |
 | Uint8 | Size of private address |
-| [InetAddress](#inetaddress) | Public address (encoding depends on size) |
-| [InetAddress](#inetaddress) | Private address (encoding depends on size) |
-| [InetAddress](#inetaddress) | Relay address (old encoding) |
+| [InetAddress](#inetaddress) | Public address |
+| [InetAddress](#inetaddress) | Private address |
+| [InetAddress](#inetaddress) | Relay address (IPv4) |
 | Uint64 | [Constant id] (PID) |
 | Uint32 | [Variable id] (CID) |
 | Uint32 | [Service variable id] (RVCID) |

@@ -220,7 +220,7 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | Uint32 | Application data size |
 | Bool | Is opened |
 | [StationAddress](Pia-Types#stationaddress) | Host address |
-| [PID](NEX-Common-Types#pid) | Host pid |
+| Uint64 | Host pid |
 | Uint32 | Host cid |
 | Uint32 | Host rvcid |
 | [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |

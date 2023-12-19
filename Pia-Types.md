@@ -10,9 +10,8 @@ This page describes common data structures that are used by the Pia library.
 5. [ReliableSlidingWindow](#reliableslidingwindow)
 
 ## InetAddress
-In version 5.11, a new encoding was introduced that is capable of representing IPv6 addresses. Even later Pia version still use the old encoding sometimes. Which encoding is used depends on the context.
+*Up to 5.10:*
 
-#### Old version
 This structure can only represent IPv4 addresses.
 
 | Offset | Size | Description |
@@ -20,12 +19,13 @@ This structure can only represent IPv4 addresses.
 | 0x0 | 4 | Address |
 | 0x4 | 2 | Port |
 
-#### New version
-This structure can represent both IPv4 and IPv6 addresses.
+*5.11 - 6.30:*
+
+This structure can represent both IPv4 and IPv6 addresses. Which encoding is used depends on the context.
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 16 | Address |
+| 0x0 | 0, 4 or 16 | Address |
 | 0x10 | 2 | Port |
 
 ## StationAddress

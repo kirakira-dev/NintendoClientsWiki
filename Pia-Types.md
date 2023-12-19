@@ -125,9 +125,9 @@ Up to Pia version 5.9, a station location contained either a public or a private
 | --- | --- |
 | Uint8 | Address size |
 | [StationAddress](#stationaddress) | Address |
-| Uint64 | Unknown |
-| Uint16 | Unknown |
-| Uint8 | Unknown |
+| Uint64 | [Constant id] |
+| Uint16 | [Variable id] |
+| Uint8 | `0x3`: NAT filtering<br>`0x1C`: NAT mapping |
 
 ### URL Type
 The URL type depends on the scheme of the given station url. It is always 0 or 1 in practice.

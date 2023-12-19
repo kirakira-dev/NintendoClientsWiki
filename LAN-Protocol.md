@@ -96,7 +96,16 @@ These flags indicate which fields are compared against the active session to det
 Each attribute list may contain up to 20 attributes. Every attribute is stored as a 4-byte integer.
 
 ### LanSearchNetworkSetting
-*6.29 - 6.30:*
+*6.16 - 6.20:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | Matchmake key |
+| 0x8 | 2 | Maximum number of stations (upper bound) |
+| 0xA | 2 | Maximum number of stations (lower bound) |
+| 0xC | 2 | [Search flags](#search-flags-1) |
+
+*6.23 - 6.30:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -108,6 +117,17 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 
 #### Search Flags
 These flags indicate which fields are compared against the active session to determine if there is a match.
+
+*6.16 - 6.26:*
+
+| Mask | Description |
+| --- | --- |
+| 0x1 | Matchmake key |
+| 0x2 | Maximum number of stations |
+| 0x4 | Opened only |
+| 0x8 | Vacant only |
+
+*6.29 - 6.30:*
 
 | Mask | Description |
 | --- | --- |

@@ -52,8 +52,6 @@ This structure can represent both IPv4 and IPv6 addresses. Which encoding is use
 ## StationLocation
 The station location holds information that allows Pia to connect to a given station. Many fields are directly taken from a [station url](NEX-Common-Types#stationurl), when NEX is used.
 
-Up to Pia version 5.9, a station location contained either a public or a private address. In Pia 5.10 and later, it contains both.
-
 *Up to 4.10:*
 
 | Type | Description |
@@ -62,12 +60,12 @@ Up to Pia version 5.9, a station location contained either a public or a private
 | Uint32 | [Constant id] (PID) |
 | Uint32 | [Variable id] (CID) |
 | Uint32 | [Service variable id] (RVCID) |
-| Uint8 | [URL type](#url-type) |
-| Uint8 | sid |
-| Uint8 | stream |
-| Uint8 | natm |
-| Uint8 | natf |
-| Uint8 | type |
+| Uint8 | [URL type](#nex-url-type) |
+| Uint8 | NEX stream id (sid) |
+| Uint8 | NEX stream type (stream) |
+| Uint8 | [NAT mapping](#nat-mapping) (natm) |
+| Uint8 | [NAT filtering](#nat-filtering) (natf) |
+| Uint8 | [NAT flags](#nat-flags) (type) |
 | Uint8 | probeinit |
 
 *5.2 - 5.9:*
@@ -78,12 +76,12 @@ Up to Pia version 5.9, a station location contained either a public or a private
 | Uint64 | [Constant id] (PID) |
 | Uint32 | [Variable id] (CID) |
 | Uint32 | [Service variable id] (RVCID) |
-| Uint8 | [URL type](#url-type) |
-| Uint8 | sid |
-| Uint8 | stream |
-| Uint8 | natm |
-| Uint8 | natf |
-| Uint8 | type |
+| Uint8 | [URL type](#nex-url-type) |
+| Uint8 | NEX stream id (sid) |
+| Uint8 | NEX stream type (stream) |
+| Uint8 | [NAT mapping](#nat-mapping) (natm) |
+| Uint8 | [NAT filtering](#nat-filtering) (natf) |
+| Uint8 | [NAT flags](#nat-flags) (type) |
 | Uint8 | probeinit |
 | [InetAddress](#inetaddress) | Relay address |
 
@@ -97,8 +95,8 @@ Up to Pia version 5.9, a station location contained either a public or a private
 | Uint64 | [Constant id] (PID) |
 | Uint32 | [Variable id] (CID) |
 | Uint32 | [Service variable id] (RVCID) |
-| Uint8 | `0x3`: natf<br>`0xC`: natm<br>`0xF0`: nat type |
-| Uint8 | type |
+| Uint8 | `0x3`: [NAT filtering](#nat-filtering) (natf)<br>`0xC`: [NAT mapping](#nat-mapping) (natm)<br>`0xF0`: NAT type |
+| Uint8 | [NAT flags](#nat-flags) (type) |
 | Uint8 | probeinit |
 | Uint8 | Is private address available |
 
@@ -114,8 +112,7 @@ Up to Pia version 5.9, a station location contained either a public or a private
 | Uint64 | [Constant id] (PID) |
 | Uint32 | [Variable id] (CID) |
 | Uint32 | [Service variable id] (RVCID) |
-| Uint8 | `0x3`: natf<br>`0xC`: natm<br>`0xF0`: nat type |
-| Uint8 | type |
+| Uint8 | `0x3`: [NAT filtering](#nat-filtering) (natf)<br>`0xC`: [NAT mapping](#nat-mapping) (natm)<br>`0xF0`: NAT type |
 | Uint8 | probeinit |
 | Uint8 | Is private address available |
 
@@ -127,9 +124,9 @@ Up to Pia version 5.9, a station location contained either a public or a private
 | [StationAddress](#stationaddress) | Address |
 | Uint64 | [Constant id] |
 | Uint16 | [Variable id] |
-| Uint8 | `0x3`: NAT filtering<br>`0x1C`: NAT mapping |
+| Uint8 | `0x3`: [NAT filtering](#nat-filtering)<br>`0xC`: [NAT mapping](#nat-mapping)<br>`0x10`: Is IPv6 NAT |
 
-### URL Type
+### NEX URL Type
 The URL type depends on the scheme of the given station url. It is always 0 or 1 in practice.
 
 | Value | Scheme |
@@ -138,6 +135,26 @@ The URL type depends on the scheme of the given station url. It is always 0 or 1
 | 1 | `prudp` |
 | 2 | `prudps` |
 | 3 | `udp` |
+
+### NAT Mapping
+| Value | Description |
+| --- | --- |
+| 0 | Unknown |
+| 1 | Endpoint independent mapping |
+| 2 | Endpoint dependent mapping |
+
+### NAT Filtering
+| Value | Description |
+| --- | --- |
+| 0 | Unknown |
+| 1 | Port independent filtering |
+| 2 | Port dependent filtering |
+
+### NAT Flags
+| Flag | Description |
+| --- | --- |
+| 1 | Is behind NAT |
+| 2 | Is public |
 
 ## StationConnectionInfo
 *Up to 5.9:*

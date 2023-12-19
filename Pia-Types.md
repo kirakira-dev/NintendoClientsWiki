@@ -29,20 +29,25 @@ This structure can represent both IPv4 and IPv6 addresses. Which encoding is use
 | 0x10 | 2 | Port |
 
 ## StationAddress
-In version 5.x, which [InetAddress](#inetaddress) encoding is used depends on the context. In version 6.x, the new encoding is always used.
-
 *Up to 4.10:*
 
-| Type | Description |
-| --- | --- |
-| [InetAddress](#inetaddress) | Address |
-| Uint16 | Extension id |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 6 | [Inet address](#inetaddress) |
+| 0x6 | 2 | Extension id |
 
-*5.2 - 6.23:*
+*5.2 - 5.44:*
 
-| Type | Description |
-| --- | --- |
-| [InetAddress](#inetaddress) | Address |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 2, 6 or 18 | [Inet address](#inetaddress) |
+
+*6.16 - 6.30:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 16 | Address |
+| 0x10 | 2 | Port |
 
 ## StationLocation
 The station location holds information that allows Pia to connect to a given station. Many fields are directly taken from a [station url](NEX-Common-Types#stationurl), when NEX is used.

@@ -119,7 +119,7 @@ Up to Pia version 5.9, a station location contained either a public or a private
 | Uint8 | probeinit |
 | Uint8 | Is private address available |
 
-*6.16 - 6.23:*
+*6.16 - 6.30:*
 
 | Type | Description |
 | --- | --- |

@@ -85,13 +85,13 @@ A station url contains the address and port of a server or client, along with a 
 | &lt;scheme&gt; | udp, prudp or prudps |
 | address | Address |
 | port | Port |
-| stream | Stream type |
-| sid | Stream id |
+| stream | Stream type (see [here](PRUDP-Protocol#virtual-ports)) |
+| sid | Stream id ([PRUDP port](PRUDP-Protocol#virtual-ports)) |
 | CID | Connection id |
 | PID | Principal id |
-| type | Type |
+| type | [NAT type flags](#nat-type-flags) |
 | RVCID | Rendez-vous connection id |
-| natm | NAT mapping |
+| natm | [NAT mapping](#nat-mapping) |
 | natf | NAT filtering |
 | upnp | UPnP support (0 or 1) |
 | pmp | PMP support (0 or 1) |
@@ -114,6 +114,19 @@ The following fields were added on Nintendo Switch:
 | Pl | Platform type |
 | Ntrpa | NAT traversal requester private address |
 | Ntrpp | NAT traversal requester private port |
+
+### NAT Type Flags
+| Flag | Description |
+| --- | --- |
+| 1 | Is behind NAT |
+| 2 | Is public |
+
+### NAT Mapping
+| Value | Description |
+| --- | --- |
+| 0 | Unknown |
+| 1 | Endpoint independent mapping |
+| 2 | Endpoint dependent mapping |
 
 # Variant
 A variant consists of an uint8 indicating the type followed by its value.

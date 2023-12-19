@@ -52,7 +52,7 @@ This packet is sent through port 35000 instead.
 | 0x18 | 0x12A | [Crypto challenge](#crypto-challenge) |
 
 ### LanSessionSearchCriteria
-*Up to 5.43:*
+*Up to 5.44:*
 
 | Offset | Size | Description |
 | --- | --- | --- |

@@ -356,8 +356,8 @@ The protocol list contains the following for every available protocol.
 | Bytes (64) | Play history registration key |
 | Uint64 | Unknown |
 
-[Constant id]: Pia-Terminology#constant-id
-[Variable id]: Pia-Terminology#variable-id
+[Constant id]: Pia-Types#constant-id
+[Variable id]: Pia-Types#variable-id
 
 [StationConnectionInfo]: Pia-Types#stationconnectioninfo
 [StationLocation]: Pia-Types#stationlocation

@@ -48,8 +48,8 @@ This packet is sent through port 35000 instead.
 | --- | --- | --- |
 | 0x0 | 1 | Packet type (0) |
 | 0x1 | 4 | Size of search network setting (0x16) |
-| 0x2 | 0x16 | [LanSearchNetworkSetting](#lansearchnetworksetting) |
-| 0x18 | 0x12A | [Crypto challenge](#crypto-challenge) |
+| 0x2 | | [LanSearchNetworkSetting](#lansearchnetworksetting) |
+| | 0x12A | [Crypto challenge](#crypto-challenge) |
 
 ### LanSessionSearchCriteria
 *Up to 5.44:*

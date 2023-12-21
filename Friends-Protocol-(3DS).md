@@ -34,7 +34,7 @@ Official name: NintendoFriendPresenceProtocol
 ## Request
 | Type | Description |
 | --- | --- |
-| [MyProfile](#myprofile) | Profile data |
+| [MyProfile](#myprofile-structure) | Profile data |
 
 ## Response
 This method does not return anything
@@ -43,7 +43,7 @@ This method does not return anything
 ## Request
 | Type | Description |
 | --- | --- |
-| [Mii](#mii) | Mii |
+| [Mii](#mii-structure) | Mii |
 
 ## Response
 This method does not return anything
@@ -52,7 +52,7 @@ This method does not return anything
 ## Request
 | Type | Description |
 | --- | --- |
-| [MiiList](#miilist) | Mii list |
+| [MiiList](#miilist-structure) | Mii list |
 
 ## Response
 This method does not return anything.
@@ -61,7 +61,7 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;[PlayedGame](#playedgame)&gt; | Played games |
+| [List]&lt;[PlayedGame](#playedgame-structure)&gt; | Played games |
 
 ## Response
 This method does not return anything.
@@ -81,30 +81,30 @@ This method does not return anything
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;[FriendInfo](#friendinfo)&gt; | Friends |
+| [List]&lt;[FriendInfo](#friendinfo-structure)&gt; | Friends |
 
 ## response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[FriendMii](#friendmii)&gt; | Miis |
+| [List]&lt;[FriendMii](#friendmii-structure)&gt; | Miis |
 
 # (7) GetFriendMiiList
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;[FriendInfo](#friendinfo)&gt; | Friends |
+| [List]&lt;[FriendInfo](#friendinfo-structure)&gt; | Friends |
 
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[FriendMiiList](#friendmiilist)&gt; | Mii lists |
+| [List]&lt;[FriendMiiList](#friendmiilist-structure)&gt; | Mii lists |
 
 # (8) IsActiveGame
 ## Request
 | Type | Description |
 | --- | --- |
 | [List]&lt;Uint32&gt; | Unknown |
-| [GameKey](#gamekey) | Game key |
+| [GameKey](#gamekey-structure) | Game key |
 
 ## Response
 | Type | Description |
@@ -132,7 +132,7 @@ This method does not return anything
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[FriendRelationship](#friendrelationship)&gt; | Friend relationships |
+| [List]&lt;[FriendRelationship](#friendrelationship-structure)&gt; | Friend relationships |
 
 # (11) AddFriendByPrincipalID
 ## Request
@@ -144,7 +144,7 @@ This method does not return anything
 ## Response
 | Type | Description |
 | --- | --- |
-| [FriendRelationship](#friendrelationship) | Friend relationship |
+| [FriendRelationship](#friendrelationship-structure) | Friend relationship |
 
 # (12) AddFriendBylstPrincipalID
 ## Request
@@ -156,7 +156,7 @@ This method does not return anything
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[FriendRelationship](#friendrelationship)&gt; | Friend relationships |
+| [List]&lt;[FriendRelationship](#friendrelationship-structure)&gt; | Friend relationships |
 
 # (13) RemoveFriendByLocalFriendCode
 ## Request
@@ -183,7 +183,7 @@ This method does not take any parameters.
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[FriendRelationship](#friendrelationship)&gt; | Friend relationships |
+| [List]&lt;[FriendRelationship](#friendrelationship-structure)&gt; | Friend relationships |
 
 # (16) UpdateBlackList
 ## Request
@@ -205,13 +205,13 @@ This method does not return anything.
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[FriendRelationship](#friendrelationship)&gt; | Friend list |
+| [List]&lt;[FriendRelationship](#friendrelationship-structure)&gt; | Friend list |
 
 # (18) UpdatePresence
 ## Request
 | Type | Description |
 | --- | --- |
-| [NintendoPresence](#nintendopresence) | Presence info |
+| [NintendoPresence](#nintendopresence-structure) | Presence info |
 | Bool | Unknown |
 
 ## Response
@@ -221,7 +221,7 @@ This method does not return anything
 ## Request
 | Type | Description |
 | --- | --- |
-| [GameKey](#gamekey) | Game key |
+| [GameKey](#gamekey-structure) | Game key |
 
 ## Response
 This method does not return anything.
@@ -254,18 +254,18 @@ This method does not return anything
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[FriendPresence](#friendpresence)&gt; | Friend presence list |
+| [List]&lt;[FriendPresence](#friendpresence-structure)&gt; | Friend presence list |
 
 # (23) GetFriendComment
 ## Request
 | Type | Description |
 | --- | --- |
-| [List]&lt;[FriendInfo](#friendinfo)&gt; | Friend info |
+| [List]&lt;[FriendInfo](#friendinfo-structure)&gt; | Friend info |
 
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[FriendComment](#friendcomment)&gt; | Comments |
+| [List]&lt;[FriendComment](#friendcomment-structure)&gt; | Comments |
 
 # (24) GetFriendPicture
 ## Request
@@ -276,7 +276,7 @@ This method does not return anything
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[FriendPicture](#friendpicture)&gt; | Friend pictures |
+| [List]&lt;[FriendPicture](#friendpicture-structure)&gt; | Friend pictures |
 
 # (25) GetFriendPersistentInfo
 ## Request
@@ -287,7 +287,7 @@ This method does not return anything
 ## Response
 | Type | Description |
 | --- | --- |
-| [List]&lt;[FriendPersistentInfo](#friendpersistentinfo)&gt; | Persistent info |
+| [List]&lt;[FriendPersistentInfo](#friendpersistentinfo-structure)&gt; | Persistent info |
 
 # (26) SendInvitation
 ## Request
@@ -322,7 +322,7 @@ This method does not return anything
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
-| [Mii](#mii) | Mii |
+| [Mii](#mii-structure) | Mii |
 | [DateTime] | Unknown |
 
 ## FriendMiiList ([Structure])
@@ -332,7 +332,7 @@ This method does not return anything
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
-| [MiiList](#miilist) | Mii list |
+| [MiiList](#miilist-structure) | Mii list |
 | [DateTime] | Unknown |
 
 ## FriendPersistentInfo ([Structure])
@@ -347,7 +347,7 @@ This method does not return anything
 | Uint8 | Area |
 | Uint8 | Language |
 | Uint8 | Platform |
-| [GameKey](#gamekey) | Game key |
+| [GameKey](#gamekey-structure) | Game key |
 | [String] | Message |
 | [DateTime] | Message updated at |
 | [DateTime] | Friended at |
@@ -370,7 +370,7 @@ This method does not return anything
 | Type | Description |
 | --- | --- |
 | Uint32 | Unknown |
-| [NintendoPresence](#nintendopresence) | Nintendo presence |
+| [NintendoPresence](#nintendopresence-structure) | Nintendo presence |
 
 ## FriendRelationship ([Structure])
 | This structure inherits from [Data] |
@@ -435,7 +435,7 @@ This method does not return anything
 | Type | Name |
 | --- | --- |
 | Uint32 | m_changedBitFlag |
-| [GameKey](#gamekey) | m_gameKey |
+| [GameKey](#gamekey-structure) | m_gameKey |
 | [String] | m_gameModeDescription |
 | Uint32 | m_joinAvailabilityFlag |
 | Uint8 | m_matchmakeSystemType |
@@ -451,7 +451,7 @@ This method does not return anything
 
 | Type | Description |
 | --- | --- |
-| [GameKey](#gamekey) | Game key |
+| [GameKey](#gamekey-structure) | Game key |
 | [DateTime] | Date time |
 
 [Structure]: NEX-Common-Types#structure

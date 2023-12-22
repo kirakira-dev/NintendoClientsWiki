@@ -360,9 +360,6 @@ In Pia version 5.7 and later, the [browse request](#0-browse-request) contains a
 | 0x1 | 1 | Crypto enabled (0 or 1) |
 | 0x2 | 8 | Incrementing counter used for nonce |
 | 0xA | 16 | Challenge key | Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 16 | Challenge key in browse response |
-| 0x10 | 16 | Challenge key received in browse request |(random bytes) |
 | 0x1A | 16 | Authentication tag for AES-GCM |
 | 0x2A | 256 or 16 | Challenge or response, encrypted with AES-GCM |
 

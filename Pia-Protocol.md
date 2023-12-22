@@ -269,14 +269,14 @@ The CRC32 hash is calculated over the following data:
 | 0x4 | 1 | [Connection id](#header) |
 | 0x5 | 7 | Last 7 bytes of nonce from [header](#header) |
 
-**LAN** *(6.26):*
+**LAN** *(6.16 - 6.30):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | IP address of source (CRC-32 hash if IPv6 is used) |
 | 0x4 | 8 | Nonce from [header](#header) |
 
-**NPLN** *(6.26):*
+**NPLN** *(6.16 - 6.30):*
 
 | Offset | Size | Description |
 | --- | --- | --- |

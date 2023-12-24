@@ -54,6 +54,7 @@ For API requests made by the account sysmodule:
 | GET | <code><a href="#get-connect100authorize">/connect/1.0.0/authorize</a></code> |
 | POST | <code><a href="#post-connect100apitoken">/connect/1.0.0/api/token</a></code> |
 | GET | `/api/1.0.0/users/<id>/qrcode_param` |
+| GET | `/connect/1.0.0/authorize/supervisor_consent` |
 | GET | `/profile` |
 
 **api.accounts.nintendo.com:**

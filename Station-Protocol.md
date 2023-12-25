@@ -170,14 +170,14 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | Uint8 | [Version number](#version-numbers) |
 | Uint8 | [Platform id](#platform-id) |
 | Uint8 | [Fragment id](#fragment-id) |
-| Uint64 | [Constant id] |
-| Uint32 | [Variable id] |
+| Uint64 | Target [constant id] |
+| Uint32 | Target [variable id] |
 | Uint8 (32) | Identification token (ascii) |
 | Uint32 | Session id |
 | Uint8 | Number of players |
 | Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
-| Uint8 | Number of player infos (P) |
-| [PlayerInfo](#player-info) (up to P) | Player info, may be [fragmented](#fragment-id). |
+| Uint8 | Number of player infos |
+| [PlayerInfo](#player-info) (2 or 4) | Player info, may be [fragmented](#fragment-id). |
 | Uint32 | Ack id |
 
 *5.27 - 5.43:*
@@ -187,8 +187,8 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | Uint8 | Message type (2) |
 | Uint8 | [Connection result](#connection-result) (accepted) |
 | Uint8 | [Platform id](#platform-id) |
-| Uint64 | [Constant id] |
-| Uint32 | [Variable id] |
+| Uint64 | Target [constant id] |
+| Uint32 | Target [variable id] |
 | Uint8 | Number of available protocols (N) |
 | Uint8 (N*2) | [Protocol list](#protocol-list) |
 | Uint16 | Size of station location |
@@ -198,7 +198,7 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | Uint8 | Number of players |
 | Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
 | Uint8 | Number of player infos (P) |
-| [PlayerInfo](#player-info) (P) | Player info |
+| [PlayerInfo](#player-info) (2 or 4) | Player info |
 | Uint32 | Ack id |
 
 ### Denying

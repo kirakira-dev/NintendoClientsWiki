@@ -119,6 +119,7 @@ The station location holds information that allows Pia to connect to a given sta
 | Uint32 | [Variable id] (CID) |
 | Uint32 | [Service variable id] (RVCID) |
 | Uint8 | `0x3`: [NAT filtering](#nat-filtering) (natf)<br>`0xC`: [NAT mapping](#nat-mapping) (natm)<br>`0xF0`: [NAT type](#nat-type) |
+| Uint8 | [NAT flags](#nat-flags) (type) |
 | Uint8 | probeinit |
 | Uint8 | Is private address available |
 

@@ -59,7 +59,7 @@ In version 5.19, the `StationProtocol` was renamed to `MeshStationProtocol` and 
 | Uint8 | Connection id |
 | Uint8 | [Version number](#version-numbers) |
 | Uint8 | Is inverse connection request |
-| Uint64 | [Constant id] |
+| Uint64 | Target [constant id] |
 | [StationConnectionInfo] | Station connection info |
 | Uint32 | Ack id |
 
@@ -71,8 +71,8 @@ In version 5.19, the `StationProtocol` was renamed to `MeshStationProtocol` and 
 | Uint8 | Connection id |
 | Uint8 | [Version number](#version-numbers) |
 | Uint8 | Is inverse connection request |
-| Uint64 | [Constant id] |
-| Uint32 | [Variable id]
+| Uint64 | Target [constant id] |
+| Uint32 | Target [variable id]
 | Uint8 | Inverse connection id |
 | [StationConnectionInfo] | Station connection info |
 | Uint32 | Ack id |
@@ -85,8 +85,8 @@ In version 5.19, the `StationProtocol` was renamed to `MeshStationProtocol` and 
 | Uint8 | Connection id |
 | Uint8 | [Version number](#version-numbers) |
 | Uint8 | Is inverse connection request |
-| Uint64 | [Constant id] |
-| Uint32 | [Variable id]
+| Uint64 | Target [constant id] |
+| Uint32 | Target [variable id]
 | Uint8 | Inverse connection id |
 | [StationLocation] | Station location |
 | Uint32 | Ack id |
@@ -100,8 +100,8 @@ In version 5.19, the `StationProtocol` was renamed to `MeshStationProtocol` and 
 | Uint8 (N*2) | [Protocol list](#protocol-list) |
 | Uint8 | Connection id |
 | Uint8 | Is inverse connection request |
-| Uint64 | [Constant id] |
-| Uint32 | [Variable id]
+| Uint64 | Target [constant id] |
+| Uint32 | Target [variable id]
 | Uint8 | Inverse connection id |
 | [StationLocation] | Station location |
 | Uint32 | Ack id |
@@ -113,8 +113,8 @@ In version 5.19, the `StationProtocol` was renamed to `MeshStationProtocol` and 
 | Uint8 | Message type (1) |
 | Uint8 | [Connection result](#connection-result) (always 0) |
 | Uint8 | [Platform id](#platform-id) |
-| Uint64 | [Constant id] |
-| Uint32 | [Variable id] |
+| Uint64 | Target [constant id] |
+| Uint32 | Target [variable id] |
 | Uint8 | Number of available protocols (N) |
 | Uint8 (N*2) | [Protocol list](#protocol-list) |
 | Uint16 | Size of station location |

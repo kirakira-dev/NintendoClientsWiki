@@ -93,7 +93,7 @@ If the join response is too big to be sent in a single packet it is split into f
 | [StationInfo] (xN) | Station info list |
 | Uint32 | Ack id |
 
-*5.2 - *
+*5.18*
 
 | Type | Description |
 | --- | --- |

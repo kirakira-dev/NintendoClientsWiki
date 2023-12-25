@@ -10,7 +10,7 @@ Also, the clone protocol used to be single protocol, but was split into several 
 | 0x00C0 | 0x08 | Keep Alive Protocol |
 | 0x0100 | 0x14 | [[Station Protocol]] |
 | 0x0200 | 0x18 | [[Mesh Protocol]] |
-| 0x0210 | 0x1C | Sync Clock Protocol |
+| 0x0210 | 0x1C | [[Sync Clock Protocol]] |
 | 0x0300 | 0x24 | [[Local Protocol]] |
 |        | 0x28 | Direct Protocol |
 |        | 0x2C | Net Protocol |

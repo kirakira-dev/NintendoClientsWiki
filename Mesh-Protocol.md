@@ -177,7 +177,7 @@ Because this message is sent through the reliable mesh protocol it does not need
 | Uint8 | Station index |
 | | Padding such that the size becomes a multiple of 4 bytes. |
 
-*5.10 and later:*
+*5.10 - 5.18:*
 
 | Offset | Size | Description |
 | --- | --- | --- |

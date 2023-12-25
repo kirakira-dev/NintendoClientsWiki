@@ -60,39 +60,58 @@ The following version numbers are advertised during the [connection request](Sta
 # Join response (success)
 If the join response is too big to be sent in a single packet it is split into fragments.
 
+*Up to 3.10:*
+
 | Type | Description |
 | --- | --- |
 | Uint8 | Message type (2) |
-| Uint8 | Number of stations in mesh |
+| Uint8 | Number of stations in mesh, including joining station |
 | Uint8 | Index of host station |
 | Uint8 | Index of joining station |
 | Uint8 | Number of fragments |
 | Uint8 | Fragment index |
 | Uint8 | Number of station info entries in current fragment (N) |
 | Uint8 | Base index of station info in current fragment |
-| | Version-dependent data |
-| [StationInfo] (xN) | Station info list. Each entry is padded such that its size is a multiple of 4 bytes. |
+| [StationInfo] (xN) | Station info list |
 | Uint32 | Ack id |
 
-*Wii U (up to 3.10):* No additional data
-
-*Wii U (4.8 and later):*
+*4.8 - 4.10:*
 
 | Type | Description |
 | --- | --- |
+| Uint8 | Message type (2) |
+| Uint8 | Number of stations in mesh, including joining station |
+| Uint8 | Index of host station |
+| Uint8 | Index of joining station |
+| Uint8 | Number of fragments |
+| Uint8 | Fragment index |
+| Uint8 | Number of station info entries in current fragment (N) |
+| Uint8 | Base index of station info in current fragment |
 | Uint8 | Maximum number of stations in first mesh |
 | Uint8 | Maximum number of stations in second mesh |
 | Uint16 | Padding |
+| [StationInfo] (xN) | Station info list |
+| Uint32 | Ack id |
 
-*Switch:*
+*5.2 - *
 
 | Type | Description |
 | --- | --- |
+| Uint8 | Message type (2) |
+| Uint8 | Number of stations in mesh, including joining station |
+| Uint8 | Index of host station |
+| Uint8 | Index of joining station |
+| Uint8 | Number of fragments |
+| Uint8 | Fragment index |
+| Uint8 | Number of station info entries in current fragment (N) |
+| Uint8 | Base index of station info in current fragment |
 | Uint8 | Maximum number of stations in first mesh |
 | Uint8 | Maximum number of stations in second mesh |
 | Uint8 | Maximum number of stations (total) |
 | Uint8 | Padding |
 | Uint32 | Update counter (incremented on each mesh update) |
+| [StationInfo] (xN) | Station info list |
+| Uint32 | Ack id |
 
 # Join response (denying)
 | Offset | Size | Description |

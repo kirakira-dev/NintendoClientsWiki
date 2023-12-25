@@ -333,7 +333,7 @@ The protocol list contains the following for every available protocol.
 | Uint8 | Language |
 | Bytes (64) | Play history registration key |
 
-*5.7 - 5.11:*
+*5.7 - 5.19:*
 | Type | Description |
 | --- | --- |
 | Bytes (80) | Player name |

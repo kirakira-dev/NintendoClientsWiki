@@ -16,3 +16,5 @@ The host sends the following reply:
 | --- | --- | --- |
 | 0x0 | 8 | System tick copied from request |
 | 0x8 | 8 | Synchronized clock in milliseconds |
+
+The system tick is used to measure the round trip time. To reduce noise, Pia calculates the median of the last 10 measurements. The estimated round trip time is divided by two, and added to the received clock value.

@@ -39,7 +39,7 @@ The following version numbers are advertised during the [connection request](Sta
 | 5.30 - 5.43 | 3 |
 
 # Join request
-*Wii U and Switch (up to 5.10):*
+*Up to 5.10:*
 
 | Type | Description |
 | --- | --- |
@@ -49,7 +49,7 @@ The following version numbers are advertised during the [connection request](Sta
 | [StationAddress] | Station address |
 | Uint32 | Ack id |
 
-*Switch (5.11 and later):*
+*5.11 - 5.18:*
 
 | Type | Description |
 | --- | --- |

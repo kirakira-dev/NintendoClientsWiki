@@ -411,11 +411,11 @@ The challenge consists of 256 random bytes. The key for encrypting the challenge
 The response contains the first 16 bytes of the HMAC-SHA256 of the decrypted challenge with a [game-specific key](Pia-Game-Keys). The key for encrypting the response is the first 16 bytes of the HMAC-SHA256 of the [session key param](#session-key-param) with the [game-specific key](Pia-Game-Keys):
 
 ### Session Key Param
-The session key param are used to derive the [challenge response key](#response) and the [session key](Pia-Protocol#session-key).
+The session key param are used to derive the [challenge response key](#response).
 
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 16 | [Challenge key](#crypto-challenge) in browse response |
 | 0x10 | 16 | [Challenge key received](#crypto-challenge) in browse request |
 
-When the host receives a valid browse request for the first time, it saves the session key param in the [LanSessionInfo](#lansessioninfo) or [LanNetworkProperty](#lannetworkproperty) structure.
+When the host receives a valid browse request for the first time, it saves the session key param in the [LanSessionInfo](#lansessioninfo) or [LanNetworkProperty](#lannetworkproperty) structure. This is used to derive the [session key](Pia-Protocol#session-key).

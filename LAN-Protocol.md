@@ -260,8 +260,8 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 8 | Network id |
-| 0x8 | 0x200 | Application data |
-| 0x208 | 4 | Application data size |
+| 0x8 | 0x200 | [Property data](#property-data) and padding |
+| 0x208 | 4 | Property data size |
 | 0x20C | 8 | Matchmake key |
 | 0x214 | 2 | Current number of stations |
 | 0x216 | 2 | Maximum number of stations |
@@ -269,6 +269,28 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | 0x219 | 1 | Has player number limit |
 | 0x21A | 1 | Current number of players |
 | 0x21B | 0x12 | Host address ([StationAddress](Pia-Types#stationaddress)) |
+
+#### Property Data
+If the application data consumes less than 0x184 bytes, this is reflected in the property data size field in the [LanNetworkProperty](#lannetworkproperty) structure.
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 0x7C | [System property data](#system-property-data) |
+| 0x7C | Up to 0x184 | Application data |
+
+#### System Property Data
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 2 | System property data size (0x7C) |
+| 0x2 | 1 | [System communication version](#system-communication-version) |
+| 0x3 | 2 | Application communication version |
+| 0x5 | 16 | User password |
+| 0x15 | 1 | Has player number limit |
+| 0x16 | 1 | Current number of players |
+| 0x17 | 4 | Host player name size |
+| 0x1B | 1 | Host player name encoding (1=utf8, 2=utf16) |
+| 0x1C | 64 | Host player name and padding |
+| 0x5C | 32 | [Session key param](#session-key-param) |
 
 ### System Communication Version
 | Version | Pia Version |
@@ -281,6 +303,7 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | 6 | 5.10 |
 | 7 | 5.11 - 5.18 |
 | 8 | 5.19 - 5.44 |
+| 10 | 6.16 - 6.30 |
 
 ## (3) Get Host Request
 This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [Pia message](Pia-Protocol). The message payload contains the following data and is encrypted with the session key:

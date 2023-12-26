@@ -417,3 +417,5 @@ The session key param are used to derive the [challenge response key](#response)
 | --- | --- | --- |
 | 0x0 | 16 | [Challenge key](#crypto-challenge) in browse response |
 | 0x10 | 16 | [Challenge key received](#crypto-challenge) in browse request |
+
+When the host receives a valid browse request for the first time, it saves the session key param in the [LanSessionInfo](#lansessioninfo) or [LanNetworkProperty](#lannetworkproperty) structure.

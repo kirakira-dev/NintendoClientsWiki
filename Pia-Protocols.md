@@ -17,7 +17,7 @@ Also, the clone protocol used to be single protocol, but was split into several 
 |        | 0x30 | Turn Protocol |
 | 0x0400 | 0x34 | [NAT Traversal Protocol](NAT-Traversal-Protocol-(Pia)) |
 | 0x0410 |      | Gateway Protocol |
-| 0x4400 | 0x44 | LAN Protocol |
+| 0x4400 | 0x44 | [[LAN Protocol]] |
 | 0x0500 | 0x54 | Bandwidth Checker Protocol |
 | 0x0600 | 0x58 | [[RTT Protocol]] |
 | 0x1800 |      | Sync Protocol (old) |

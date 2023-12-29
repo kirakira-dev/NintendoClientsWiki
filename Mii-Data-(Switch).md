@@ -4,7 +4,7 @@ Most data is stored in little endian byte order.
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 16 | Create ID (UUIDv4) |
-| 0x10 | 22 | Nickname (UTF-16) |
+| 0x10 | 22 | Nickname (UTF-16-LE) |
 | 0x26 | 1 | Font region |
 | 0x27 | 1 | Favorite color |
 | 0x28 | 1 | Gender |

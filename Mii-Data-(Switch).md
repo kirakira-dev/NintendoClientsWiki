@@ -3,7 +3,7 @@ Most data is stored in little endian byte order.
 ## `nn::mii::detail::CharInfoRaw`
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 16 | Create ID |
+| 0x0 | 16 | Create ID (UUIDv4) |
 | 0x10 | 22 | Nickname |
 | 0x26 | 1 | Font region |
 | 0x27 | 1 | Favorite color |

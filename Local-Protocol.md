@@ -61,7 +61,7 @@ The following version numbers are advertised during the [connection request](Sta
 | 0x48 | 1 | Host migration state |
 
 ## Ack message
-*5.18 - 5.44:*
+*5.9 - 5.44:*
 
 | Offset | Size | Description |
 | --- | --- | --- |

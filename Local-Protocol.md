@@ -4,8 +4,8 @@
 | Message Type | Description |
 | --- | --- |
 | 0x11 | [Update session](#update-session-message) |
-| 0x12 | Destroy network |
-| 0x13 | Start host migration |
+| 0x12 | [Destroy network](#destroy-network-message) |
+| 0x13 | [Start host migration](#start-host-migration-message) |
 | 0x21 | [Update session ack](#ack-message) |
 
 The following version numbers are advertised during the [connection request](Station-Protocol):
@@ -59,6 +59,22 @@ The following version numbers are advertised during the [connection request](Sta
 | --- | --- | --- |
 | 0x0 | 8 x 9 | [Local nodes](#local-node) |
 | 0x48 | 1 | Host migration state |
+
+## Destroy network message
+*5.9:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 12 | [Local message header](#local-message-header) |
+| 0xC | 4 | Always 0 |
+
+## Start host migration message
+*5.9:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 12 | [Local message header](#local-message-header) |
+| 0xC | 4 | Always 0 |
 
 ## Ack message
 *5.9 - 5.44:*

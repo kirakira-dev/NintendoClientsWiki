@@ -351,6 +351,8 @@ This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulate
 ## (6) Session Message
 This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted with the session key. The goal of this message is to transmit a [LanSessionInfo](#lansessioninfo) structure. Depending on the size of the [LanSessionInfo](#lansessioninfo), this message may be split into multiple fragments. Each fragment contains up to 800 bytes of data.
 
+Whenever the session is updated, a session message is sent through UDP broadcast port 49152 - 49155. A session message is also sent to a specific station when the station requests an update with a [session request](#5-session-request).
+
 *Up to 5.44:*
 
 | Offset | Size | Description |

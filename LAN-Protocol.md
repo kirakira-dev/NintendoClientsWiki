@@ -12,8 +12,8 @@ Every packet starts with a single byte that indicates its type.
 | 1 | [Browse reply](#1-browse-reply) |
 | 3 | [Get host request](#3-get-host-request) |
 | 4 | [Get host reply](#4-get-host-reply) |
-| 5 | [Get session request](#5-get-session-request) |
-| 6 | [Get session reply](#6-get-session-reply) |
+| 5 | [Session request](#5-session-request) |
+| 6 | [Session message](#6-session-message) |
 | 7 | [Keep alive message](#7-keep-alive-message) |
 
 ## (0) Browse Request
@@ -337,7 +337,7 @@ This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted w
 | 0xC | 4 | Session id |
 | 0x10 | | [StationLocation](Pia-Types#stationlocation) for host |
 
-## (5) Get Session Request
+## (5) Session Request
 This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [Pia message](Pia-Protocol). The message payload contains the following data and is encrypted with the session key:
 
 *Up to 5.44:*
@@ -348,7 +348,7 @@ This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulate
 | 0x1 | 11 | Padding (always 0) |
 | 0xC | 4 | Session id |
 
-## (6) Get Session Reply
+## (6) Session Message
 This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted with the session key. The goal of this message is to transmit a [LanSessionInfo](#lansessioninfo) structure. Depending on the size of the [LanSessionInfo](#lansessioninfo), this message may be split into multiple fragments. Each fragment contains up to 800 bytes of data.
 
 *Up to 5.44:*

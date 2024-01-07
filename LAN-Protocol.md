@@ -10,8 +10,8 @@ Every packet starts with a single byte that indicates its type.
 | --- | --- |
 | 0 | [Browse request](#0-browse-request) |
 | 1 | [Browse reply](#1-browse-reply) |
-| 3 | [Get host request](#3-get-host-request) |
-| 4 | [Get host reply](#4-get-host-reply) |
+| 3 | [Host request](#3-host-request) |
+| 4 | [Host message](#4-host-message) |
 | 5 | [Session request](#5-session-request) |
 | 6 | [Session message](#6-session-message) |
 | 7 | [Keep alive message](#7-keep-alive-message) |
@@ -305,7 +305,7 @@ If the application data consumes less than 0x184 bytes, this is reflected in the
 | 8 | 5.19 - 5.44 |
 | 10 | 6.16 - 6.30 |
 
-## (3) Get Host Request
+## (3) Host Request
 This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [Pia message](Pia-Protocol). The message payload contains the following data and is encrypted with the session key:
 
 *Up to 5.44:*
@@ -316,7 +316,7 @@ This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulate
 | 0x1 | 11 | Padding (always 0) |
 | 0xC | 4 | Session id |
 
-## (4) Get Host Reply
+## (4) Host Message
 This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted with the session key.
 
 *Up to 5.9:*

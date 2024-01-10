@@ -37,7 +37,7 @@ On the Switch, a new field was added that lets a client request a system-record.
 | Uint32 | Record mask (system) |
 
 ## System information
-In the tables below, the values of P and Q are configured by the game.
+In the tables below, the values of P (maximum number of players) and Q (number of special players) are configured by the game.
 
 | Game | P | Q |
 | --- | --- | --- |
@@ -51,14 +51,14 @@ In the tables below, the values of P and Q are configured by the game.
 | --- | --- |
 | Uint32 | Connected AID bitmap |
 | Uint32 | Disconnected AID bitmap |
-| Uint32 | Unknown |
+| Uint32 | Special AID bitmap |
 | Uint32 | Received AID bitmap |
 | Uint64 | Session time |
 | Uint32 | Principal id |
 | Uint32 | Unknown |
-| Uint8 | Unknown |
-| [UniqueId](#uniqueid) (P*2-1) | Unknown |
-| [UniqueId](#uniqueid) (Q) | Unknown |
+| Uint8 | Is player id table initialized |
+| [UniqueId](#uniqueid) (P*2-1) | Player unique ids |
+| [UniqueId](#uniqueid) (Q) | Special unique ids |
 | Uint8 | Unknown |
 | Uint8 (P) | Player id table |
 
@@ -68,13 +68,13 @@ In the tables below, the values of P and Q are configured by the game.
 | --- | --- |
 | Uint64 | Connected AID bitmap |
 | Uint64 | Disconnected AID bitmap |
-| Uint64 | Unknown |
+| Uint64 | Special AID bitmap |
 | Uint64 | Received AID bitmap |
 | Uint64 | Session time |
 | Uint64 | Principal id |
-| Uint8 | Unknown |
-| [UniqueId](#uniqueid) (P*2-1) | Unknown |
-| [UniqueId](#uniqueid) (Q) | Unknown |
+| Uint8 | Is player id table initialized |
+| [UniqueId](#uniqueid) (P*2-1) | Player unique ids |
+| [UniqueId](#uniqueid) (Q) | Special unique ids |
 | Uint8 | Unknown |
 | Uint8 (P) | Player id table |
 
@@ -92,5 +92,6 @@ In the tables below, the values of P and Q are configured by the game.
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 8 | Station id |
-| 0x8 | 2 | Unknown |
+| 0x8 | 1 | Is local player |
+| 0x9 | 1 | Is disconnected |
 | 0xA | 6 | Padding (always 0) |

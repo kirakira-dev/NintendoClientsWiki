@@ -83,7 +83,7 @@ In the tables below, the values of P (maximum number of players) and Q (number o
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 4 | Station id |
+| 0x0 | 4 | [Constant id] |
 | 0x4 | 2 | Unknown |
 | 0x6 | 2 | Padding (always 0) |
 
@@ -91,7 +91,9 @@ In the tables below, the values of P (maximum number of players) and Q (number o
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | Station id |
+| 0x0 | 8 | [Constant id] |
 | 0x8 | 1 | Is local player |
 | 0x9 | 1 | Is disconnected |
 | 0xA | 6 | Padding (always 0) |
+
+[Constant id]: Pia-Types#constant-id

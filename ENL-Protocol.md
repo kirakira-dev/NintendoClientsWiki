@@ -53,7 +53,7 @@ In the tables below, the values of P (maximum number of players) and Q (maximum 
 | Uint32 | Disconnected AID bitmap |
 | Uint32 | CPU AID bitmap |
 | Uint32 | Received AID bitmap |
-| Uint64 | Session time |
+| Uint64 | [Session time](Sync-Clock-Protocol) at join |
 | Uint32 | Principal id |
 | Uint32 | Unknown |
 | Uint8 | Is player id table initialized |
@@ -70,7 +70,7 @@ In the tables below, the values of P (maximum number of players) and Q (maximum 
 | Uint64 | Disconnected AID bitmap |
 | Uint64 | CPU AID bitmap |
 | Uint64 | Received AID bitmap |
-| Uint64 | Session time |
+| Uint64 | [Session time](Sync-Clock-Protocol) at join |
 | Uint64 | Principal id |
 | Uint8 | Is player id table initialized |
 | [UniqueId](#uniqueid) (P*2-1) | Player unique ids |

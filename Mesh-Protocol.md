@@ -181,7 +181,7 @@ Because this message is sent through the reliable mesh protocol it does not need
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 0x3E | [StationLocation](#stationlocation). If it takes up less than 0x3E bytes the remaining bytes are filled with 0's. |
+| 0x0 | 0x3E | [StationLocation](Pia-Types#stationlocation). If it takes up less than 0x3E bytes the remaining bytes are filled with 0's. |
 | 0x3E | 1 | Station index |
 | 0x3F | 1 | Padding |
 

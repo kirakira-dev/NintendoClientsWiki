@@ -242,7 +242,7 @@ A reliable sliding window is used by various protocols to ensure that all messag
 | 1 | Has payload |
 | 2 | First fragment |
 | 4 | Last fragment |
-| 8 | Is multicast |
+| 8 | Is initialize |
 | 16 | Is compressed |
 | 32 | Reset |
 | 64 | Reset ack |

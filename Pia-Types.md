@@ -218,9 +218,9 @@ A reliable sliding window is used by various protocols to ensure that all messag
 | 0x1 | 1 | Stream id |
 | 0x2 | 2 | Payload size |
 | 0x4 | 2 | Sequence id |
-| 0x6 | 2 | Unknown |
-| 0x8 | 1 | Unknown (N) |
-| 0x9 | 8*N | Unknown |
+| 0x6 | 2 | Lowest sequence id pending ack |
+| 0x8 | 1 | Number of multicast constant ids (N) |
+| 0x9 | 8*N | Multicast [constant ids](#constant-id) |
 | | | Payload |
 
 *5.31:*
@@ -240,11 +240,12 @@ A reliable sliding window is used by various protocols to ensure that all messag
 | Flag | Description |
 | --- | --- |
 | 1 | Has payload |
-| 2 | Last fragment |
-
-2. [Constant id](#constant-id)
-3. [Variable id](#variable-id)
-4. [Service variable id](#service-variable-id)
+| 2 | First fragment |
+| 4 | Last fragment |
+| 8 | Is multicast |
+| 16 | Is compressed |
+| 32 | Reset |
+| 64 | Reset ack |
 
 ## Constant ID
 The constant id uniquely identifies a station, and never changes, even across sessions. The constant id depends on the network type.

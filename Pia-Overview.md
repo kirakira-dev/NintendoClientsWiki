@@ -42,9 +42,9 @@ The following steps are performed to join a mesh:
 2. Your console [establishes a connection](#connection-establishment) to the host of the mesh.
 3. Your console sends a [join request](Mesh-Protocol) to the host.
 4. The host decides if it wants to accept the join request. For example, if the mesh already has the maximum number of participants it may reject the join request.
-5. The host sends a [join response](Mesh-Protocol) to your console to inform it about its decision. If the join request was accepted, the join response also contains the addresses of the other consoles in the mesh.
-6. If the join request was accepted, your console establishes a connection to the other consoles in the mesh.
-7. Finally, your console starts sending/receiving data packets to/from the other consoles.
+5. The host sends a [join response](Mesh-Protocol) to your console to inform it about its decision. If the join request was accepted, the join response also information about the other consoles in the mesh.
+6. If the join request was accepted, the host send an [update message](Mesh-Protocol) to all consoles in the mesh. Upon receiving the update message, the other consoles try to establish a connection with your console.
+7. Your console is now part of the mesh.
 
 ### Connection establishment
 After acquiring the [StationLocation](Pia-Types#stationlocation) of another console elsewhere (e.g. from [matchmaking](#matchmaking) or the [join response](#joining-a-mesh)), the following steps are performed to establish a connection with the console:

@@ -28,7 +28,7 @@ All peer-to-peer packets are sent through UDP. The packet format is described [h
 
 * [[Unreliable Protocol]]
 * [[Reliable Protocol]]
-* Broadcast Reliable Protocol
+* [[Broadcast Reliable Protocol]]
 * [[Stream Broadcast Reliable Protocol]]
 * Clone Protocol
 * Sync Protocol

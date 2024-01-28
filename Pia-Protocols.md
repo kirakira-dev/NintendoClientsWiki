@@ -1,4 +1,4 @@
-[Pia](Pia-Overview) > Protocols
+[Pia](Pia-Overview) > Services
 ---
 
 All games that use Pia version 5.6 or newer use the new protocol ids. Older games use the old protocol ids.

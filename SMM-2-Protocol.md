@@ -1,4 +1,6 @@
-SMM 2 uses [ENL](ENL-Protocol). After a client has joined the mesh, it sends the following packet to the master station through the [reliable protocol](Reliable-Protocol).
+SMM 2 uses [ENL](ENL-Protocol).
+
+### Player Info Packet
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -25,3 +27,12 @@ SMM 2 uses [ENL](ENL-Protocol). After a client has joined the mesh, it sends the
 | 0xB5 | 3 | Padding |
 | 0xB8 | 4 | Always 4 |
 | 0xBC | 4 | Unknown |
+
+### Thumbnail Packet
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 0x1BF9C | Thumbnail (JPEG) |
+| 0x1BF9C | 4 | Thumbnail size (always 0x1BF9C) |
+| 0x1BFA0 | 32 | HMAC-SHA256 of JPEG data |
+| 0x1BFC0 | 16 | RNG state for key generation |
+| 0x1BFD0 | 48 | Padding (always 0) |

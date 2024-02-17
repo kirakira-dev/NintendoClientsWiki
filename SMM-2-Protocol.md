@@ -1,10 +1,10 @@
 SMM 2 uses [ENL](ENL-Protocol).
 
-### Player Info Packet
+### Matching Packet
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 4 | Packet type (1) |
+| 0x0 | 4 | State |
 | 0x4 | 4 | Padding |
 | 0x8 | 8 | NSA ID |
 | 0x10 | 16 | UUID |

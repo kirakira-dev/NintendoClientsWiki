@@ -23,7 +23,7 @@ SMM 2 uses [ENL](ENL-Protocol).
 | 0xA8 | 4 | Unknown |
 | 0xAC | 4 | Unknown |
 | 0xB0 | 4 | Random value |
-| 0xB4 | 1 | Always 1 |
+| 0xB4 | 1 | 0 = Battle, 1 = Coop |
 | 0xB5 | 3 | Padding |
 | 0xB8 | 4 | Always 4 |
 | 0xBC | 4 | Unknown |

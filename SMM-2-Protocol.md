@@ -11,10 +11,10 @@ SMM 2 uses [ENL](ENL-Protocol).
 | 0x20 | 11 x 2 | Name |
 | 0x36 | 2 | Padding |
 | 0x38 | 88 | [Mii](Mii-Data-(Switch)) |
-| 0x90 | 2 | Unknown |
-| 0x92 | 2 | Unknown |
-| 0x94 | 2 | Unknown |
-| 0x96 | 2 | Unknown |
+| 0x90 | 2 | Top number |
+| 0x92 | 2 | Bottom number |
+| 0x94 | 2 | Headwear number |
+| 0x96 | 2 | Anim number |
 | 0x98 | 4 | Unknown |
 | 0x9C | 1 | Unknown |
 | 0x9D | 3 | Padding |

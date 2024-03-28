@@ -8,3 +8,4 @@ URL: https://capi.lp1.op2.nintendo.net
 | URL |
 | --- |
 | `/v1/users/<id>/membership` |
+| `/v1/users/<id>/memberships` |

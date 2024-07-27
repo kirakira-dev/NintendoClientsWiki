@@ -1,7 +1,7 @@
 [Switch Servers](Server-List#switch) > Title installation
 ---
 
-The sun servers have a dedicated page:
+The sun and atumn servers have a dedicated page:
 * [[Sun Server]]
 * [[Atumn Server]]
 

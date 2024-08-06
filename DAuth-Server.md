@@ -17,6 +17,8 @@ The dauth server takes form-encoded requests and responds with json-encoding. It
 * [Examples](#examples)
 
 ## Headers
+Up to 17.0.1:
+
 | Header | Description |
 | --- | --- |
 | Host | `dauth-lp1.ndas.srv.nintendo.net` |
@@ -27,6 +29,16 @@ The dauth server takes form-encoded requests and responds with json-encoding. It
 | Content-Type | `application/x-www-form-urlencoded` |
 
 The X-Nintendo-PowerState header is only present on system version 7.0.0 and later. In 7.0.0, there is a space between `X-Nintendo-PowerState` and the colon. This was fixed in 7.0.1.
+
+In 18.0.0 and later, the user agent is no longer present and the headers are reordered:
+
+| Header | Description |
+| --- | --- |
+| Host | `dauth-lp1.ndas.srv.nintendo.net` |
+| Accept | `*/*` |
+| Content-Type | `application/x-www-form-urlencoded` |
+| X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake) |
+| Content-Length | Content length |
 
 #### User Agents
 | System Version | User agent |
@@ -51,7 +63,7 @@ The X-Nintendo-PowerState header is only present on system version 7.0.0 and lat
 | 15.0.0 - 15.0.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 15.3.0.0)` |
 | 16.0.0 - 16.1.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 16.2.0.0)` |
 | 17.0.0 - 17.0.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 17.5.0.0)` |
-| 18.0.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 18.3.0.0)` |
+| 18.0.0 - 18.1.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 18.3.0.0)` |
 
 ## Methods
 In API version 3 and later, one must perform a cryptographic challenge to obtain a device token or edge token:
@@ -95,7 +107,7 @@ The following methods return a different kind of device token:
 | 6.2.0 | v4 |
 | 7.0.0 - 8.1.1 | v5 |
 | 9.0.0 - 12.1.0 | v6 |
-| 13.0.0 - 18.0.0 | v7 |
+| 13.0.0 - 18.1.0 | v7 |
 
 #### API Changes
 | API | Changelog |
@@ -206,7 +218,7 @@ A `vendor_id` parameter was added:
 | 14.0.0 - 14.1.2 | 14 |
 | 15.0.0 - 15.0.1 | 15 |
 | 16.0.0 - 16.1.0 | 16 |
-| 17.0.0 - 18.0.0 | 17 |
+| 17.0.0 - 18.1.0 | 17 |
 
 ## Known Client IDs
 | Client ID | Description | Edge |

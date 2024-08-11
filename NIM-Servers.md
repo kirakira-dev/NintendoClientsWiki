@@ -31,6 +31,8 @@ The sun and atumn servers have a dedicated page:
 | `/v1/my/devices/hac/link` |
 | `/v1/my/devices/hac/unlink_all` |
 | `/v1/my/membership/free_trial_availability` |
+| `/v1/rom_cards` |
+| `/v1/rom_cards/register` |
 
 ### pearljam
 | URL |

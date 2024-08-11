@@ -96,7 +96,7 @@
 * https://pushmo.hac.lp1.eshop.nintendo.net
 * https://sun.hac.lp1.d4c.nintendo.net ([system update meta](Sun-Server))
 * https://superfly.hac.lp1.d4c.nintendo.net
-* https://veer.hac.%.d4c.nintendo.net
+* https://veer.hac.lp1.d4c.nintendo.net
 
 #### Push Notifications ([docs](NPNS-Servers))
 * https://consumer.lp1.npns.srv.nintendo.net

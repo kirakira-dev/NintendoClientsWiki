@@ -86,7 +86,6 @@
 
 #### eShop Applet ([docs](eShop-Applet-(Switch)))
 * https://bugyo.hac.lp1.eshop.nintendo.net
-* https://tagaya.hac.lp1.eshop.nintendo.net
 
 #### Title Installation ([docs](NIM-Servers))
 * https://aqua.hac.lp1.d4c.nintendo.net ([system update requirements](Aqua-Server))
@@ -97,6 +96,7 @@
 * https://pushmo.hac.lp1.eshop.nintendo.net
 * https://sun.hac.lp1.d4c.nintendo.net ([system update meta](Sun-Server))
 * https://superfly.hac.lp1.d4c.nintendo.net
+* https://tagaya.hac.lp1.eshop.nintendo.net ([title version list](Tagaya-Server-(Switch)))
 * https://veer.hac.lp1.d4c.nintendo.net
 
 #### Push Notifications ([docs](NPNS-Servers))

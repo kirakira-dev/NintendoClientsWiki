@@ -12,7 +12,10 @@ The tagaya server provides the latest version number for each title. The tagaya 
 | Host | `tagaya.hac.lp1.eshop.nintendo.net` |
 | User-Agent | [User agent](#user-agents) |
 | Accept | `application/json` |
+| If-None-Match | Last known ETag (optional) |
 | X-Nintendo-DenebEdgeToken | [Edge token](DAuth-Server) |
+
+The If-None-Match header is only present if the Switch has already requested a version list after the last reboot.
 
 ### User Agents
 The user agent looks as follows: `NintendoSDK Firmware/<firmware version>-<revision> (platform:NX; did:<device id>; eid:lp1)`. The firmware version and revision number are obtained from the [system version title](https://switchbrew.org/wiki/System_Version_Title).

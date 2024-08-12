@@ -1,14 +1,10 @@
 [Switch Servers](Server-List#switch) > Title installation
 ---
 
-The sun and atumn servers have a dedicated page:
-* [[Sun Server]]
+The following servers have a dedicated page:
+* [[Aqua Server]]
 * [[Atumn Server]]
-
-### aqua
-| URL |
-| --- |
-| `/required_system_update_meta` |
+* [[Sun Server]]
 
 ### atum
 | URL |

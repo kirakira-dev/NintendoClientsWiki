@@ -1,4 +1,4 @@
-## [[Server List]] > Tagaya Server
+## [Wii U](Server-List#wii-u) > Tagaya Server
 
 This server is at https://tagaya.wup.shop.nintendo.net.
 

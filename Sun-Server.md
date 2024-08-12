@@ -3,7 +3,7 @@
 
 The sun server only has one function: providing the latest system update version. If the Switch detects that a system update is available, it downloads the system update from the [atumn server](Atumn-Server).
 
-The sun server takes JSON-encoded requests and respond with JSON-encoding. The sun server only accepts requests with a valid device certificate.
+The sun server only accepts requests with a valid device certificate.
 
 * [Header](#headers)
 * [Methods](#methods)

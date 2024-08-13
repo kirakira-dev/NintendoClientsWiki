@@ -1,4 +1,4 @@
-## [[Server List]] > IDBE Server
+## [Switch](Server-List#switch) > IDBE Server
 
 This server provides icon data for 3DS, Wii U and Switch titles.
 

@@ -11,7 +11,6 @@ The following files are provided by the server:
 
 * `/c1/a/d/<title id>`: control [NCA] for title (icon and name)
 * `/c1/a/d/<title id>/<title version>`: control [NCA] for title (icon and name)
-* `/c1/r/t/<id>`
 * `/c1/t/a/<title id>/<title version>`: [NCA] containing [CNMT]
 * `/c1/<title id>/c/a/<content id>`: [NCA] containing [CNMT]
 * `/c1/<title id>/c/c/<content id>`: [NCA] containing game content
@@ -19,6 +18,8 @@ The following files are provided by the server:
 * `/c2/<title id>/c/a/<content id>`: [NCA] containing [CNMT]
 * `/c2/<title id>/c/c/<content id>`: [NCA] containing game content
 * `/c2/<title id>/c/c/<content id>/d`: JSON object containing content hashes
+
+The difference between `c1` and `c2` is that `c1` requires an edge token from [dauth](DAuth-Server), while `c2` requires an edge token from [dragons](Dragons-Server).
 
 ## Request Headers
 | Header | Description |

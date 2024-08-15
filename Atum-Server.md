@@ -9,8 +9,8 @@ The atum server provides title content. It always requires an [edge token](DAuth
 ## Overview
 The following files are provided by the server:
 
-* `/c1/a/d/<id>`
-* `/c1/a/d/<id>/<id>`
+* `/c1/a/d/<title id>`: control [NCA] for title (icon and name)
+* `/c1/a/d/<title id>/<title version>`: control [NCA] for title (icon and name)
 * `/c1/r/t/<id>`
 * `/c1/t/a/<title id>/<title version>`: [NCA] containing [CNMT]
 * `/c1/<title id>/c/a/<content id>`: [NCA] containing [CNMT]

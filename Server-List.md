@@ -87,17 +87,23 @@
 #### eShop Applet ([docs](eShop-Applet-(Switch)))
 * https://bugyo.hac.lp1.eshop.nintendo.net
 
-#### Title Installation ([docs](NIM-Servers))
-* https://aqua.hac.lp1.d4c.nintendo.net ([system update requirements](Aqua-Server))
-* https://atum.hac.lp1.d4c.nintendo.net ([game content](Atum-Server))
+#### System Updates
+* https://sun.hac.lp1.d4c.nintendo.net ([system update meta](Sun-Server))
 * https://atumn.hac.lp1.d4c.nintendo.net ([system update content](Atumn-Server))
+* https://aqua.hac.lp1.d4c.nintendo.net ([system update requirements](Aqua-Server))
+
+#### Game Content (Metadata)
+* https://tagaya.hac.lp1.eshop.nintendo.net ([title version list](Tagaya-Server-(Switch)))
 * https://beach.hac.lp1.eshop.nintendo.net
 * https://pearljam.hac.lp1.eshop.nintendo.net
 * https://pushmo.hac.lp1.eshop.nintendo.net
-* https://sun.hac.lp1.d4c.nintendo.net ([system update meta](Sun-Server))
 * https://superfly.hac.lp1.d4c.nintendo.net
-* https://tagaya.hac.lp1.eshop.nintendo.net ([title version list](Tagaya-Server-(Switch)))
 * https://veer.hac.lp1.d4c.nintendo.net
+
+#### Game Content (Data) ([docs](Atum-Server))
+* https://atum.hac.lp1.d4c.nintendo.net (Akamai)
+* https://atum-eda.hac.lp1.d4c.nintendo.net (LLNW)
+* https://atum-4ff.hac.lp1.d4c.nintendo.net (Lumen)
 
 #### Push Notifications ([docs](NPNS-Servers))
 Old:

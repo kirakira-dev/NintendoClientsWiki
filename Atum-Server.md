@@ -16,8 +16,9 @@ The following files are provided by the server:
 * `/c1/<title id>/c/a/<content id>`: [NCA] containing [CNMT]
 * `/c1/<title id>/c/c/<content id>`: [NCA] containing game content
 * `/c1/<title id>/c/c/<content id>/d`: JSON object containing content hashes
-* `/c2/<id>/c/a/<id>`
-* `/c2/<id>/c/c/<id>`
+* `/c2/<title id>/c/a/<content id>`: [NCA] containing [CNMT]
+* `/c2/<title id>/c/c/<content id>`: [NCA] containing game content
+* `/c2/<title id>/c/c/<content id>/d`: JSON object containing content hashes
 
 ## Request Headers
 | Header | Description |

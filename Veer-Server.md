@@ -3,7 +3,7 @@
 
 Title content is provided by three different vendors: akamai, llnw and lumen. The veer server provides a policy that assigns a weight to each vendor. The higher the weight for a vendor, the higher the probability that the Switch downloads the content from that vendor.
 
-The veer server only accepts requests with a valid device certificate.
+The veer server was introduced in system version 14.0.0 and only accepts requests with a valid device certificate.
 
 * [Header](#headers)
 * [Methods](#methods)
@@ -23,4 +23,10 @@ Here is an example: `NintendoSDK Firmware/15.0.0-4.0 (platform:NX; did:6265ca407
 ## Methods
 | Method | Path |
 | --- | --- |
+| GET | `/v2/policy.json` |
 | GET | `/v3/policy.json` |
+
+| System version | API version |
+| --- | --- |
+| 14.0.0 - 14.1.2 | v2 |
+| 15.0.1 - 18.1.0 | v3 |

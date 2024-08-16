@@ -1,8 +1,11 @@
 ## Switch
 | Environment | Description |
 | --- | --- |
-| lp1 | Live production |
-| dd1, dp1, jd1, sd1, sp1, td1, xd1, yd1, zd1 | Development |
+| lp1 | Production |
+| sd1, sp1 | Lotcheck |
+| dd1, dp1 | Game development |
+| td1 | System development |
+| jd1, xd1, yd1, zd1 | Other |
 
 #### Connection Test ([docs](Connection-Test))
 * http://ctest.cdn.nintendo.net
@@ -22,7 +25,7 @@
 * https://aapi-lp1.ndas.srv.nintendo.net (internal)
 * https://aadmin-lp1.ndas.mng.nintendo.net (internal)
 
-#### Switch Accounts ([docs](BAAS-Server))
+#### Switch Users ([docs](BAAS-Server))
 * https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com (lp1)
 * https://e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com (dd1)
 * https://d9c8ea0e17f68bdeab8674c59f6fabda-sb.baas.nintendo.com (dp1)

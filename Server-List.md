@@ -101,7 +101,7 @@
 * https://pearljam.hac.lp1.eshop.nintendo.net
 * https://pushmo.hac.lp1.eshop.nintendo.net
 * https://superfly.hac.lp1.d4c.nintendo.net
-* https://veer.hac.lp1.d4c.nintendo.net
+* https://veer.hac.lp1.d4c.nintendo.net ([vendor weights](Veer-Server))
 
 #### Game Content (Data) ([docs](Atum-Server))
 * https://atum.hac.lp1.d4c.nintendo.net (Akamai)

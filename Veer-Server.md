@@ -23,6 +23,7 @@ Here is an example: `NintendoSDK Firmware/15.0.0-4.0 (platform:NX; did:6265ca407
 ## Methods
 | Method | Path |
 | --- | --- |
+| GET | `/v1/policy.json` |
 | GET | `/v2/policy.json` |
 | GET | `/v3/policy.json` |
 
@@ -30,3 +31,39 @@ Here is an example: `NintendoSDK Firmware/15.0.0-4.0 (platform:NX; did:6265ca407
 | --- | --- |
 | 14.0.0 - 14.1.2 | v2 |
 | 15.0.0 - 18.1.0 | v3 |
+
+Note that `v1` was never used by the Switch.
+
+Response for `v1`:
+
+```json
+{
+  "weights": [{"vendor": "akamai", "weight":100}],
+  "uuid": "3c37a3ea-4f26-42b3-bddf-1988f8f322cb"
+}
+```
+
+Response for `v2`:
+
+```json
+{
+  "weights": [
+    {"vendor": "akamai", "weight":100},
+    {"vendor": "llnw", "weight":0}
+  ],
+  "uuid":"9b2d588a-7f85-46e8-8347-2b4f32288b41"
+}
+```
+
+Response for `v3`:
+
+```json
+{
+  "weights": [
+    {"vendor": "akamai", "weight": 81},
+    {"vendor": "llnw", "weight": 19}
+  ],
+  "uuid": "2cd1b8b6-c1e7-4238-96c3-0e18ec9c2945",
+  "ttl": 86400
+}
+```

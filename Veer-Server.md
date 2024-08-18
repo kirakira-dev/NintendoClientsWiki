@@ -29,4 +29,4 @@ Here is an example: `NintendoSDK Firmware/15.0.0-4.0 (platform:NX; did:6265ca407
 | System version | API version |
 | --- | --- |
 | 14.0.0 - 14.1.2 | v2 |
-| 15.0.1 - 18.1.0 | v3 |
+| 15.0.0 - 18.1.0 | v3 |

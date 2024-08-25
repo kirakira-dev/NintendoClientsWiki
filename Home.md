@@ -23,9 +23,3 @@ Welcome to the NintendoClients wiki!
 * [[Switch Error Codes]]
 * [[Switch Tokens]]
 * [Title Database](https://kinnay.github.io)
-* [[DKC:TF Level IDs]]
-* [[Mario Kart 8 Track IDs]]
-* [[Mario Kart 8 Protocol]]
-* [[Data Store Codes]]
-* [[DDL Parse Trees]]
-* [Playground](https://nintendo-playground.com)

@@ -32,6 +32,10 @@ Here is an example: `NintendoSDK Firmware/15.0.0-4.0 (platform:NX; did:6265ca407
 | 14.0.0 - 14.1.2 | v2 |
 | 15.0.0 - 18.1.0 | v3 |
 
+| Param | Description |
+| --- | --- |
+| context | `selection`, `reselection_by_system_due_to_error`, `reselection_by_system_due_to_timeout` or `reselection_by_user` |
+
 Note that `v1` was never used by the Switch.
 
 Response for `v1`:

@@ -76,6 +76,7 @@ The following methods require a user access token:
 
 | Module | Method | URL |
 | --- | --- | --- |
+| Account | POST | `/1.0.0/devices/me/delete` |
 | Account | POST | `/1.0.0/image_upload` |
 | Account | PUT | `/1.0.0/push_channels/<id>/<id>` |
 | Friends | GET | `/1.0.0/users` |

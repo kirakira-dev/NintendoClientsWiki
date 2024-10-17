@@ -17,6 +17,8 @@ The aauth server takes form-encoded requests and responds with json-encoding. It
 * [Examples](#examples)
 
 ## Headers
+Up to 17.0.1:
+
 | Header | Description |
 | --- | --- |
 | Host | `aauth-lp1.ndas.srv.nintendo.net` |
@@ -25,6 +27,16 @@ The aauth server takes form-encoded requests and responds with json-encoding. It
 | X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake). This header is only sent in the [application token request](#application-token-request). |
 | Content-Length | Content length |
 | Content-Type | `application/x-www-form-urlencoded` |
+
+In 18.0.0 and later, the user agent is no longer present and the headers are reordered:
+
+| Header | Description |
+| --- | --- |
+| Host | `aauth-lp1.ndas.srv.nintendo.net` |
+| Accept | `*/*` |
+| Content-Type | `application/x-www-form-urlencoded` |
+| X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake). This header is only sent in the [application token request](#application-token-request). |
+| Content-Length | Content length |
 
 #### User Agents
 | System Version | User agent |
@@ -39,7 +51,6 @@ The aauth server takes form-encoded requests and responds with json-encoding. It
 | 15.0.0 - 15.0.1 | `libcurl (nnHttp; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 15.3.0.0; Add-on 15.3.0.0)` |
 | 16.0.0 - 16.1.0 | `libcurl (nnHttp; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 16.2.0.0; Add-on 16.2.0.0)` |
 | 17.0.0 - 17.0.1 | `libcurl (nnHttp; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 17.5.0.0; Add-on 17.5.0.0)` |
-| 18.0.0 | `libcurl (nnHttp; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 18.3.0.0; Add-on 18.3.0.0)` |
 
 ## Methods
 The following method returns a timestamp and your ip address:
@@ -54,6 +65,7 @@ In API version 3 and later, one must solve a cryptographic challenge to prove th
 | --- | --- |
 | POST | [`/v3/challenge`](#challenge-request) |
 | POST | [`/v4/challenge`](#challenge-request) |
+| POST | [`/v5/challenge`](#challenge-request) |
 
 The following methods return an application token as JWT:
 
@@ -63,6 +75,7 @@ The following methods return an application token as JWT:
 | POST | [`/v2-44cd4221f90742b5f37a4948b37dacf024d0bb14dde86db0af20ec300a36a0fe/application_auth_token`](#application-token-request) |
 | POST | [`/v3/application_auth_token`](#application-token-request) |
 | POST | [`/v4/application_auth_token`](#application-token-request) |
+| POST | [`/v5/application_auth_token`](#application-token-request) |
 
 #### System Versions
 | System | API |
@@ -70,7 +83,8 @@ The following methods return an application token as JWT:
 | 1.0.0 - 4.1.0 | v1 |
 | 5.0.0 - 8.1.1 | v2 |
 | 9.0.0 - 14.1.2 | v3 |
-| 15.0.0 - 18.0.0 | v4 |
+| 15.0.0 - 18.1.0 | v4 |
+| 19.0.0 | v5 |
 
 #### API Changes
 | API | Changelog |
@@ -79,6 +93,7 @@ The following methods return an application token as JWT:
 | v2 | The API path is obfuscated with a random hex string. The `environment` parameter was removed. The online play policy was added. For digital titles, the certificate is encrypted with a random key. The `NO_CERT` media type was added. |
 | v3 | The API path is no longer obfuscated. The challenge was added for gamecards. |
 | v4 | The `cert_key` parameter was removed for digital titles. A token from dragons is now required. |
+| v5 | The `media_type` parameter was renamed to `auth_type` and the gamecard challenge was redesigned. |
 
 ## Time Request
 This method is unrelated to aauth. It returns a `text/plain` document that contains two lines:
@@ -87,20 +102,30 @@ This method is unrelated to aauth. It returns a `text/plain` document that conta
 
 It also returns this information in the `X-NINTENDO-UNIXTIME` and `X-NINTENDO-GLOBAL-IP` headers.
 
+This method is no longer used since system version 18.0.0. It is replaced by a [ctest server](https://github.com/kinnay/NintendoClients/wiki/Connection-Test).
+
 ## Challenge Request
 This request is only required if the media type is `GAMECARD`.
 
 | Param | Description |
 | --- | --- |
-| &device_auth_token | Device token from [dauth server](DAuth-Server) |
+| device_auth_token | Device token from [dauth server](DAuth-Server) |
 
-Note that the device_auth_token parameter is preceded by an ampersand, even though it is the first and only parameter in the request.
+Note: up to system version 17.0.1, the device_auth_token was preceded by an ampersand, even though it is the first and only parameter in the request.
 
-Response on success:
+Response on success, up to version 4:
 
 | Field | Description |
 | --- | --- |
 | value | Base64-encoded (16 bytes) |
+| seed | Base64-encoded (15 bytes) |
+
+Version 5:
+
+| Field | Description |
+| --- | --- |
+| challenge | Base64-encoded (32 bytes) |
+| challenge_src | Base64-encoded (9 bytes) |
 | seed | Base64-encoded (15 bytes) |
 
 The seed value never changes. It is even consistent across environments.
@@ -218,6 +243,20 @@ For digitial titles, the Switch no longer sends the application certificate to t
 | device_auth_token | Device token from [dauth server](DAuth-Server) |
 | media_type | `DIGITAL` |
 | cert | Contents authorization token from [dragons server](Dragons-Servers) |
+
+### Version 5
+The media_type parameter was renamed to auth_type. The challenge and challenge_src parameters were added for gamecard authentication.
+
+| Param | Description |
+| --- | --- |
+| application_id | Title id (`%016x`) |
+| application_version | Title version (`%08x`) |
+| device_auth_token | Device token from [dauth server](DAuth-Server) |
+| media_type | `GAMECARD` |
+| gvt | Base64-encoded challenge reply, based on the seed and value from the [challenge](#challenge-request) (88 bytes) |
+| cert | Base64-encoded gamecard certificate (512 bytes) |
+| challenge | Challenge |
+| challenge_src | Challenge src |
 
 ## Errors
 On error, the server sends the following response:

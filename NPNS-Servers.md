@@ -1,5 +1,7 @@
-[[Server List]] > Push Notifications
+[Switch](#switch) > Push Notifications
 ---
+
+NPNS has been replaced by [Penne](Penne-Servers).
 
 ### broker
 | URL |

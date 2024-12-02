@@ -220,7 +220,7 @@ A `vendor_id` parameter was added:
 | 15.0.0 - 15.0.1 | 15 |
 | 16.0.0 - 16.1.0 | 16 |
 | 17.0.0 - 18.1.0 | 17 |
-| 19.0.0 | 19 |
+| 19.0.0 - 19.0.1 | 19 |
 
 ## Known Client IDs
 | Client ID | Description | Edge |

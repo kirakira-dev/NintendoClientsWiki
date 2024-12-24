@@ -130,10 +130,23 @@ Response:
 
 | Field | Description |
 | --- | --- |
-| challenge | Base64-encoded challenge (32 bytes) |
+| challenge | Base64-encoded challenge (35 bytes) |
 | data | Base64-encoded AES key required for MAC calculation (16 bytes) |
 
 The data value never changes, but it depends on the given key generation. It is even consistent across environments. The challenge value is valid for one minute.
+
+The challenge field used to contain 32 unknown bytes. However, at the end of 2024, the challenge was updated and contains the following 35 bytes instead:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Always 2 |
+| 0x1 | 4 | Timestamp |
+| 0x5 | 1 | Always 0 or 2 |
+| 0x6 | 29 | Unknown |
+
+Since the challenge is treated as an opaque piece of data, no changes were needed on the client side.
+
+At the same time, the server stopped adding base64 padding to the challenge and data fields.
 
 ## Device Token Request
 This method returns a device token as JWT.

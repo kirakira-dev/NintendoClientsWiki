@@ -29,6 +29,7 @@ Services are never modified in a backward incompatible way, but new methods and 
 * `nn.npln.friends.v1.Friends`
 * `nn.npln.friends.v1.PresenceService`
 * `nn.npln.gamesync.v1.Gamesync`
+* `nn.npln.globalcounter.v1.GlobalCounterService`
 * `nn.npln.hydro.v1.Datastore`
 * `nn.npln.leaderboard.v1.LeaderboardService`
 * `nn.npln.maintenance.v1.MaintenanceScheduleService`

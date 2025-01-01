@@ -1,3 +1,6 @@
+[[Server List]] > NAT Check
+---
+
 This server is used to detect NAT properties of the router in order to perform NAT traversal.
 
 This server is at:<br>

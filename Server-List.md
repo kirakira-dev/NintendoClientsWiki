@@ -8,7 +8,7 @@ Table of contents:
 * [Internal](#internal)
 
 # Switch 2
-#### Connection Test ([docs])
+#### Connection Test ([docs](Connection-Test))
 * `https://api.p01.lp1.ctest.srv.nintendo.net`
 * `https://ctest-dl.p01.lp1.ctest.srv.nintendo.net`
 * `https://ctest-ul.p01.lp1.ctest.srv.nintendo.net`

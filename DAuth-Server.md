@@ -312,7 +312,7 @@ Most errors use HTTP status code 400. The only known exception is error 0009, wh
 | 0017 | The device is banned. |
 
 ## Examples
-Note that the client must always use a valid device certificate as the client certificate. If the client does not provide a certificate, the nginx server rejects the request:
+Note that the client must always use a valid device certificate as the client certificate. If the client does not provide a certificate, the nginx server used to reject the request:
 
 ```
 HTTP/1.1 400 Bad Request
@@ -331,6 +331,8 @@ Connection: close
 </body>
 </html>
 ```
+
+Nowadays, the server terminates the connection during the TLS handshake instead.
 
 Before anything else, one must obtain a challenge:
 

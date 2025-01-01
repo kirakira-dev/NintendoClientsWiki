@@ -7,6 +7,11 @@ Nintendo provides the following connection test servers for the Nintendo Switch:
 * http://ctest-ul-lp1.cdn.nintendo.net
 * https://api.hac.lp1.ctest.srv.nintendo.net
 
+On the Switch 2, the following servers are used instead:
+* https://ctest-dl.p01.lp1.ctest.srv.nintendo.net
+* https://ctest-ul.p01.lp1.ctest.srv.nintendo.net
+* https://api.p01.lp1.ctest.srv.nintendo.net
+
 The first server is used to check if the internet connection is working when you connect to a wifi network. The next two are used to measure your download and upload speed.
 
 The last server was introduced in system version 18.0.0 and is a replacement for `/v1/time` of the [[AAuth server]].

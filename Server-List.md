@@ -50,7 +50,7 @@ Table of contents:
 * `https://receive.p01.lp1.dg.srv.nintendo.net`
 * `https://receive.p01.lp1.er.srv.nintendo.net`
 
-#### NAT Check
+#### NAT Check ([docs](NAT-Check-Server))
 * `nncs1.p01.lp1.n.n.srv.nintendo.net`
 * `nncs2.p01.lp1.n.n.srv.nintendo.net`
 

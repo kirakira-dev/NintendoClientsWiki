@@ -341,7 +341,7 @@ New ([docs](Penne-Servers)):
 
 # Internal
 * `nexred.nintendo.co.jp` (Redmine issue tracker for [NEX](NEX-Overview-(Game-Servers))
-* `devbts30.nintendo.co.jp
+* `devbts30.nintendo.co.jp`
 * `spdlybra.nintendo.co.jp`
 * `devhipchat.boy.nintendo.co.jp`
 * `ndo-gitlab.boy.nintendo.co.jp`

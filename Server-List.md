@@ -340,7 +340,8 @@ New ([docs](Penne-Servers)):
 * https://door-d4c.mng.nintendo.net (ROM management)
 
 # Internal
-| Server | Description |
-| --- | --- |
-| - nexred.nintendo.co.jp | Redmine issue tracker for [NEX](NEX-Overview-(Game-Servers)) |
-| - devbts30.nintendo.co.jp<br>- devhipchat.boy.nintendo.co.jp | Internal dev servers |
+* `nexred.nintendo.co.jp` (Redmine issue tracker for [NEX](NEX-Overview-(Game-Servers))
+* `devbts30.nintendo.co.jp
+* `spdlybra.nintendo.co.jp`
+* `devhipchat.boy.nintendo.co.jp`
+* `ndo-gitlab.boy.nintendo.co.jp`

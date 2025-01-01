@@ -1,7 +1,7 @@
 [Switch](Server-List#switch) > Connection Test
 ---
 
-Nintendo provides three connection test servers for the Nintendo Switch:
+Nintendo provides the following connection test servers for the Nintendo Switch:
 * http://ctest.cdn.nintendo.net
 * http://ctest-dl-lp1.cdn.nintendo.net
 * http://ctest-ul-lp1.cdn.nintendo.net

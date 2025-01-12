@@ -225,7 +225,7 @@ New ([docs](Penne-Servers)):
 * `https://api.sect.srv.nintendo.net`
 
 # Wii U
-#### Account Server ([docs](Account Server))
+#### Account Server ([docs](Account-Server))
 * `https://account.nintendo.net`
 * `https://game-dev.account.nintendo.net`
 * `https://system-dev.account.nintendo.net`

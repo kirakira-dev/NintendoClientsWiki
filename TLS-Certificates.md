@@ -63,6 +63,7 @@ Many client and server certificates that are used by Nintendo are issued by an i
 | `03:D4` | `lp1.nso.nintendo.net` |
 | `03:E6` | `*.c.app.nintendowifi.net` |
 | `03:F1` | `*.hac.td1.acbaa.srv.nintendo.net` |
+| `04:77` | `*.dd1.t.npln.srv.nintendo.net` |
 | `04:85` | `uat.account.nintendo.net` |
 | `04:95` | `account.nintendo.net` |
 | `04:96` | `system-dev.account.nintendo.net` |

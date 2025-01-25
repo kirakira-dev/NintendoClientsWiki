@@ -159,6 +159,7 @@ Unknown:
 * `https://permission.lp1.sata.srv.nintendo.net`
 * `https://pp.lp1.sata.srv.nintendo.net`
 * `https://scsi-policy-lp1.cdn.nintendo.net`
+* `https://lp1.sprofile.srv.nintendo.net`
 
 #### eShop Services ([docs](REST-Services))
 * `https://ecs-lp1.hac.shop.nintendo.net`

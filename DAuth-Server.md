@@ -239,6 +239,7 @@ A `vendor_id` parameter was added:
 | Client ID | Description | Edge |
 | --- | --- | --- |
 | `146c8ac7b8a0db52` | SCSI storage | Yes |
+| `16e96f76850156d1` | Crash reports | No |
 | `3117b250cab38f45` | Atum and IDBE | Yes |
 | `41f4a6491028e3c4` | Pushmo and Tagaya | Yes |
 | `67bf9945b45248c6` | BCAT | Yes |

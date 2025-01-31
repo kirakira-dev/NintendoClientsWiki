@@ -55,9 +55,9 @@ Table of contents:
 * `nncs2.p01.lp1.n.n.srv.nintendo.net`
 
 #### Other Servers
-* `https://bvc.p01.lp1.bvc.srv.nintendo.net`
+* `https://bvc.p01.lp1.bvc.srv.nintendo.net` (browser version check)
 * `https://download.p01.lp1.banco.srv.nintendo.net`
-* `https://idbe-p01.cdn.nintendo.net`
+* `https://idbe-p01.cdn.nintendo.net` ([icon data](IDBE-Server))
 
 Unknown:
 
@@ -222,7 +222,7 @@ New ([docs](Penne-Servers)):
 * `https://api-lp1.frs.srv.nintendo.net` ([friends](Friends-API))
 * `https://api.hac.lp1.acbaa.srv.nintendo.net` ([Animal Crossing API](https://github.com/Kinnay/NintendoClients/wiki/AC:NH-Server))
 * `https://web-lp1.share.srv.nintendo.net`
-* `https://bvc-hac-lp1.cdn.nintendo.net`
+* `https://bvc-hac-lp1.cdn.nintendo.net` (browser version check)
 * `https://api.sect.srv.nintendo.net`
 
 # Wii U

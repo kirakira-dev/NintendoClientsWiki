@@ -41,6 +41,7 @@ Many client and server certificates that are used by Nintendo are issued by an i
 | `01:41` | `*.lp1.npns.srv.nintendo.net` |
 | `01:46` | `receive-lp1.dg.srv.nintendo.net` |
 | `01:4F` | `receive-td1.er.srv.nintendo.net` |
+| `01:54` | `HAC Common Devel` |
 | `01:5B` | `*.sect.srv.nintendo.net` |
 | `01:60` | `*.dev.nintendowifi.net` |
 | `01:61` | `*.zd1.npns.srv.nintendo.net` |

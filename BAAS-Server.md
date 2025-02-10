@@ -77,7 +77,7 @@ The following methods require a user access token:
 | Module | Method | URL |
 | --- | --- | --- |
 | Account | POST | `/1.0.0/devices/me/delete` |
-| Account | POST | `/1.0.0/image_upload` |
+| Account | POST | [`/1.0.0/image_upload`](#post-100image_upload) |
 | Account | PUT | `/1.0.0/push_channels/<id>/<id>` |
 | Friends | GET | `/1.0.0/users` |
 | Both | GET | [`/1.0.0/users/<id>`](#get-100usersid) |
@@ -227,6 +227,44 @@ Connection: keep-alive
 
 {"id":"f09c3d45cc3432c6","etag":"\"4d20053b9c0fcf9a\"","nickname":"","country":"","birthday":"0000-00-00","thumbnailUrl":"","deviceAccounts":[{"id":"7c23fd7c9b37b0cb","password":"0mr1prbsNFzRs0dRCHXRUNECGd1kJVg3Lq6zn0nR"}],"links":{},"permissions":{"personalAnalytics":true,"personalNotification":true,"friendRequestReception":true,"friends":"EVERYONE","presence":"FRIENDS","presenceUpdatedAt":1633432210,"personalAnalyticsUpdatedAt":1633432210,"personalNotificationUpdatedAt":1633432210},"extras":{"self":{},"favoriteFriends":{},"friends":{},"foaf":{},"everyone":{}},"presence":{"state":"OFFLINE","extras":{"self":{},"favoriteFriends":{},"friends":{},"foaf":{},"everyone":{}},"updatedAt":1632676901,"logoutAt":0},"deleted":false,"blocksUpdatedAt":1632676901,"friendsUpdatedAt":1632676901,"createdAt":1632676901,"updatedAt":1632676901}
 ```
+
+### POST /1.0.0/image_upload
+This method uploads a profile picture to the server. The request uses a JSON body.
+
+| Field | Description |
+| --- | --- |
+| rawContent | Base64-encoded JPEG |
+| ownerId | User id of owner |
+| allowTransform | Boolean |
+
+Response on success:
+
+| Field | Description |
+| --- | --- |
+| id | Image id |
+| ownerId | Owner id |
+| owner | Owner |
+| state | `STORED` |
+| content | Content |
+| createdAt | Created at (timestamp) |
+| updatedAt | Updated at (timestamp) |
+
+The owner has the following fields:
+
+| Field | Description |
+| --- | --- |
+| id | Owner id |
+
+The content has the following fields:
+
+| Field | Description |
+| --- | --- |
+| id | Image id |
+| width | Width |
+| height | Height |
+| format | `jpg` |
+| url | URL of uploaded image |
+| urlExpiresAt | Set to 2147483647 |
 
 ### GET /1.0.0/users/&lt;id&gt;
 This method does not take any parameters and simply returns the [user information](#user-information) for the given user. If the access token does not belong to the given user, this method returns [`insufficient_scope`](#errors).

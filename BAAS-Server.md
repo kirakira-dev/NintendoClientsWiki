@@ -156,6 +156,7 @@ This method can be used to log in on a device account that was registered with <
 | id | Device account id |
 | password | Device account password |
 | appAuthNToken | [AAuth token](AAuth-Server) (optional) |
+| naCountry | Country code such as `NL` (optional, introduced in 18.0.0) |
 | skipOp2Verification | Skip NSO verification (optional) |
 
 Response on success:

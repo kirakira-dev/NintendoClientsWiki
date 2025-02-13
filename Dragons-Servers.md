@@ -179,7 +179,7 @@ If the error code is `invalid_parameter`, the response may contain more details 
 | 400 | `invalid_device_certificate` | Device certificate is invalid |
 | 400 | `invalid_eticket_template` | |
 | 400 | `invalid_parameter` | Parameter is invalid |
-| 401 | `account_id_required` | |
+| 401 | `account_id_required` | Account ID is required |
 | 401 | `authentication_required` | |
 | 403 | `edge_token_not_grantable` | |
 | 403 | `invalid_token` | Token is invalid |

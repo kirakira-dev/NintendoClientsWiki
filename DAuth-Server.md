@@ -89,6 +89,7 @@ The following methods return a device token as JWT:
 | POST | [`/v5/device_auth_token`](#device-token-request) |
 | POST | [`/v6/device_auth_token`](#device-token-request) |
 | POST | [`/v7/device_auth_token`](#device-token-request) |
+| POST | [`/v8/device_auth_tokens`](#device-token-request) |
 
 The following methods return a different kind of device token:
 
@@ -99,6 +100,7 @@ The following methods return a different kind of device token:
 | POST | [`/v5/edge_token`](#edge-token-request) |
 | POST | [`/v6/edge_token`](#edge-token-request) |
 | POST | [`/v7/edge_token`](#edge-token-request) |
+| POST | [`/v8/edge_tokens`](#edge-token-request) |
 
 #### System Versions
 | System | API |

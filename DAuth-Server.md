@@ -76,6 +76,7 @@ In API version 3 and later, one must perform a cryptographic challenge to obtain
 | POST | [`/v5/challenge`](#challenge-request) |
 | POST | [`/v6/challenge`](#challenge-request) |
 | POST | [`/v7/challenge`](#challenge-request) |
+| POST | [`/v8/challenge`](#challenge-request) |
 
 The following methods return a device token as JWT:
 
@@ -109,6 +110,7 @@ The following methods return a different kind of device token:
 | 7.0.0 - 8.1.1 | v5 |
 | 9.0.0 - 12.1.0 | v6 |
 | 13.0.0 - 19.0.1 | v7 |
+| 20.0.0 | v8 |
 
 #### API Changes
 | API | Changelog |

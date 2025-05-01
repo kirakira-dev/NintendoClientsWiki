@@ -98,8 +98,8 @@ Unknown:
 * `https://dadmin-lp1.ndas.mng.nintendo.net` (internal)
 
 #### Application Authentication ([docs](AAuth-Server))
-* `https://aauth-lp1.ndas.srv.nintendo.net`
-* `https://aauth.hac.lp1.ndas.srv.nintendo.net`
+* `https://aauth.hac.lp1.ndas.srv.nintendo.net` (new)
+* `https://aauth-lp1.ndas.srv.nintendo.net` (old)
 * `https://acert-lp1.ndas.srv.nintendo.net`
 * `https://aapi-lp1.ndas.srv.nintendo.net` (internal)
 * `https://aadmin-lp1.ndas.mng.nintendo.net` (internal)

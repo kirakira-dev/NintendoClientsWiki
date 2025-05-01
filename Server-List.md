@@ -61,7 +61,8 @@ Table of contents:
 #### Other Servers
 * `https://bvc.p01.lp1.bvc.srv.nintendo.net` (browser version check)
 * `https://idbe-p01.cdn.nintendo.net` ([icon data](IDBE-Server))
-* `https://nemof.p01.lp1.nemor.srv.nintendo.net` (eShop videos)
+* `https://nemof.p01.lp1.nemo.srv.nintendo.net` (eShop videos)
+* `https://gw.p01.lp1.vermillion.srv.nintendo.net` (virtual game cards)
 
 Unknown:
 
@@ -70,7 +71,6 @@ Unknown:
 * `*.p01.lp1.savanna.srv.nintendo.net`
 * `*.p01.lp1.smn.srv.nintendo.net`
 * `*.p01.lp1.sprofile.srv.nintendo.net`
-* `*.p01.lp1.vermillion.srv.nintendo.net`
 * `*.p01.lp1.p01-aaab.srv.nintendo.net`
 * `*.p01.lp1.civil.nintendo.net`
 * `*.p01.lp1.ss.nintendo.net`
@@ -221,7 +221,7 @@ New ([docs](Penne-Servers)):
 * `https://transfer.hac.lp1.banco.srv.nintendo.net`
 * `https://download.hac.lp1.banco.srv.nintendo.net`
 
-#### Other Services
+#### Other Servers
 * `https://mii-secure-lp1.cdn.nintendo.net` (mii images)
 * `https://idbe-hac.cdn.nintendo.net` ([icon data](IDBE-Server))
 * `https://lp1.nso.nintendo.net` (NSO applet)
@@ -232,6 +232,7 @@ New ([docs](Penne-Servers)):
 * `https://web-lp1.share.srv.nintendo.net`
 * `https://bvc-hac-lp1.cdn.nintendo.net` (browser version check)
 * `https://api.sect.srv.nintendo.net`
+* `https://gw.hac.lp1.vermillion.srv.nintendo.net` (virtual game cards)
 
 # Wii U
 #### Account Server ([docs](Account-Server))

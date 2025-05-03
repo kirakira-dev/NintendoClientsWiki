@@ -289,6 +289,7 @@ A `vendor_id` parameter was added:
 | `93af0acb26258de9` | Beach and Bugyo | Yes |
 | `bad8156f44ac935a` | SProfile | No |
 | `d5b6cac2c1514c56` | Dragons | No |
+| `d98185acb55994b4` | SCSI policy | Yes |
 | `dc656ea03b63cf68` | Parental controls | No |
 | `df51c436bc01c437` | Prepo | No |
 | `e58171fe439390ce` | Penne | No |

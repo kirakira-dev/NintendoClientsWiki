@@ -232,6 +232,20 @@ Every token request is a dictionary with one or two fields:
 | client_id | [Client id](#known-client-ids) |
 | vendor_id | `akamai`, `llnw`, `lumen`, `fastly` or `cloudflare` (only present in edge token requests) |
 
+Response on success:
+
+| Field | Description |
+| --- | --- |
+| results | List of token results |
+
+Every token result contains the following fields:
+
+| Field | Description |
+| --- | --- |
+| client_id | Client id from request |
+| device_auth_token | Device token |
+| expires_in | Expiration in seconds (86400) |
+
 ## Edge Token Request
 This method returns a different kind of device token. Up to v6, it takes the same parameters as [`/device_auth_token`](#device-token-request).
 
@@ -240,7 +254,7 @@ Response on success:
 | Field | Description |
 | --- | --- |
 | expires_in | Expiration in seconds (86400) |
-| dtoken | Device token |
+| dtoken | Edge token |
 
 ### Version 7
 A `vendor_id` parameter was added:
@@ -254,6 +268,16 @@ A `vendor_id` parameter was added:
 | system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
 | vendor_id | `akamai`, `llnw` or `lumen` |
 | mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
+
+### Version 8
+The request is the same as the [`/device_auth_tokens`](#device-token-request) request, except that a `vendor_id` field is present next to each client id. The response contains a `results` array, where every element contains the following fields:
+
+| Field | Description |
+| --- | --- |
+| client_id | Client id from request |
+| vendor_id | Vendor id from request |
+| dtoken | Edge token |
+| expires_in | Expiration in seconds (86400)
 
 ## Master Key Revisions
 | System version | Key generation |
@@ -271,7 +295,7 @@ A `vendor_id` parameter was added:
 | 16.0.0 - 16.1.0 | 16 |
 | 17.0.0 - 18.1.0 | 17 |
 | 19.0.0 - 19.0.1 | 19 |
-| 20.0.0 | 20 |
+| 20.0.0 - 20.0.1 | 20 |
 
 ## Known Client IDs
 | Client ID | Description | Edge |

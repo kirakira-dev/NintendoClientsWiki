@@ -312,7 +312,7 @@ The request is the same as the [`/device_auth_tokens`](#device-token-request) re
 | `8f849b5d34778d8e` | [AAuth](AAuth-Server) and [BaaS](BAAS-Server) | No |
 | `93af0acb26258de9` | Beach and Bugyo | Yes |
 | `bad8156f44ac935a` | SProfile | No |
-| `d5b6cac2c1514c56` | [Dragons](Dragons-Servers) and Vermillion | No |
+| `d5b6cac2c1514c56` | [Dragons](Dragons-Servers) and [Vermillion](Vermillion-Server) | No |
 | `d98185acb55994b4` | SCSI policy | Yes |
 | `dc656ea03b63cf68` | Parental controls | No |
 | `df51c436bc01c437` | Prepo | No |

@@ -223,7 +223,7 @@ The endpoint now accepts a JSON body instead of form-encoding, and allows the cl
 | token_requests | List of token requests |
 | key_generation | [Master key revision](#master-key-revisions) |
 | challenge | Base64-encoded [challenge](#challenge-request) |
-| mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
+| mac | Base64-encoded AES-CMAC of all previous fields in form-encoding. The fields are encoded in the following order: `challenge`, `fw_revision`, `ist`, `key_gneration`, `system_version` and `token_requests`. The `token_requests` field is encoded with JSON without whitespace. |
 
 Every token request is a dictionary with one or two fields:
 

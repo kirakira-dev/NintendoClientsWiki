@@ -201,6 +201,7 @@ Old ([docs](NPNS-Servers)):
 New ([docs](Penne-Servers)):
 * `https://god.hac.lp1.penne.srv.nintendo.net`
 * `https://val.hac.lp1.penne.srv.nintendo.net`
+* `https://fro-8.hac.lp1.penne.srv.nintendo.net`
 
 #### Telemetry ([docs](Telemetry-Servers))
 * `https://receive-lp1.dg.srv.nintendo.net` (play reports)

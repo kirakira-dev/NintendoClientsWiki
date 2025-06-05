@@ -29,7 +29,7 @@ Table of contents:
 * `https://accounts.nintendo.com`
 * `https://cdn.accounts.nintendo.com`
 * `https://api.accounts.nintendo.com`
-* `https;//c-lp1.accounts.nintendo.com`
+* `https://c-lp1.accounts.nintendo.com`
 
 #### Push Notifications
 * `https://god.p01.lp1.penne.srv.nintendo.net`

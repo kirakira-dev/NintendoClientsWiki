@@ -53,6 +53,7 @@ Table of contents:
 * `https://superfly.p01.lp1.d4c.srv.nintendo.net`
 * `https://veer.p01.lp1.d4c.srv.nintendo.net`
 * `https://atum.p01.lp1.d4c.srv.nintendo.net`
+* `https://atum-img-lp1.cdn.nintendo.net`
 
 #### Online Save Storage
 * `https://storage.p01.lp1.scsi.srv.nintendo.net`
@@ -75,6 +76,7 @@ Table of contents:
 * `https://list.p01.lp1.bcat.srv.nintendo.net`
 * `https://topics.p01.lp1.bcat.srv.nintendo.net`
 * `https://data.p01.lp1.bcat.srv.nintendo.net`
+* `https://web.p01.lp1.bcat.srv.nintendo.net`
 
 #### Game Chat
 * `https://enishi.p01.lp1.idobata.srv.nintendo.net`
@@ -88,11 +90,12 @@ Table of contents:
 * `https://p01.lp1.znma.srv.nintendo.net` (parental controls)
 * `https://capi.lp1.op2.nintendo.net` ([NSO membership verification](NSO-Verification-Server))
 * `https://app.lp1.five.nintendo.net` (friend invitations)
+* `https://p01.lp1.savanna.srv.nintendo.net` (eShop)
+* `https://lp1.nso.nintendo.net` (Nintendo Switch Online)
 
 Unknown:
 
 * `*.p01.lp1.pegasus.srv.nintendo.net`
-* `*.p01.lp1.savanna.srv.nintendo.net`
 * `*.p01.lp1.smn.srv.nintendo.net`
 * `*.p01.lp1.sprofile.srv.nintendo.net`
 * `*.p01.lp1.p01-aaab.srv.nintendo.net`

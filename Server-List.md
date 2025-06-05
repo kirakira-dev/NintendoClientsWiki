@@ -92,7 +92,8 @@ Table of contents:
 * `https://capi.lp1.op2.nintendo.net` ([NSO membership verification](NSO-Verification-Server))
 * `https://app.lp1.five.nintendo.net` (friend invitations)
 * `https://p01.lp1.savanna.srv.nintendo.net` (eShop)
-* `https://lp1.nso.nintendo.net` (Nintendo Switch Online)
+* `https://lp1.nso.nintendo.net` (NSO applet)
+* `https://fw-api.lp1.nso.nintendo.net` (NSO rewards)
 * `service-status.p01.lp1.smn.srv.nintendo.net` (service status)
 
 Unknown:

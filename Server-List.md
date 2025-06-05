@@ -29,6 +29,7 @@ Table of contents:
 * `https://accounts.nintendo.com`
 * `https://cdn.accounts.nintendo.com`
 * `https://api.accounts.nintendo.com`
+* `https;//c-lp1.accounts.nintendo.com`
 
 #### Push Notifications
 * `https://god.p01.lp1.penne.srv.nintendo.net`
@@ -92,11 +93,11 @@ Table of contents:
 * `https://app.lp1.five.nintendo.net` (friend invitations)
 * `https://p01.lp1.savanna.srv.nintendo.net` (eShop)
 * `https://lp1.nso.nintendo.net` (Nintendo Switch Online)
+* `service-status.p01.lp1.smn.srv.nintendo.net` (service status)
 
 Unknown:
 
 * `*.p01.lp1.pegasus.srv.nintendo.net`
-* `*.p01.lp1.smn.srv.nintendo.net`
 * `*.p01.lp1.sprofile.srv.nintendo.net`
 * `*.p01.lp1.p01-aaab.srv.nintendo.net`
 * `*.p01.lp1.civil.nintendo.net`

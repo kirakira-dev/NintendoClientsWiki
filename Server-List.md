@@ -21,6 +21,15 @@ Table of contents:
 #### Application Authentication
 * `https://aauth.p01.lp1.ndas.srv.nintendo.net`
 
+#### Switch Users ([docs](BAAS-Server))
+* `https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com`
+* `https://cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com`
+
+#### Nintendo Accounts ([docs](Account-Server-(Switch)))
+* `https://accounts.nintendo.com`
+* `https://cdn.accounts.nintendo.com`
+* `https://api.accounts.nintendo.com`
+
 #### Push Notifications
 * `https://god.p01.lp1.penne.srv.nintendo.net`
 * `https://val.p01.lp1.penne.srv.nintendo.net`
@@ -48,6 +57,7 @@ Table of contents:
 #### Online Save Storage
 * `https://storage.p01.lp1.scsi.srv.nintendo.net`
 * `https://policy.p01.lp1.scsi.srv.nintendo.net`
+* `scsi-upload-lp1.s3.us-west-2.amazonaws.com`
 
 #### Telemetry
 * `https://receive.p01.lp1.dg.srv.nintendo.net`
@@ -61,15 +71,22 @@ Table of contents:
 * `https://transfer.p01.lp1.banco.srv.nintendo.net`
 * `https://download.p01.lp1.banco.srv.nintendo.net`
 
+#### News
+* `https://list.p01.lp1.bcat.srv.nintendo.net`
+* `https://topics.p01.lp1.bcat.srv.nintendo.net`
+* `https://data.p01.lp1.bcat.srv.nintendo.net`
+
 #### Other Servers
 * `https://bvc.p01.lp1.bvc.srv.nintendo.net` (browser version check)
 * `https://idbe-p01.cdn.nintendo.net` ([icon data](IDBE-Server))
 * `https://nemof.p01.lp1.nemo.srv.nintendo.net` (eShop videos)
 * `https://gw.p01.lp1.vermillion.srv.nintendo.net` (virtual game cards)
+* `https://enishi.p01.lp1.idobata.srv.nintendo.net`
+* `https://p01.lp1.znma.srv.nintendo.net` (parental controls)
+* `https://capi.lp1.op2.nintendo.net` ([NSO membership verification](NSO-Verification-Server))
 
 Unknown:
 
-* `*.p01.lp1.bcat.srv.nintendo.net`
 * `*.p01.lp1.pegasus.srv.nintendo.net`
 * `*.p01.lp1.savanna.srv.nintendo.net`
 * `*.p01.lp1.smn.srv.nintendo.net`
@@ -78,7 +95,6 @@ Unknown:
 * `*.p01.lp1.civil.nintendo.net`
 * `*.p01.lp1.ss.nintendo.net`
 * `*.p01.lp1.nega.srv.nintendo.net`
-* `*.p01.lp1.idobata.srv.nintendo.net`
 * `*.p01.lp1.kanawa.srv.nintendo.net`
 
 # Switch

@@ -69,6 +69,7 @@ Pokemon Scarlet and Violet implement custom services as well:
 | Monster Hunter Rise | `e1c218b5` |
 | Monster Hunter Rise Demo | `f124d2cb` |
 | Monster Hunter Rise: Sunbreak Demo | `bc33b7d4` |
+| Mario Kart World | `e96531c6` |
 | Pokemon Legends: Arceus | `e047112f` |
 | Pokemon Scarlet & Violet | `50e39f8f` |
 | Splatoon 3 | `dce9377b` |

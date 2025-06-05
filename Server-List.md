@@ -76,12 +76,15 @@ Table of contents:
 * `https://topics.p01.lp1.bcat.srv.nintendo.net`
 * `https://data.p01.lp1.bcat.srv.nintendo.net`
 
+#### Game Chat
+* `https://enishi.p01.lp1.idobata.srv.nintendo.net`
+* `https://sebumi.p01.lp1.idobata.srv.nintendo.net`
+
 #### Other Servers
 * `https://bvc.p01.lp1.bvc.srv.nintendo.net` (browser version check)
 * `https://idbe-p01.cdn.nintendo.net` ([icon data](IDBE-Server))
 * `https://nemof.p01.lp1.nemo.srv.nintendo.net` (eShop videos)
 * `https://gw.p01.lp1.vermillion.srv.nintendo.net` (virtual game cards)
-* `https://enishi.p01.lp1.idobata.srv.nintendo.net`
 * `https://p01.lp1.znma.srv.nintendo.net` (parental controls)
 * `https://capi.lp1.op2.nintendo.net` ([NSO membership verification](NSO-Verification-Server))
 * `https://app.lp1.five.nintendo.net` (friend invitations)

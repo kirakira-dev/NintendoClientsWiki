@@ -84,6 +84,7 @@ Table of contents:
 * `https://enishi.p01.lp1.idobata.srv.nintendo.net`
 * `https://p01.lp1.znma.srv.nintendo.net` (parental controls)
 * `https://capi.lp1.op2.nintendo.net` ([NSO membership verification](NSO-Verification-Server))
+* `https://app.lp1.five.nintendo.net` (friend invitations)
 
 Unknown:
 

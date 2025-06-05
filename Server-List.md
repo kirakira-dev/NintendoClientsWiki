@@ -13,6 +13,7 @@ Table of contents:
 * `https://ctest-dl.p01.lp1.ctest.srv.nintendo.net`
 * `https://ctest-ul.p01.lp1.ctest.srv.nintendo.net`
 * `https://ctest.p01.ctest.srv.nintendo.net`
+* `https://ctest.cdn.nintendo.net`
 
 #### Device Authentication
 * `https://dauth.p01.lp1.ndas.srv.nintendo.net`
@@ -23,6 +24,7 @@ Table of contents:
 #### Push Notifications
 * `https://god.p01.lp1.penne.srv.nintendo.net`
 * `https://val.p01.lp1.penne.srv.nintendo.net`
+* `https://fro-2.p01.lp1.penne.srv.nintendo.net`
 
 #### eLicenses
 * `https://dragons.p01.lp1.dragons.nintendo.net`

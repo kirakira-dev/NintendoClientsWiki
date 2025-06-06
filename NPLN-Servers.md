@@ -70,6 +70,8 @@ Pokemon Scarlet and Violet implement custom services as well:
 | Monster Hunter Rise Demo | `f124d2cb` |
 | Monster Hunter Rise: Sunbreak Demo | `bc33b7d4` |
 | Mario Kart World | `e96531c6` |
+| Nintendo Classics | `7b4e32ca` |
+| Nintendo Switch Online Playtest | `927e13da` |
 | Pokemon Legends: Arceus | `e047112f` |
 | Pokemon Scarlet & Violet | `50e39f8f` |
 | Puyo Puyo Tetris 2S | `cebd73f4` |
@@ -77,7 +79,7 @@ Pokemon Scarlet and Violet implement custom services as well:
 | Splatoon 3: Splatfest World Premiere | `156eef4e` |
 | Super Mario Bros. Wonder | `ba973ec6` |
 | Super Mario Party Jamboree | `adf89f68` |
-| Wavecade | ? |
+| Wavecade | `7b4e32ca` |
 
 ## Useful Tools
 * [grpcui](https://github.com/fullstorydev/grpcui) - a simple user interface for gRPC

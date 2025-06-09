@@ -346,6 +346,7 @@ The password is only present once, when the account is created.
 | Field | Description |
 | --- | --- |
 | nintendoNetwork | [Nintendo network link](#linked-account) |
+| nintendoAccount | [Nintendo account link](#linked-account) |
 | twitter | [Twitter account link](#linked-account) |
 | facebook | [Facebook account link](#linked-account) |
 | google | [Google account link](#linked-account) |

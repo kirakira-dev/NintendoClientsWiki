@@ -61,7 +61,7 @@ Table of contents:
 * `https://policy.p01.lp1.scsi.srv.nintendo.net`
 * `scsi-upload-lp1.s3.us-west-2.amazonaws.com`
 
-#### Telemetry
+#### Telemetry ([docs](Telemetry-Servers))
 * `https://receive.p01.lp1.dg.srv.nintendo.net`
 * `https://receive.p01.lp1.er.srv.nintendo.net`
 

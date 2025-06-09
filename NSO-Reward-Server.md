@@ -42,3 +42,12 @@ Connection: keep-alive
 {"message":"OK"}
 ```
 
+The following fields are transmitted in the request body:
+
+| Field | Description |
+| --- | --- |
+| type_name | Event type (`application_event`, `savedata_upload` or `online_play`) |
+| version | Version number (usually 1) |
+| occurred_at | Timestamp |
+| application_id | Title id |
+| event_data | Additional data for application events (optional, string) |

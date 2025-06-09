@@ -302,6 +302,7 @@ Device tokens:
 
 | Client ID | Description |
 | --- | --- |
+| `146c8ac7b8a0db52` | SCSI storage |
 | `16e96f76850156d1` | Crash reports |
 | `6ac5a6873fe5f68c` | SATA storage |
 | `75fe236362ff5f8b` | [Account server](Account-Server-(Switch)) |

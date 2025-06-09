@@ -1,4 +1,4 @@
-[[Server List]] > Telemetry
+[Switch](Server-List#switch) > Telemetry
 ---
 
 | Server | Description |

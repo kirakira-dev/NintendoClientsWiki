@@ -1,27 +1,42 @@
-# Error Categories
-| Error Codes | Description |
-| --- | --- |
-| 101-XXXX | [FP (friends)](#fp-error-codes) |
-| 102-XXXX | [ACT (accounts)](#act-error-codes) |
-| 103-XXXX | AC (internet connection) |
-| 104-XXXX | BOSS (spotpass) |
-| 105-XXXX | NIM (title installation) |
-| 106-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
-| 107-XXXX | [eShop (api)](#eshop-errors-api) |
-| 111-XXXX | [eShop (website)](#eshop-errors-website) |
-| 115-XXXX | OLV (miiverse) |
-| 118-XXXX | PIA (peer to peer) |
-| 124-XXXX | EC (e-commerce) |
-| 150-XXXX | FS (file system) |
-| 151-XXXX | KPAD (wiimote) |
-| 155-XXXX | SAVE (save files) |
-| 160-XXXX | System error |
-| 162-XXXX | MCP (title management) |
-| 165-XXXX | VPAD (gamepad) |
-| 166-XXXX | AOC (add-on content) |
-| 168-XXXX | NFP (amiibo) |
+An error code contains a module id and a module-specific code, separated by a dash. For example: `106-0502`.
 
-# FP Error Codes
+The following module ids are known:
+
+| Module | Code | Description |
+| --- | --- | --- |
+| 101 | FP | [Friends](#fp-error-codes) |
+| 102 | ACT | [Accounts](#act-error-codes) |
+| 103 | AC | Internet connection |
+| 104 | BOSS | Spotpass |
+| 105 | NIM | Title installation |
+| 106 | NEX | [Game servers](#nex-error-codes) |
+| 107 | | [eShop (api)](#eshop-errors-api) |
+| 109 | NEI | eShop (REST) |
+| 111 | | [eShop (website)](#eshop-errors-website) |
+| 112 | | Internet browser |
+| 115 | OLV | Miiverse |
+| 117 | NWF | Nintendo web framework |
+| 118 | PIA | Peer to peer |
+| 123 | | E-commerce applet |
+| 124 | EC | E-commerce |
+| 150 | FS | Filesystem |
+| 151 | KPAD | Controller |
+| 152 | WPAD | Wiimote |
+| 153 | | USB HID |
+| 154 | | USB microphone |
+| 155 | SAVE | Save files |
+| 156 | UDS | Local wireless |
+| 157 | ACP | Title launch |
+| 158 | | System settings |
+| 159 | | Security |
+| 160 | | System error |
+| 162 | MCP | Title management |
+| 165 | VPAD | Gamepad |
+| 166 | TEMP | Temporary storage |
+| 168 | NFP | Amiibo |
+| 199 | CMN | General |
+
+## FP Error Codes
 | Error code | Name |
 | --- | --- |
 | 101-0000 | SUCCESS |
@@ -196,7 +211,7 @@
 | 101-0812 | AUTHENTICATION_UNSUPPORTED_VERSION |
 | 101-0813 | AUTHENTICATION_UNKNOWN |
 
-# ACT Error Codes
+## ACT Error Codes
 | Error code | Name |
 | --- | --- |
 | 102-0000 | MY_SUCCESS |
@@ -486,7 +501,7 @@
 | 102-2998 | UNAUTHENTICATED_AFTER_SALVAGE |
 | 102-2999 | AUTHENTICATION_FAILURE_UNKNOWN |
 
-# NEX Error Codes
+## NEX Error Codes
 | Error code | Name |
 | --- | --- |
 | 106-0102 | Core::Unknown |
@@ -695,7 +710,7 @@
 | 106-2002 | Ranking2::InvalidArgument |
 | 106-2003 | Ranking2::InvalidScore |
 
-# NEX Error Descriptions
+## NEX Error Descriptions
 | Error&nbsp;code | Description |
 | --- | --- |
 | 106-0102 | The reason for the error is unknown. |
@@ -736,12 +751,12 @@
 | 106-0510 | The destination Station did not authenticate itself properly. |
 | 106-0511 | 3rd-party server or device answered with an error code according to protocol used e.g. HTTP error code |
 
-# EShop Errors (API)
+## EShop Errors (API)
 | Error code | Name |
 | --- | --- |
 | 107-3190 | WISHLIST_FULL |
 
-# EShop Errors (Website)
+## EShop Errors (Website)
 | Error code | Name |
 | --- | --- |
 | 111-9000 | CLOSE_APPLICATION |

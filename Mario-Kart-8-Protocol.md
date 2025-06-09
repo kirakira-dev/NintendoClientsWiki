@@ -20,6 +20,12 @@ Mario Kart 8 uses the [ENL framework](ENL-Protocol).
 | 0x98 | Uint32 | Flags |
 | 0x9C | --- | End of record |
 
+## Record Type 1
+| Offset | Type | Description |
+| --- | --- | --- |
+| 0x0 | Unk (0x10C) | Unknown |
+| 0x10C | --- | End of record |
+
 ## Record Type 2
 | Offset | Type | Description |
 | --- | --- | --- |

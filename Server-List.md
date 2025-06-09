@@ -97,7 +97,7 @@ Table of contents:
 * `https://app.lp1.five.nintendo.net` (friend invitations)
 * `https://p01.lp1.savanna.srv.nintendo.net` (eShop)
 * `https://lp1.nso.nintendo.net` (NSO applet)
-* `https://fw-api.lp1.nso.nintendo.net` (NSO rewards)
+* `https://fw-api.lp1.nso.nintendo.net` ([NSO rewards](NSO-Reward-Server))
 * `service-status.p01.lp1.smn.srv.nintendo.net` (service status)
 
 Unknown:
@@ -257,7 +257,7 @@ New ([docs](Penne-Servers)):
 * `https://mii-secure-lp1.cdn.nintendo.net` (mii images)
 * `https://idbe-hac.cdn.nintendo.net` ([icon data](IDBE-Server))
 * `https://lp1.nso.nintendo.net` (NSO applet)
-* `https://fw-api.lp1.nso.nintendo.net` (NSO rewards)
+* `https://fw-api.lp1.nso.nintendo.net` ([NSO rewards](NSO-Reward-Server))
 * `https://capi.lp1.op2.nintendo.net` ([NSO membership verification](NSO-Verification-Server))
 * `https://api-lp1.frs.srv.nintendo.net` ([friends](Friends-API))
 * `https://api.hac.lp1.acbaa.srv.nintendo.net` ([Animal Crossing API](https://github.com/Kinnay/NintendoClients/wiki/AC:NH-Server))

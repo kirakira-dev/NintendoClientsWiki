@@ -26,7 +26,9 @@ This is record type 1.
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 268 | Unknown |
+| 0x0 | 8 | Unknown |
+| 0x8 | 256 | [Player info](#sysplayerinfo) |
+| 0x108 | 4 | Unknown |
 | 0x10C | --- | End of record |
 
 ## All Player Info Record

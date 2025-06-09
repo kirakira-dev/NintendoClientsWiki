@@ -305,8 +305,8 @@ Device tokens:
 | `146c8ac7b8a0db52` | SCSI storage |
 | `16e96f76850156d1` | Crash reports |
 | `6ac5a6873fe5f68c` | SATA storage |
-| `75fe236362ff5f8b` | [Account server](Account-Server-(Switch)) |
-| `81333c548b2e876d` | [Account server](Account-Server-(Switch)) |
+| `75fe236362ff5f8b` | [Nintendo account](Account-Server-(Switch)) applet |
+| `81333c548b2e876d` | [Nintendo account](Account-Server-(Switch)) API |
 | `83b72b05dc3278d7` | NPNS |
 | `8f849b5d34778d8e` | [AAuth](AAuth-Server) and [BaaS](BAAS-Server) |
 | `93af0acb26258de9` | Beach and Bugyo |

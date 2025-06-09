@@ -3,7 +3,7 @@ Mario Kart 8 uses the [ENL framework](ENL-Protocol).
 | Record type | Description |
 | --- | --- |
 | 0 | [Menu](#record-type-0) |
-| 1 | Player info |
+| 1 | [Player info](#record-type-1) |
 | 2 | [All player info](#record-type-2) |
 | 3 | Race |
 | 4 | Drive |

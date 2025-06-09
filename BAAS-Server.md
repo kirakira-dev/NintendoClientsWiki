@@ -53,7 +53,8 @@ The user agents below are taken from the account sysmodule. If the request is ma
 | 16.0.0 - 16.1.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 16.2.0.0; Add-on 16.2.0.0)` |
 | 17.0.0 - 17.0.1 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 17.5.0.0; Add-on 17.5.0.0)` |
 | 18.0.0 - 18.1.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 18.3.0.0; Add-on 18.3.0.0)` |
-| 19.0.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 19.3.0.0; Add-on 19.3.0.0)` |
+| 19.0.0 - 19.0.1 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 19.3.0.0; Add-on 19.3.0.0)` |
+| 20.0.0 - 20.1.1 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 20.5.4.0; Add-on 20.5.4.0)` |
 
 ## Methods
 The following methods do not require an access token:
@@ -91,7 +92,7 @@ The following methods require a user access token:
 | Account | ? | `/1.0.0/users/<id>/device_histories` |
 | Friends | POST | [`/1.0.0/users/<id>/generate_code`](#post-100usersidgenerate_code) |
 | Account | POST | [`/1.0.0/users/<id>/link`](#post-100usersidlink) |
-| Account | POST | `/1.0.0/users/<id>/unlink
+| Account | POST | `/1.0.0/users/<id>/unlink` |
 | Friends | POST | `/2.0.0/friend_requests` |
 | Friends | PATCH | `/2.0.0/friend_requests/<id>` |
 | Friends | GET | `/2.0.0/users/<id>/friends` |

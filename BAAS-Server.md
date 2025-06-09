@@ -321,7 +321,8 @@ This method returns the JWK set for the access token that's issued by <code><a h
 | nickname | Nickname |
 | country | Country |
 | birthday | YYYY-MM-DD |
-| thumbnailUrl | Thumbnail URL |
+| thumbnailUrl | Small thumbnail URL (256x256) |
+| thumbnail2Url | Large thumbnail URL (512x512) |
 | deviceAccounts | List of [device accounts](#device-account) |
 | links | [Linked accounts](#linked-accounts) |
 | permissions | [Privacy settings](#privacy-settings) |

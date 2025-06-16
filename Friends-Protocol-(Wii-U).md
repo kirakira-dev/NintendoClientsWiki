@@ -418,8 +418,8 @@ Specifies which fields changed their value recently.
 
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
-| Bool | Unknown |
+| [PID] | Pid |
+| Bool | Blocked |
 
 [BlacklistedPrincipal]: #blacklistedprincipal-structure
 [Comment]: #comment-structure

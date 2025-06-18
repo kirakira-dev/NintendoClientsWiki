@@ -69,12 +69,12 @@ This method does not return anything.
 ## SimpleSearchObject ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
-| [PID] | Unknown |
+| Uint32 | Object id |
+| [PID] | Owner |
 | [List]&lt;Uint32&gt; | Attributes |
-| [qBuffer] | Unknown |
+| [qBuffer] | Metadata |
 | Uint32 | Unknown |
-| [String] | Unknown |
+| [String] | Code |
 | [SimpleSearchDateTimeAttribute] | Datetime attribute |
 
 ## SimpleSearchDateTimeAttribute ([Structure])
@@ -84,18 +84,18 @@ This method does not return anything.
 | Uint32 | Unknown |
 | Uint32 | Unknown |
 | Uint32 | Unknown |
-| [DateTime] | Unknown |
-| [DateTime] | Unknown |
+| [DateTime] | Start time |
+| [DateTime] | End time |
 
 ## SimpleSearchParam ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
-| [PID] | Unknown |
+| Uint32 | Object id |
+| [PID] | Owner |
 | [List]&lt;[SimpleSearchCondition]&gt; | Conditions |
-| [String] | Unknown |
+| [String] | Code |
 | [ResultRange] | Result range |
-| [DateTime] | Unknown |
+| [DateTime] | Datetime |
 
 ## SimpleSearchCondition ([Structure])
 | Type | Description |

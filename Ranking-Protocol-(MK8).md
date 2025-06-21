@@ -34,26 +34,26 @@ This page describes the methods that are only seen in Mario Kart 8.
 ## CompetitionRankingInfo ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| [List]&lt;Uint32&gt; | Unknown |
+| Uint32 | Id |
+| Uint32 | Number of participants |
+| [List]&lt;Uint32&gt; | Team scores |
 
 ## CompetitionRankingInfoGetParam ([Structure])
 | Type | Description |
 | --- | --- |
-| Uint8 | Unknown |
+| Uint8 | Rank order |
 | [ResultRange] | Result range |
 
 ## CompetitionRankingUploadScoreParam ([Structure])
 | Type | Description |
 | --- | --- |
+| Uint32 | Id |
+| Uint32 | Season id |
 | Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint32 | Unknown |
-| Uint8 | Unknown |
-| Uint32 | Unknown |
-| Bool | Unknown |
+| Uint32 | Score |
+| Uint8 | Team id |
+| Uint32 | Team score |
+| Bool | Is first upload |
 | [qBuffer] | Metadata |
 
 [Result]: NEX-Common-Types#result

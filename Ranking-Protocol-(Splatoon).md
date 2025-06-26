@@ -82,6 +82,7 @@ Revision 1:
 [Structure]: NEX-Common-Types#structure
 [Data]: NEX-Common-Types#anydataholder
 [PID]: NEX-Common-Types#pid
+[ResultRange]: NEX-Common-Types#resultrange-structure
 
 [CompetitionRankingGetParam]: #competitionrankinggetparam-structure
 [CompetitionRankingUploadScoreParam]: #competitionrankinguploadscoreparam-structure

@@ -107,13 +107,25 @@ This is a vendor-specific action frame that is broadcasted by the access point e
 | --- | --- | --- |
 | 0x0 | 32 | [Session info](#session-info) |
 | 0x20 | 1 | [LDN version](#changelog) |
-| 0x21 | 1 | Encryption type (1=plain, 2=AES-CTR) |
+| 0x21 | 1 | Encryption type (1=plain, 2=AES-CTR, 3=AES-GCM) |
 | 0x22 | 2 | Advertisement data size |
-| 0x24 | 4 | Nonce for AES-CTR algorithm |
+| 0x24 | 4 | Nonce for AES algorithm |
+
+*Plain* or *AES-CTR*:
+
+| Offset | Size | Description |
+| --- | --- | --- |
 | 0x28 | 32 | SHA-256 hash, calculated over the whole advertisement payload with the hash set to zero |
 | 0x48 | | [Advertisement data](#advertisement-data) |
 
-If encryption is enabled, the hash and advertisement data are encrypted with AES-CTR. The input buffer for [key derivation](#encryption-keys) is the [session info](#session-info), and the input key is `191884743e24c77d87c69e4207d0c438`.
+*AES-GCM*:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x28 | 16 | AES-GCM MAC |
+| 0x38 | | Encrypted [Advertisement data](#advertisement-data) |
+
+When AES-CTR is used, both the hash and advertisement data are encrypted. The input buffer for [key derivation](#encryption-keys) is the [session info](#session-info), and the input key is `191884743e24c77d87c69e4207d0c438`.
 
 ### Advertisement Data
 | Offset | Size | Description |

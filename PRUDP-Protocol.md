@@ -256,6 +256,8 @@ Even though PRUDP also supports unreliable data packets, these are never used by
 
 DISCONNECT packets may be reliable (graceful disconnect) or unreliable (forced disconnect).
 
+Note that USER, ROUTE and RAW packets are never used by NEX.
+
 | Value | Type |
 | --- | --- |
 | 0 | SYN |

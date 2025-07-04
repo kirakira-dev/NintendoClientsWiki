@@ -71,6 +71,7 @@ Pokemon Scarlet and Violet implement custom services as well:
 | Monster Hunter Rise: Sunbreak Demo | `bc33b7d4` |
 | Mario Kart World | `e96531c6` |
 | Nintendo Classics | `7b4e32ca` |
+| Nintendo Classics - GameCube | `f4177419` |
 | Nintendo Switch Online Playtest | `927e13da` |
 | Pokemon Legends: Arceus | `e047112f` |
 | Pokemon Scarlet & Violet | `50e39f8f` |

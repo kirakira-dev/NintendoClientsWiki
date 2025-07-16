@@ -1,3 +1,7 @@
+This page lists the error messages that may be shown on the Wii U when an error occurs. Messages that are marked with `-` are valid error codes, but do not come with an error message (a default error message is shown instead).
+
+For the technical reason behind these error, see the page about [[Wii U Error Codes]] instead.
+
 ## 101-XXXX
 
 | Code | Message |

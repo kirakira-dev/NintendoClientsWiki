@@ -170,9 +170,36 @@ These fields have the following meaning.
 | `v` | Version (always 1) |
 | `att` | Token type (0=3DS, 1=Wii U, 2=Switch) |
 | `pid` | User id |
-| `mi` | Unknown |
+| `exp` | Expiration timestamp in seconds |
+| `mi` | [Membership info](#membership-info) |
 
-In some cases, the attributes have an `exp` field that contains the expiration timestamp in seconds.
+The expiration timestamp is not always present. It is possible that this depends on the server version.
+
+#### Membership Info
+
+| Field | Description |
+| --- | --- |
+| `ms` | [Membership status](#membership-status) |
+| `mp` | [Membership policy](#membership-policy) |
+| `cpa` | Can play all |
+
+#### Membership Status
+This field probably indicates whether the user has an active Nintendo Switch Online membership:
+
+| Value | Description |
+| --- | --- |
+| -1 | No information available |
+| 0 | Not a member |
+| 1 | Is a member |
+
+#### Membership Policy
+This field seems to indicate whether a Nintendo Switch Online membership is required to access the game server:
+
+| Value | Description |
+| --- | --- |
+| 0 | No membership required |
+| 1 | Membership required for all features |
+| 2 | Membership required for some features |
 
 ## Terminology
 * **Authentication server:** the server that generates the tickets. This server only provides a single service: the ticket granting service.

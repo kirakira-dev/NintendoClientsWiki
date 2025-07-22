@@ -18,8 +18,8 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 | 65 | [GetFavoriteCompetition](#65-getfavoritecompetition) |
 | 66 | GetTeamParticipants |
 | 67 | FindCommunityByOwner |
-| 68 | ? |
-| 69 | ? |
+| 68 | [Unknown](#68-unknown) |
+| 69 | [Unknown](#69-unknown) |
 
 # (54) CreateSimpleSearchObject
 ## Request
@@ -133,6 +133,28 @@ This method does not take any parameters.
 | --- | --- |
 | [List]&lt;[SimpleSearchObject]&gt; | Favorite competitions |
 
+# (68) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [UnknownStruct](#unknownstruct-structure) | Response |
+
+# (69) Unknown
+## Request
+| Type | Description |
+| --- | --- |
+| [UnknownStruct](#unknownstruct-structure) | Request |
+
+## Response
+| Type | Description |
+| --- | --- |
+| Uint32 | Unknown |
+
 # Types
 ## SimpleSearchObject ([Structure])
 | Type | Description |
@@ -177,6 +199,12 @@ Revision 1:
 | --- | --- |
 | Uint32 | Value |
 | Uint32 | Comparison operator |
+
+## UnknownStruct ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Unknown |
+| [DateTime] | Unknown |
 
 [SimpleSearchObject]: #simplesearchobject-structure
 [SimpleSearchDateTimeAttribute]: #simplesearchdatetimeattribute-structure

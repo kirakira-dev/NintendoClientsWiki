@@ -26,7 +26,7 @@ If the username does not exist, the `%retval%` field is set to `RendezVous::Inva
 | --- | --- | --- |
 | [Result] | %retval% | Result code |
 | [PID] | pidPrincipal |  User pid |
-| [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-ticket) |
+| [Buffer] | pbufResponse | [Kerberos ticket](Kerberos-Authentication#kerberos-tickets) |
 | [RVConnectionData] | pConnectionData | Connection info for secure server.<br><br>The Nintendo Switch allows the secure server to be at the same address as the authentication server. In that case, the secure server station url points to  0.0.0.1 with port 1. |
 | [String] | strReturnMsg | Server build name |
 

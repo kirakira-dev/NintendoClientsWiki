@@ -123,18 +123,19 @@ The [Kerberos ticket](#kerberos-tickets) contains the following data, encrypted 
 | Bytes | A random session key |
 | [PID] | The principal id of the **target user** |
 | [Buffer] | [Internal ticket data](#internal-ticket-format) |
+| [Buffer] | [JSON attributes](#json-attributes) (only present on new game servers) |
 
 The length of the session key is always 32 bytes, except in communication with the 3DS / Wii U friends server, in which case it's 16 bytes.
 
 ### Internal Ticket Format
 The format of the internal ticket was updated at some point. In the old format, the internal ticket data was encrypted directly with the **target key**. In the new format, a random key is sent along with the internal ticket in plain text, which is combined with the **target key** to derive the final encryption key.
 
-### Old version
+#### Old version
 | Type | Description |
 | --- | --- |
 | [Ticket Info](#ticket-info) | Encrypted ticket info |
 
-### New version
+#### New version
 | Type | Description |
 | --- | --- |
 | [Buffer] | Random key |
@@ -142,14 +143,34 @@ The format of the internal ticket was updated at some point. In the old format, 
 
 The final encryption key is calculated as follows: `MD5(target_user_key + random_key)`
 
-### Ticket Info
+#### Ticket Info
 The date time is used to check ticket expiration. A ticket is valid for exactly 2 minutes.
+
+**Note:** the structure below is outdated. Recent game servers return a larger structure with an unknown format.
 
 | Type | Description |
 | --- | --- |
 | [DateTime] | The time at which the ticket was issued |
 | [PID] | The principal id of the **source user** |
 | Bytes | The session key |
+
+### JSON Attributes
+If present, the JSON attributes contain the following null-terminated string:
+
+```json
+{"v": 1, "att": 2, "pid": 11607394848327368017, "mi": {"ms": -1, "mp": 1, "cpa": true}}
+```
+
+These fields have the following meaning.
+
+| Field | Description |
+| --- | --- |
+| `v` | Version (always 1) |
+| `att` | Token type (0=3DS, 1=Wii U, 2=Switch) |
+| `pid` | User id |
+| `mi` | Unknown |
+
+In some cases, the attributes have an `exp` field that contains the expiration timestamp in seconds.
 
 ## Terminology
 * **Authentication server:** the server that generates the tickets. This server only provides a single service: the ticket granting service.

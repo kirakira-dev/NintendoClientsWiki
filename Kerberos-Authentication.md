@@ -116,7 +116,7 @@ Here, `pid` and `password` are the principal id and password of the **source** o
 ## Ticket Format
 The following encryption algorithm is used: first, the ticket is encrypted with RC4. Then a HMAC-MD5 of the encrypted data is appended. The decryption process is the reverse: first check the HMAC, then decrypt.
 
-The [Kerberos ticket](#kerberos-ticket) contains the following data, encrypted with the **source key**:
+The [Kerberos ticket](#kerberos-tickets) contains the following data, encrypted with the **source key**:
 
 | Type | Description |
 | --- | --- |

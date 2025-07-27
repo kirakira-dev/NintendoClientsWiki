@@ -55,7 +55,7 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 ## Request
 This method does not return anything.
 
-# (20) GetCommonDataByPIDList
+# (20) GetScorePack
 ## Request
 | Type | Description |
 | --- | --- |

@@ -256,6 +256,7 @@ New ([docs](Penne-Servers)):
 #### Other Servers
 * `https://mii-secure-lp1.cdn.nintendo.net` (mii images)
 * `https://idbe-hac.cdn.nintendo.net` ([icon data](IDBE-Server))
+* `https://nemof.hac.lp1.nemo.srv.nintendo.net` (eShop videos)
 * `https://lp1.nso.nintendo.net` (NSO applet)
 * `https://fw-api.lp1.nso.nintendo.net` ([NSO rewards](NSO-Reward-Server))
 * `https://capi.lp1.op2.nintendo.net` ([NSO membership verification](NSO-Verification-Server))

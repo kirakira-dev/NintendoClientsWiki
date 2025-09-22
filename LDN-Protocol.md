@@ -133,6 +133,8 @@ The format of the advertisement data depends on the encryption type that is spec
 
 The authentication token is generated when the network is created and was added in LDN version 3. In previous versions it is set to 0. It is used during [authentication](#authentication).
 
+The band and channel fields were added in version 20.0.0.
+
 #### Plain or AES-CTR
 
 | Offset | Size | Description |

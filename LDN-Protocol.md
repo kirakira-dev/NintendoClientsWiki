@@ -26,13 +26,8 @@ Also see: [[Local Wireless Communication on PC]].
 | --- | --- | --- |
 | 2.0.0 - 5.1.0 | 2 | Initial version |
 | 6.0.0 - 18.1.0 | 3 | Challenge was added to authentication frame |
-| 19.0.0 - 20.1.5 | 4 | Unknown changes |
-
-In addition, the following changes were seen:
-
-| System version | Changes |
-| --- | --- |
-| 20.0.0 | Support for AES-GCM encryption was added, and a band/channel field was added to advertisement frames |
+| 19.0.0 - 19.0.1 | 4 | No significant changes |
+| 20.0.0 - 20.4.0 | 4 | Support for AES-GCM encryption was added, and a band/channel field was added to advertisement frames |
 
 ## WLAN Channels
 The channel on which LDN operates can be specified by games. Allowed channels are:

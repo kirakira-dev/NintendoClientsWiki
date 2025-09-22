@@ -32,7 +32,7 @@ In addition, the following changes were seen:
 
 | System version | Changes |
 | --- | --- |
-| 20.0.0 | Support for AES-GCM encryption was added |
+| 20.0.0 | Support for AES-GCM encryption was added, and a band/channel field was added to advertisement frames |
 
 ## WLAN Channels
 The channel on which LDN operates can be specified by games. Allowed channels are:

@@ -133,7 +133,7 @@ The format of the advertisement data depends on the encryption type that is spec
 
 The authentication token is generated when the network is created and was added in LDN version 3. In previous versions it is set to 0. It is used during [authentication](#authentication).
 
-*Plain or AES-CTR:*
+#### Plain or AES-CTR
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -163,7 +163,7 @@ Every participant has the following structure:
 | 0x2C | 2 | Application communication version |
 | 0x2E | 10 | Padding (always 0) |
 
-*AES-GCM:*
+#### AES-GCM
 
 | Offset | Size | Description |
 | --- | --- | --- |

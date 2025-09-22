@@ -141,7 +141,7 @@ The authentication token is generated when the network is created and was added 
 | 0x10 | 2 | [Security level](#encryption-keys) |
 | 0x12 | 1 | Station accept policy:<br>0 = Open participation<br>1 = Closed participation<br>2 = Blacklist (provided by game)<br>3 = Whitelist (provided by game) |
 | 0x13 | 1 | Padding (always 0) |
-| 0x14 | 2 | `0x03FF`: Unknown<br>`0xFC00`: Band (2 = 2.4 GHz, 5 = 5 GHz, 6 = 6 GHz) |
+| 0x14 | 2 | `0x03FF`: Channel<br>`0xFC00`: Band (2 = 2.4 GHz, 5 = 5 GHz, 6 = 6 GHz) |
 | 0x16 | 1 | Maximum number of participants |
 | 0x17 | 1 | Current number of participants |
 | 0x18 | 56 x 8 | Participant list (see below) |
@@ -173,7 +173,7 @@ Every participant has the following structure:
 | 0x19 | 1 | Station accept policy:<br>0 = Open participation<br>1 = Closed participation<br>2 = Blacklist (provided by game)<br>3 = Whitelist (provided by game) |
 | 0x1A | 2 | Application communication version |
 | 0x1C | 8 | Unknown |
-| 0x24 | 2 | `0x03FF`: Unknown<br>`0xFC00`: Band (2 = 2.4 GHz, 5 = 5 GHz, 6 = 6 GHz) |
+| 0x24 | 2 | `0x03FF`: Channel<br>`0xFC00`: Band (2 = 2.4 GHz, 5 = 5 GHz, 6 = 6 GHz) |
 | 0x26 | 1 | Maximum number of participants |
 | 0x27 | 1 | Current number of participants (N) |
 | 0x28 | 48 x N | [Participant](#participant-info) list |

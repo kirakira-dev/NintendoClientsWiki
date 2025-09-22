@@ -131,6 +131,8 @@ AES-GCM encryption must be explicitly enabled by games. It is mostly used by Swi
 ### Advertisement Data
 The format of the advertisement data depends on the encryption type that is specified in the [header](#advertisement-payload).
 
+The authentication token is generated when the network is created and was added in LDN version 3. In previous versions it is set to 0. It is used during [authentication](#authentication).
+
 *Plain or AES-CTR:*
 
 | Offset | Size | Description |
@@ -139,30 +141,55 @@ The format of the advertisement data depends on the encryption type that is spec
 | 0x10 | 2 | [Security level](#encryption-keys) |
 | 0x12 | 1 | Station accept policy:<br>0 = Open participation<br>1 = Closed participation<br>2 = Blacklist (provided by game)<br>3 = Whitelist (provided by game) |
 | 0x13 | 1 | Padding (always 0) |
-| 0x14 | 2 | Unknown (20.0.0+) |
+| 0x14 | 2 | `0x03FF`: Unknown<br>`0xFC00`: Unknown |
 | 0x16 | 1 | Maximum number of participants |
 | 0x17 | 1 | Current number of participants |
-| 0x18 | 56 x 8 | [Participant](#participant-info) list |
+| 0x18 | 56 x 8 | Participant list (see below) |
 | 0x1D8 | 2 | Padding (always 0) |
 | 0x1DA | 2 | Application data size |
 | 0x1DC | 384 | [Application data](LDN-Application-Data-(Pia)) |
 | 0x35C | 412 | Padding (always 0) |
 | 0x4F8 | 8 | Authentication token (random) |
 
-*AES-GCM:* not yet documented
+Every participant has the following structure:
 
-The authentication token is generated when the network is created and was added in LDN version 3. In previous versions it is set to 0. It is used during [authentication](#authentication).
-
-#### Participant Info
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | IP address |
 | 0x4 | 6 | MAC address |
 | 0xA | 1 | Is connected |
-| 0xB | 1 | Padding (always 0) |
+| 0xB | 1 | Unknown |
 | 0xC | 32 | Username |
 | 0x2C | 2 | Application communication version |
 | 0x2E | 10 | Padding (always 0) |
+
+*AES-GCM:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 16 | Network key |
+| 0x10 | 8 | Authentication token (random) |
+| 0x18 | 1 | [Security level](#encryption-keys) |
+| 0x19 | 1 | Station accept policy:<br>0 = Open participation<br>1 = Closed participation<br>2 = Blacklist (provided by game)<br>3 = Whitelist (provided by game) |
+| 0x1A | 2 | Application communication version |
+| 0x1C | 8 | Unknown |
+| 0x24 | 2 | `0x03FF`: Unknown<br>`0xFC00`: Unknown |
+| 0x26 | 1 | Maximum number of participants |
+| 0x27 | 1 | Current number of participants (N) |
+| 0x28 | 48 x N | [Participant](#participant-info) list |
+| | 2 | Application data size |
+| | | [Application data](LDN-Application-Data-(Pia)) |
+
+Every participant has the following structure:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | IP address |
+| 0x4 | 6 | MAC address |
+| 0xA | 1 | Player index |
+| 0xB | 1 | Unknown |
+| 0xC | 32 | Username |
+| 0x2C | 4 | Padding (always 0) |
 
 ## Authentication Frame
 This is a data frame with ethertype 0x88B7 (OUI extended). It is usually [encrypted](#encryption-keys).

@@ -26,7 +26,7 @@ Also see: [[Local Wireless Communication on PC]].
 | --- | --- | --- |
 | 2.0.0 - 5.1.0 | 2 | Initial version |
 | 6.0.0 - 18.1.0 | 3 | Challenge was added to authentication frame |
-| 19.0.0 - 20.1.5 | 4 | Unknown difference |
+| 19.0.0 - 20.1.5 | 4 | Unknown changes |
 
 In addition, the following changes were seen:
 
@@ -126,8 +126,12 @@ This is a vendor-specific action frame that is broadcasted by the access point e
 
 When AES-CTR is used, both the hash and advertisement data are encrypted. The input buffer for [key derivation](#encryption-keys) is the [session info](#session-info), and the input key is `191884743e24c77d87c69e4207d0c438`.
 
+AES-GCM encryption must be explicitly enabled by games. It is mostly used by Switch 2 games.
+
 ### Advertisement Data
-Note: the advertisement data has a different format when AES-GCM encryption is used, which has not yet been documented here.
+The format of the advertisement data depends on the encryption type that is specified in the [header](#advertisement-payload).
+
+*Plain or AES-CTR:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -144,6 +148,8 @@ Note: the advertisement data has a different format when AES-GCM encryption is u
 | 0x1DC | 384 | [Application data](LDN-Application-Data-(Pia)) |
 | 0x35C | 412 | Padding (always 0) |
 | 0x4F8 | 8 | Authentication token (random) |
+
+*AES-GCM:* not yet documented
 
 The authentication token is generated when the network is created and was added in LDN version 3. In previous versions it is set to 0. It is used during [authentication](#authentication).
 

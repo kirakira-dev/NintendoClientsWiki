@@ -262,7 +262,7 @@ The challenge was added to the authentication frame in LDN version 3. Its purpos
 | 0x31 | 1 | Always 0 |
 | 0x32 | 1 | P |
 | 0x33 | 1 | Q |
-| 0x34 | 1 | Debug check (always 0) |
+| 0x34 | 1 | Flags (1 = is debug check, 2 = is ounce) |
 | 0x35 | 3 | Padding (always 0) |
 | 0x38 | 8 | Authentication token (see [advertisement frame](#advertisement-frame)) |
 | 0x40 | 8 | Authentication nonce (random) |

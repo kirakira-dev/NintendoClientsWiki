@@ -246,7 +246,8 @@ LDN version 3 and later:
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 0x84 | Unknown |
+| 0x0 | 1 | Platform (0 = Switch, 1 = Switch 2) |
+| 0x1 | 0x83 | Padding (always 0) |
 | 0x84 | 0x100 | [Challenge response](#challenge-response) (only present if enabled) |
 
 #### Challenge Request

@@ -262,7 +262,7 @@ The challenge was added to the authentication frame in LDN version 3. Its purpos
 | 0x31 | 1 | Always 0 |
 | 0x32 | 1 | P |
 | 0x33 | 1 | Q |
-| 0x34 | 1 | Flags (1 = is debug check, 2 = is ounce) |
+| 0x34 | 1 | Flags (1 = is debug check, 2 = unknown) |
 | 0x35 | 3 | Padding (always 0) |
 | 0x38 | 8 | Authentication token (see [advertisement frame](#advertisement-frame)) |
 | 0x40 | 8 | Authentication nonce (random) |
@@ -281,7 +281,8 @@ The HMAC is calculated over bytes 0x30 - 0x300 and the key is `f84b487fb37251c26
 | 0x24 | 12 | Always 0 |
 | 0x30 | 1 | Always 0 |
 | 0x31 | 1 | Always 0 |
-| 0x32 | 6 | Padding (always 0) |
+| 0x32 | 2 | Padding (always 0) |
+| 0x34 | 4 | Flags (2 = unknown) |
 | 0x38 | 8 | Authentication nonce from request |
 | 0x40 | 8 | Device id from request |
 | 0x48 | 8 | Own device id |

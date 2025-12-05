@@ -208,6 +208,8 @@ Fields that are not present are copied from the previous message.
 | 0x8 | The message may not be bundled with other messages in a single packet |
 | 0x10 | The message payload is zlib compressed. This was introduced around Pia version 5.14 and is only supported by some specific protocols. |
 
+Note: it seems that on version 5.2, the meaning of the multicast bit is flipped (unknown in which version this was changed).
+
 Note: it seems like later pia versions use 0x20 for zlib compression instead.
 
 ### Station index
@@ -218,7 +220,7 @@ Every console in a mesh gets its own station index. The following station index 
 * **255:** Used for broadcast messages.
 
 ### Destination
-The content of this field depends on the [multicast bit](#message-flags). If the multicast bit is cleared, this field contains the [constant id](Pia-Types#constant-id) of the destination console. If the multicast bit is set, this field contains a bitmap where each bit represents one destination console (the bit number of a console is its station index: `1 << station_index`).
+The content of this field depends on the [multicast bit](#message-flags). If the multicast bit is cleared, this field contains the [constant id](Pia-Types#constant-id) of the destination console. If the multicast bit is set, this field contains a bitmap where each bit represents one destination console (the bit number of a console is its station index: `1 << station_index`). If the destination field is 0, the message is broadcast to all consoles.
 
 ## Encryption
 Packets are encrypted and signed with the [session key](#session-key). The messages are padded with 0xFF before encryption such that their combined size is a multiple of 16 bytes.

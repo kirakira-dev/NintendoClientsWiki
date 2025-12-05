@@ -294,7 +294,11 @@ The session key is used for packet encryption and signature calculation.
 
 The session key is obtained from the game server during [matchmaking](Match-Making-Types#matchmakesession-structure).
 
-**LDN** *(Up to 5.7):*
+**LDN** *(Up to 5.6):*
+
+Encryption is not supported in LDN mode.
+
+**LDN** *(5.7):*
 
 The session key is [specified by the game](Pia-Game-Keys).
 

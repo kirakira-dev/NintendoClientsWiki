@@ -44,7 +44,7 @@ The following version numbers are advertised during the [connection request](Sta
 | Type | Description |
 | --- | --- |
 | Uint8 | Message type (1) |
-| Uint8 | Station index |
+| Uint8 | Station index (always 0xFD) |
 | Uint16 | Padding (always 0) |
 | [StationAddress] | Station address |
 | Uint32 | Ack id |
@@ -54,7 +54,7 @@ The following version numbers are advertised during the [connection request](Sta
 | Type | Description |
 | --- | --- |
 | Uint8 | Message type (1) |
-| Uint8 | Station index |
+| Uint8 | Station index (Always 0xFD) |
 | Uint32 | Ack id |
 
 # Join response (success)

@@ -40,6 +40,8 @@ In version 5.19, the `StationProtocol` was renamed to `MeshStationProtocol` and 
 | 5.27 - 5.43 | 2 |
 
 ## Connection Request
+In versions where applicable, the inverse connection id must be the connection id that was previously received from the other station.
+
 *3.3 - 4.10:*
 
 | Type | Description |

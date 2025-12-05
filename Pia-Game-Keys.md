@@ -2,6 +2,7 @@ In LDN and LAN mode, [Pia](Pia-Overview) derives encryption keys using a game-sp
 
 | Game | Key |
 | --- | --- |
+| Mario Kart 8 Deluxe | `ABCDEFGHIJKLMNOP` |
 | Pokemon Sword/Shield | `p1frXqxmeCZWFv0X` |
 | Splatoon 2 | `ee182a63e216cdb1f51ad4bed8cf6508` |
 | Super Mario Maker 2 | `667c18475889faab61f93ef1da180971` |

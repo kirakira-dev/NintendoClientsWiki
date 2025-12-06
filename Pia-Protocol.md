@@ -264,7 +264,7 @@ The CRC32 hash is calculated over the following data:
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 4 | XOR of [network id](LAN-Protocol#lannetworkproperty) and IP address of source |
+| 0x0 | 4 | XOR of network id and IP address of source |
 | 0x4 | 8 | Nonce from [header](#header) |
 
 **LAN** *(up to 5.44):*

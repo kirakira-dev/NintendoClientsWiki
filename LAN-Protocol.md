@@ -405,7 +405,7 @@ The crypto challenge is the same in all versions.
 | --- | --- |
 | 1 | 5.7 - 5.10 |
 | 2 | 5.11 - 5.44 |
-| 3 | 6.16 - 6.30 |
+| 3 | 6.16 - 6.33 |
 | 4 | 6.40 |
 
 Mario Kart World has the challenge version set to 4.

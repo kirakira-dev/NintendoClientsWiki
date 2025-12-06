@@ -218,8 +218,10 @@ Unknown:
 
 #### Game Content (Data) ([docs](Atum-Server))
 * `https://atum.hac.lp1.d4c.nintendo.net` (Akamai)
-* `https://atum-eda.hac.lp1.d4c.nintendo.net` (LLNW)
 * `https://atum-4ff.hac.lp1.d4c.nintendo.net` (Lumen)
+* `https://atum-eda.hac.lp1.d4c.nintendo.net` (LLNW)
+* `https://atum-5a8.hac.lp1.d4c.nintendo.net` (Fastly)
+* `https://atum-f03.hac.lp1.d4c.nintendo.net` (Cloudflare)
 
 #### Push Notifications
 Old ([docs](NPNS-Servers)):

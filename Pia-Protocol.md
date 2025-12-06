@@ -88,6 +88,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 6.16 - 6.23 | 11 |
 | 6.25 - 6.26 | 12 |
 | 6.29 - 6.30 | 13 |
+| 6.34 | 15 |
 | 6.40 | 16 |
 
 Mario Kart World has header version 16.

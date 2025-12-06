@@ -26,11 +26,15 @@ Here is an example: `NintendoSDK Firmware/15.0.0-4.0 (platform:NX; did:6265ca407
 | GET | `/v1/policy.json` |
 | GET | `/v2/policy.json` |
 | GET | `/v3/policy.json` |
+| GET | `/v4/policy.json` |
+| GET | `/v5/policy.json` |
 
 | System version | API version |
 | --- | --- |
 | 14.0.0 - 14.1.2 | v2 |
-| 15.0.0 - 18.1.0 | v3 |
+| 15.0.0 - 19.0.1 | v3 |
+| 20.0.0 - 20.1.5 | v4 |
+| 20.2.0 - 21.0.1 | v5 |
 
 | Param | Description |
 | --- | --- |

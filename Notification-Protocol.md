@@ -90,7 +90,7 @@ Notification type 4000:
 | m_pidSource | Previous owner |
 | m_uiParam1 | Gathering id |
 | m_uiParam2 | New owner |
-| m_strParam | Unknown |
+| m_strParam | Timestamp in microseconds |
 
 Notification type 109000:
 

@@ -28,7 +28,9 @@
 
 # (1) CreateAccount
 ## Request
-This method does not take any parameters.
+| Type | Name |
+| --- | --- |
+| [UbiAccount] | ubiAccount |
 
 ## Response
 | Type | Name |
@@ -38,7 +40,9 @@ This method does not take any parameters.
 
 # (2) UpdateAccount
 ## Request
-This method does not take any parameters.
+| Type | Name |
+| --- | --- |
+| [UbiAccount] | ubiAccount |
 
 ## Response
 | Type | Name |

@@ -38,6 +38,7 @@ This method does not return anything.
 ## Request
 | Type | Name |
 | --- | --- |
+| [TrackingInformation] | userInfo |
 | Uint32 | deltaTime |
 
 ## Response

@@ -60,7 +60,8 @@ Wii U files are encoded in big-endian byte order, 3DS files in little-endian byt
 **3DS:**
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x2050 | 0x1680 | Unknown |
+| 0x2050 | 0x480 | 24x24 RGB565 data |
+| 0x24D0 | 0x1200 | 48x48 RGB565 data |
 
 ### Title Strings
 | Offset | Size | Description |
@@ -86,5 +87,3 @@ The header has room for 16 languages but only 12 are actually used. The remainin
 | 9 | Portuguese |
 | 10 | Russian |
 | 11 | Chinese (traditional) |
-
-<!-- | 0x20 | 0x36B0 or 0x12060 | Icon data | -->

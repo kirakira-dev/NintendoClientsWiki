@@ -88,4 +88,7 @@ The application data seems to be structured as follows:
 | 0x16 | 22 | Unknown |
 | 0x2C | 4 | Character id |
 | 0x30 | 4 | Sticker id |
-| 0x34 | 12 | Unknown |
+| 0x34 | 4 | Unknown |
+| 0x38 | 8 | Unknown |
+
+A number of character ids have been documented [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vR02aFyfjlxmc987Tve0P-wsuH8c3g4A8PSoc_pjFh2OQPlP6g7fYjnVIl1NnSNxkfK0km2ucikrV_a/pubhtml).

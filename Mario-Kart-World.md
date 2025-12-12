@@ -91,4 +91,4 @@ The application data seems to be structured as follows:
 | 0x34 | 4 | Unknown |
 | 0x38 | 8 | Unknown |
 
-A number of character ids have been documented [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vR02aFyfjlxmc987Tve0P-wsuH8c3g4A8PSoc_pjFh2OQPlP6g7fYjnVIl1NnSNxkfK0km2ucikrV_a/pubhtml).
+A number of character ids have been documented [here](https://docs.google.com/spreadsheets/d/16jP_RZU_rvqdlGMt4kYIhz4ZxgCpk7S73eA9zLZTlGE/edit?usp=sharing).

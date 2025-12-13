@@ -98,7 +98,8 @@ Table of contents:
 * `https://p01.lp1.savanna.srv.nintendo.net` (eShop)
 * `https://lp1.nso.nintendo.net` (NSO applet)
 * `https://fw-api.lp1.nso.nintendo.net` ([NSO rewards](NSO-Reward-Server))
-* `service-status.p01.lp1.smn.srv.nintendo.net` (service status)
+* `https://service-status.p01.lp1.smn.srv.nintendo.net` (service status)
+* `https://m-lp1.baas.nintendo.com`
 
 Unknown:
 

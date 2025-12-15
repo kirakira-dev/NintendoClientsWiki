@@ -36,6 +36,8 @@ Table of contents:
   * **Example:** `t-e96531c6-lp1.lp1.t.npln.srv.nintendo.net`
 * `npln-lp1-latency-<region>-<id>-green-agones.lp1.t.npln.srv.nintendo.net` (latency measurement)
   * **Example:** `npln-lp1-latency-eu-01-green-agones.lp1.t.npln.srv.nintendo.net`
+* `s01.lp1.s.npln.srv.nintendo.net` (STUN)
+* `s01.lp1.u.npln.srv.nintendo.net` (TURN)
 
 #### eLicenses
 * `https://dragons.p01.lp1.dragons.nintendo.net`

@@ -74,6 +74,8 @@ Table of contents:
 #### NAT Check ([docs](NAT-Check-Server))
 * `nncs1.p01.lp1.n.n.srv.nintendo.net`
 * `nncs2.p01.lp1.n.n.srv.nintendo.net`
+* `nncs1-lp1.n.n.srv.nintendo.net`
+* `nncs2-lp1.n.n.srv.nintendo.net`
 
 #### System Transfer
 * `https://transfer.p01.lp1.banco.srv.nintendo.net`

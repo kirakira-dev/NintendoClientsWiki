@@ -1,11 +1,13 @@
 [Switch](Server-List#switch) > Account Server
 ---
 
-URL: https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com
-
 The baas server manages user accounts and friendships on the Nintendo Switch.
 
 Depending on the method, this server takes form or json encoded requests. The server always responds with json encoding.
+
+The main URL is https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com.
+
+On 21.0.0 and later, the account sysmodule uses https://m-lp1.baas.nintendo.com instead (the friends sysmodule still uses the previous URL).
 
 * [Headers](#headers)
 * [Methods](#methods)
@@ -54,7 +56,8 @@ The user agents below are taken from the account sysmodule. If the request is ma
 | 17.0.0 - 17.0.1 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 17.5.0.0; Add-on 17.5.0.0)` |
 | 18.0.0 - 18.1.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 18.3.0.0; Add-on 18.3.0.0)` |
 | 19.0.0 - 19.0.1 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 19.3.0.0; Add-on 19.3.0.0)` |
-| 20.0.0 - 20.1.1 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 20.5.4.0; Add-on 20.5.4.0)` |
+| 20.0.0 - 20.5.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 20.5.4.0; Add-on 20.5.4.0)` |
+| 21.0.0 - 21.1.0 | `libcurl (nnAccount; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 21.4.0.0; Add-on 21.4.0.0)` |
 
 ## Methods
 The following methods do not require an access token:

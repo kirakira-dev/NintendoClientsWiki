@@ -9,11 +9,11 @@ Wii U games send the monitoring data to the NEX server instead, through the [Sen
 
 ## Packet Format
 Every packet consists of:
-* An unencrypted [header](#packet-header)
+* An unencrypted [header](#monitoring-data-header)
 * A [compressed and encrypted](#packet-encoding) payload
 
-## Packet Header
-This is the `nn::pia::common::MonitoringDataHeader` structure.
+## Monitoring Data Header
+This structure appears at the start of the packet, but also at the start of the decrypted and decompressed payload.
 
 *Up to 5.6:*
 
@@ -23,7 +23,7 @@ This is the `nn::pia::common::MonitoringDataHeader` structure.
 | 0x1 | 1 | [Data type](#data-types) |
 | 0x2 | 1 | Flags |
 | 0x3 | 1 | Always 0xFF |
-| 0x4 | 2 | Compressed payload size |
+| 0x4 | 2 | Payload size |
 | 0x6 | 10 | Padding (filled with 0xFF) |
 
 *5.7 and later:*
@@ -34,7 +34,7 @@ This is the `nn::pia::common::MonitoringDataHeader` structure.
 | 0x1 | 1 | [Data type](#data-types) |
 | 0x2 | 1 | Flags |
 | 0x3 | 1 | Unknown |
-| 0x4 | 2 | Compressed payload size |
+| 0x4 | 2 | Payload size |
 | 0x6 | 8 | AES-GCM nonce (random number) |
 | 0xE | 1 | Encryption key id (random number) |
 | 0xF | 1 | Always 0xFF |

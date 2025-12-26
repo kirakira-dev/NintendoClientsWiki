@@ -3,6 +3,8 @@
 
 This protocol is used for the P2P monitoring server on the Switch. The messages are wrapped in unencrypted [Pia packets](Pia-Protocol) and sent to `g<game server id>-%.p.srv.nintendo.net` through UDP port 34343.
 
+If no game server id is specified (e.g. when the game uses [NPLN](NPLN-Servers)), then `g2122d301` is used as a default.
+
 Wii U games send the monitoring data to the NEX server instead, through the [SendReport](Secure-Protocol#8-sendreport) method of the [secure connection protocol](Secure-Protocol).
 
 The message payload is encoded as follows:

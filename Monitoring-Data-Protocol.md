@@ -307,7 +307,8 @@ All fields are initialized to 0xFF.
 | 0x14 | 4 | SDK version (1) |
 | 0x18 | 4 | SDK version (2) |
 | 0x1C | 4 | NPLN version |
-| 0x20 | 1 x 124 | Unknown |
+| 0x20 | 4 | Unknown |
+| 0x24 | 1 x 120 | Unknown |
 | 0x9C | 4 | Unknown |
 | 0xA0 | 4 | Unknown |
 | 0xA4 | 4 | Unknown |

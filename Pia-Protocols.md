@@ -557,7 +557,7 @@ The Pia library was redesigned for NPLN.
 | 0xB4 | Reckoning 3D Protocol |
 
 ## 6.40
-The Pia library was redesigned for NPLN.
+All protocol ids were changed.
 
 | ID | Protocol |
 | --- | --- |

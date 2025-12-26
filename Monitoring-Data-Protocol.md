@@ -324,8 +324,106 @@ All fields are initialized to 0xFF.
 | 0x185 | 4 | Unknown |
 | 0x189 | 4 | Unknown |
 | 0x18D | 2 | Unknown |
-| 0x18D | 2 | Unknown |
-| 0x18D | 2 | Unknown |
+| 0x18F | 2 | Unknown |
+| 0x191 | 2 | Unknown |
+| 0x193 | 2 | Unknown |
+| 0x195 | 2 | Unknown |
+| 0x197 | 1 | Unknown |
+| 0x198 | 1 | Unknown |
+| 0x199 | 2 | Unknown |
+| 0x19B | 4 | Unknown |
+| 0x19F | 4 | Unknown |
+| 0x1A3 | 4 | Unknown |
+| 0x1A7 | 4 | Unknown |
+| 0x1AB | 4 | Unknown |
+| 0x1AF | 4 | Unknown |
+| 0x1B3 | 8 | Unknown |
+| 0x1BB | 1 x 15 | Unknown |
+| 0x1CA | 2 x 12 | Unknown |
+| 0x1E2 | 1 | Unknown |
+| 0x1E3 | 4 | Unknown |
+| 0x1E7 | 4 | Unknown |
+| 0x1EB | 2 | Unknown |
+| 0x1ED | 1 | Unknown |
+| 0x1EE | 4 | Unknown |
+| 0x1F2 | 1 | Unknown |
+| 0x1F3 | 96 | Unknown |
+| 0x253 | 4 x 10 | Unknown |
+| 0x27B | 2 | Unknown |
+| 0x27D | 2 | Unknown |
+| 0x27F | 4 | Unknown |
+| 0x283 | 2 | Unknown |
+| 0x285 | 4 | Unknown |
+| 0x289 | 2 x 10 | Unknown |
+| 0x29D | 4 x 18 | Unknown |
+| 0x2E5 | 1 | Unknown |
+| 0x2E6 | 1 | Unknown |
+| 0x2E7 | 1 | Unknown |
+| 0x2E8 | 1 | Unknown |
+| 0x2E9 | 1 | Unknown |
+| 0x2EA | 4 x 8 | Unknown |
+| 0x30A | 8 | Unknown |
+| 0x312 | 1 | Unknown |
+| 0x313 | 2 | Unknown |
+| 0x315 | 1 | Unknown |
+| 0x316 | 1 | Unknown |
+| 0x317 | 1 | Unknown |
+| 0x318 | 4 | Unknown |
+| 0x31C | 1 | Unknown |
+| 0x31D | 1 | Unknown |
+| 0x31E | 1 | Unknown |
+| 0x31F | 2 x 15 | Unknown |
+| 0x33D | 1 | Unknown |
+| 0x33E | 2 | Unknown |
+| 0x340 | 1 | Unknown |
+| 0x341 | 2 | Unknown |
+| 0x343 | 4 | Unknown |
+| 0x347 | 4 | Unknown |
+| 0x34B | 4 | Unknown |
+| 0x34F | 1 x 6 | Unknown |
+| 0x355 | 2 | Unknown |
+| 0x357 | 2 | Unknown |
+| 0x359 | 1 | Unknown |
+| 0x35A | 2 | Unknown |
+| 0x35C | 1 | Unknown |
+| 0x35D | 2 | Unknown |
+| 0x35F | 4 | Unknown |
+| 0x363 | 2 | Unknown |
+| 0x365 | 1 | Unknown |
+| 0x366 | 2 | Unknown |
+| 0x368 | 1 | Unknown |
+| 0x369 | 2 | Unknown |
+| 0x36B | 1 | Unknown |
+| 0x36C | 2 | Unknown |
+| 0x36E | 1 | Unknown |
+| 0x36F | 1 | Unknown |
+| 0x370 | 2 | Unknown |
+| 0x372 | 1 | Unknown |
+| 0x373 | 2 | Unknown |
+| 0x375 | 1 | Unknown |
+| 0x376 | 2 | Unknown |
+| 0x378 | 1 | Unknown |
+| 0x379 | 2 | Unknown |
+| 0x37B | 1 | Unknown |
+| 0x37C | 2 | Unknown |
+| 0x37E | 1 | Unknown |
+| 0x37F | 2 | Unknown |
+| 0x381 | 1 | Unknown |
+| 0x382 | 2 | Unknown |
+| 0x384 | 1 | Unknown |
+| 0x385 | 2 | Unknown |
+| 0x387 | 1 | Unknown |
+| 0x388 | 1 | Unknown |
+| 0x389 | 1 | Unknown |
+| 0x38A | 4 | Unknown |
+| 0x38E | 2 | Unknown |
+| 0x390 | 2 | Unknown |
+| 0x392 | 4 | Unknown |
+| 0x396 | 2 | Unknown |
+| 0x398 | 1 | Unknown |
+| 0x399 | 2 | Unknown |
+| 0x39B | 1 | Unknown }
+| 0x39C | --- | End |
 
 ### NexSessionSearchCriteria
 | Type | Description |

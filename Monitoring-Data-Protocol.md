@@ -333,12 +333,7 @@ All fields are initialized to 0xFF.
 | 0x197 | 1 | Unknown |
 | 0x198 | 1 | Unknown |
 | 0x199 | 2 | Unknown |
-| 0x19B | 4 | Unknown |
-| 0x19F | 4 | Unknown |
-| 0x1A3 | 4 | Unknown |
-| 0x1A7 | 4 | Unknown |
-| 0x1AB | 4 | Unknown |
-| 0x1AF | 4 | Unknown |
+| 0x19B | 4 x 6 | Unknown |
 | 0x1B3 | 8 | Unknown |
 | 0x1BB | 1 x 15 | Unknown |
 | 0x1CA | 2 x 12 | Unknown |

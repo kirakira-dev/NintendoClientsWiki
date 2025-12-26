@@ -308,8 +308,9 @@ All fields are initialized to 0xFF.
 | 0x18 | 4 | Game SDK version |
 | 0x1C | 4 | NPLN version |
 | 0x20 | 4 | Unknown |
-| 0x24 | 1 x 120 | Unknown |
-| 0x9C | 4 | Unknown |
+| 0x24 | 1 x 119 | Unknown |
+| 0x9B | 1 | [System language](#system-language) |
+| 0x9C | 4 | [Device location name hash](#device-location-name-hash) |
 | 0xA0 | 4 | Unknown |
 | 0xA4 | 4 | Unknown |
 | 0xA8 | 1 | Unknown |
@@ -467,6 +468,42 @@ All fields are initialized to 0xFF.
 | 0 | Reliable |
 | 1 | Unreliable |
 | 2 | Failure or very unreliable |
+
+### System Language
+| ID | Language |
+| --- | --- |
+| 0 | Japanese |
+| 1 | English (US) |
+| 2 | French |
+| 3 | German |
+| 4 | Italian |
+| 5 | Spanish |
+| 6 | Chinese |
+| 7 | Korean |
+| 8 | Dutch |
+| 9 | Portuguese |
+| 10 | Russian |
+| 11 | Taiwanese |
+| 12 | English (UK) |
+| 13 | French (Canada) |
+| 14 | Spanish (Latin America) |
+| 15 | Chinese (simplified) |
+| 16 | Chinese (traditional) |
+| 17 | Portuguese (Brazil) |
+
+### Device Location Name Hash
+This is calculated over the time zone name, from `nn::time::GetDeviceLocationName`.
+
+```python
+import hashlib
+import struct
+
+def hash(timezone):
+    hash = hashlib.md5(timezone.encode()).digest()
+    parts = struct.unpack(">4I", hash)
+    value = parts[0] ^ parts[1] ^ parts[2] ^ parts[3]
+    return struct.pack(">I", value)
+```
 
 ## Session End Monitoring Data
 | Offset | Size | Description |

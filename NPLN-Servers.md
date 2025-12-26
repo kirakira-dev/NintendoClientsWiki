@@ -25,6 +25,8 @@ The official library sets the user agent to `grpc-c++/1.31.1 grpc-c/11.0.0 (nint
 ## List of services
 Services are never modified in a backward incompatible way, but new methods and services may be added in the future.
 
+General:
+
 * [`nn.npln.auth.v1.Auth`](Auth-Service)
 * `nn.npln.friends.v1.Friends`
 * `nn.npln.friends.v1.PresenceService`
@@ -39,7 +41,7 @@ Services are never modified in a backward incompatible way, but new methods and 
 * `nn.npln.ugcstore.v1.Screening`
 * [`nn.npln.ugcstore.v1.Ugcstore`](Ugcstore-Service)
 
-Splatoon 3 also implements some custom services:
+Splatoon 3:
 
 * `nn.npln.toyohr.v1.Canola`
 * `nn.npln.toyohr.v1.CloudSave`
@@ -52,10 +54,14 @@ Splatoon 3 also implements some custom services:
 * `nn.npln.toyohr.v1.Schedule`
 * `nn.npln.toyohr.v1.UserScreening`
 
-Pokemon Scarlet and Violet implement custom services as well:
+Pokemon Scarlet and Violet:
 
 * `nn.npln.timber.v1.CompetitionService`
 * `nn.npln.timber.v1.TradeBoxService`
+
+Pokemon Legends Z-A:
+
+* `nn.npln.ikaros.v1.CompetitionService`
 
 ## List of games
 * [SDK version table](https://kinnay.github.io/view.html?page=switch&sort=npln&npln=1)

@@ -424,7 +424,7 @@ All fields are initialized to 0xFF.
 | 0x396 | 2 | Unknown |
 | 0x398 | 1 | Unknown |
 | 0x399 | 2 | Unknown |
-| 0x39B | 1 | Unknown }
+| 0x39B | 1 | Unknown |
 | 0x39C | --- | End |
 
 ### NexSessionSearchCriteria

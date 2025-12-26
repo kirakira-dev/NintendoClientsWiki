@@ -323,8 +323,8 @@ All fields are initialized to 0xFF.
 | 0x17B | 1 x 7 | Unknown |
 | 0x182 | 2 | Unknown |
 | 0x184 | 1 | Unknown |
-| 0x185 | 4 | Unknown |
-| 0x189 | 4 | Unknown |
+| 0x185 | 4 | Public IP address |
+| 0x189 | 4 | Local IP address |
 | 0x18D | 2 | Unknown |
 | 0x18F | 2 | Unknown |
 | 0x191 | 2 | Unknown |

@@ -92,7 +92,7 @@ The payload is first zlib compressed and then encrypted.
 
 *Up to 5.6:*
 
-The payload is encrypted with AES-ECB with the key ``901edf193dc5ef3c5290647bff20c385`.
+The payload is encrypted with AES-ECB with the key `901edf193dc5ef3c5290647bff20c385`.
 
 *5.7 and later:*
 

@@ -10,7 +10,7 @@ Wii U games send the monitoring data to the NEX server instead, through the [Sen
 ## Packet Format
 Every packet consists of:
 * An unencrypted [header](#monitoring-data-header)
-* A [compressed and encrypted](#packet-encoding) payload
+* A [compressed and encrypted](#payload-encoding) payload
 
 ## Monitoring Data Header
 This structure appears at the start of the packet, but also at the start of the decrypted and decompressed payload.

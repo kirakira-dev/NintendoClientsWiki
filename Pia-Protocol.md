@@ -216,6 +216,21 @@ Fields that are not present are copied from the previous message.
 | Bytes | Payload (protocol-specific) |
 | | Padding |
 
+*6.40:*
+
+Fields that are not present are copied from the previous message.
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Flags indicating which of the following fields are present. |
+| Uint8 | [Message flags](#message-flags). *Only present if `flags & 1`.* |
+| Uint16 | Payload size. *Only present if `flags & 2`.* |
+| Uint8 | [Protocol type](Pia-Protocols). *Only present if `flags & 4`.* |
+| Uint8 | Unknown. *Only present if `flags & 8`.* |
+| Uint8 | Unknown. *Only present if `flags & 16`.* |
+| Bytes | Payload (protocol-specific) |
+| | Padding |
+
 ### Message flags
 | Mask | Description |
 | --- | --- |

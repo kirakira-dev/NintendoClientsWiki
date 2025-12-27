@@ -298,6 +298,29 @@ All fields are initialized to 0xFF.
 | Uint8 | Unknown |
 | Uint32 | Always `PiaM` |
 
+*Version 34:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 16 | [Header](#monitoring-data-header) |
+| 0x10 | 4 | Pia version |
+| 0x14 | 4 | Pia SDK version |
+| 0x18 | 4 | Game SDK version |
+| 0x1C | 4 | NPLN version |
+| 0x20 | 4 | Unknown |
+| 0x24 | 1 | Unknown |
+| 0x25 | 1 | Unknown |
+| 0x26 | 1 | Unknown |
+| 0x27 | 20 | Engine version |
+| 0x3B | 96 | Unknown |
+| 0x9B | 1 | [System language](#system-language) |
+| 0x9C | 4 | [Device location name hash](#device-location-name-hash) |
+| 0xA0 | ... | Unknown |
+| 0x384 | 2 | Number of buffers per station for event clone protocol |
+| 0x386 | 4 | Maximum id for atomic clone protocol |
+| 0x38A | ... | Unknown |
+| 0x434 | --- | End |
+
 *Version 43:*
 
 | Offset | Size | Description |
@@ -308,7 +331,11 @@ All fields are initialized to 0xFF.
 | 0x18 | 4 | Game SDK version |
 | 0x1C | 4 | NPLN version |
 | 0x20 | 4 | Unknown |
-| 0x24 | 1 x 119 | Unknown |
+| 0x24 | 1 | Unknown |
+| 0x25 | 1 | Unknown |
+| 0x26 | 1 | Unknown |
+| 0x27 | 20 | Engine version |
+| 0x3B | 96 | Unknown |
 | 0x9B | 1 | [System language](#system-language) |
 | 0x9C | 4 | [Device location name hash](#device-location-name-hash) |
 | 0xA0 | 4 | Unknown |

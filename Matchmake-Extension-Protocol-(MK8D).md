@@ -171,8 +171,8 @@ Revision 1:
 
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
-| [DateTime] | Unknown |
+| Uint32 | Liveliness rate |
+| [DateTime] | Liveliness update time |
 
 ## SimpleSearchDateTimeAttribute ([Structure])
 | Type | Description |

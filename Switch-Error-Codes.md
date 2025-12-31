@@ -163,8 +163,9 @@ The following module ids are currently known:
 | 2223 | `websocket` | Websockets |
 | 2224 | `socketio` | Socket I/O |
 | 2306 | `nex` | [Game servers (old)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
+| 2318 | `pia` | Peer to peer (new) |
 | 2321 | `npln` | Game servers (new) |
-| 2618 | `pia` | [Peer to peer](#pia-error-codes) |
+| 2618 | `pia` | [Peer to peer](#pia-error-codes) (old) |
 | 2623 | `eagle` | [Relay servers](#eagle-error-codes) |
 | 2815 | `coral` | [Voice chat](#coral-error-codes) |
 

@@ -120,9 +120,10 @@ The following errors are shown when the [DAuth server](DAuth-Server) returns an 
 | 2124-4507 | 0007 | System update is required. |
 | 2124-4508 | 0008 | Device has been banned. |
 | 2124-4509 | 0009 | Internal Server Error. |
-| 2124-4510 | 0010 | |
-| 2124-4511 | 0011 | |
-| 2124-4513 | 0013 | |
+| 2124-4510 | 0010 | Under maintenance. |
+| 2124-4511 | 0011 | Invalid client. |
+| 2124-4512 | 0012 | API not found. |
+| 2124-4513 | 0013 | Invalid certificate. |
 | 2124-4514 | 0014 | Invalid parameter in request. |
 | 2124-4515 | 0015 | Invalid parameter in request. |
 | 2124-4516 | 0016 | Invalid parameter in request. |

@@ -1,15 +1,169 @@
-# Error Categories
-| Error Codes | Description |
-| --- | --- |
-| 2123-XXXX | [SSL / TLS](#ssl-error-codes) |
-| 2124-XXXX | [Account services](#account-error-codes) |
-| 2155-XXXX | [Curl (http requests)](#curl-error-codes) |
-| 2181-XXXX | [DAuth (device authentication)](#dauth-error-codes) |
-| 2306-XXXX | [NEX (game servers)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
-| 2321-XXXX | NPLN (new game servers) |
-| 2618-XXXX | [PIA (peer to peer)](#pia-error-codes) |
-| 2623-XXXX | [Eagle (relay servers)](#eagle-error-codes) |
-| 2815-XXXX | [Coral (voice chat)](#coral-error-codes) |
+An error code contains a module id and a module-specific code, separated by a dash. For example: `2306-0502`.
+
+The following module ids are currently known:
+
+| Code | Name | Description |
+| --- | --- | --- |
+| 2001 | `svc` | Supervisor calls (syscalls) |
+| 2002 | `fs` | Filesystem |
+| 2003 | `os` | Operating system |
+| 2004 | `htcs` | Host target connection services |
+| 2005 | `ncm` | Nintendo content manager |
+| 2006 | `dd` | Device address space |
+| 2007 | `osdbg` | OS debugging |
+| 2008 | `lr` | Location resolver |
+| 2009 | `ldr` | Loader services |
+| 2010 | `sf` | Service framework |
+| 2011 | `sf::hipc` | Service framework (IPC) |
+| 2012 | `tma` | Target manager agent |
+| 2013 | `dmnt` | Debug monitor |
+| 2014 | `gds` | ? |
+| 2015 | `pm` | Process manager |
+| 2016 | `ns` | Nintendo shell services |
+| 2017 | `bsdsocket` | Berkeley sockets |
+| 2018 | `htc` | Host target connections |
+| 2019 | `tsc` | ? |
+| 2020 | `kvdb` | Key-value database |
+| 2021 | `sm` | Service manager |
+| 2022 | `ro` | Loader symbol registration |
+| 2023 | `gc` | ? |
+| 2024 | `sdmmc` | MMC storage |
+| 2025 | `ovln` | Overlay notifications |
+| 2026 | `spl` | Secure platform services |
+| 2027 | `socket` | Socket API |
+| 2028 | `dt` | Device tree |
+| 2029 | `htclow` | Host target connections (low level) |
+| 2030 | `ddsf` | Device driver service framework |
+| 2031 | `htcfs` | Host target connections (filesystem) |
+| 2032 | `async` | Asynchronous tasks |
+| 2033 | `util` | Utilities |
+| 2035 | `tipc` | Tiny IPC |
+| 2037 | `anif` | ? |
+| 2100 | `eth` | Ethernet |
+| 2101 | `i2c` | I2C (hardware communication) |
+| 2102 | `gpio` | GPIO (hardware communication) |
+| 2103 | `uart` | UART (hardware communication) |
+| 2104 | `cpad` | Classic controller |
+| 2105 | `settings` | System settings |
+| 2106 | `ftm` | Touchscreen |
+| 2107 | `wlan` | WLAN |
+| 2108 | `xcd` | NX controller driver |
+| 2109 | `tmp451` | Temperature sensor |
+| 2110 | `nifm` | Network interface manager (internet connection) |
+| 2111 | `codec` | Audio decoding |
+| 2112 | `lsm6ds3` | Accelerometer / gyroscope |
+| 2113 | `bluetooth` | Bluetooth |
+| 2114 | `vi` | Video display |
+| 2115 | `nfp` | Amiibo |
+| 2116 | `time` | Time services |
+| 2117 | `fgm` | Frequency governer module |
+| 2118 | `oe` | Operating environment (battery, performance, etc.) |
+| 2119 | `bh1730fvc` | Light sensor |
+| 2120 | `pcie` | PCIe (hardware communication) |
+| 2121 | `friends` | Friends |
+| 2122 | `bcat` | Background content delivery (used for news and game data) |
+| 2123 | `ssl` | [SSL / TLS](#ssl-error-codes) |
+| 2124 | `account` | [Account services](#account-error-codes) |
+| 2125 | `news` | News |
+| 2126 | `mii` | Miis |
+| 2127 | `nfc` | Near-field communication |
+| 2128 | `am` | Applet manager |
+| 2129 | `prepo` | Play reports (telemetry) |
+| 2130 | `ahid` | ? |
+| 2131 | `applet` | Applets |
+| 2132 | `ae` | Applet environment |
+| 2133 | `pcv` | Power control / voltage services |
+| 2134 | `usb::pd` | USB power delivery |
+| 2135 | `bpc` | Board power control |
+| 2136 | `psm` | Power management |
+| 2137 | `nim` | Network installation manager |
+| 2138 | `psc` | Power state control |
+| 2139 | `tc` | Temperature control |
+| 2140 | `usb` | USB |
+| 2141 | `nsd` | Network service discovery |
+| 2142 | `pctl` | Parental controls |
+| 2143 | `btm` | Bluetooth manager |
+| 2144 | `la` | Library applets |
+| 2145 | `es` | E-ticket services |
+| 2146 | `ngc` | Profanity checks |
+| 2147 | `erpt` | Error report generation |
+| 2148 | `apm` | Applet profile manager |
+| 2149 | `cec` | CEC (HDMI) |
+| 2150 | `profiler` | CPU profiler |
+| 2151 | `eupld` | Error report uploads |
+| 2152 | `libde` | Icon downloads |
+| 2153 | `audio` | Audio |
+| 2154 | `npns` | Nintendo push notification service |
+| 2155 | `http` | [HTTP requests (curl)](#http-error-codes) |
+| 2156 | `idle` | Auto-sleep |
+| 2157 | `arp` | Application registry |
+| 2158 | `updater` | Updater |
+| 2159 | `swkbd` | Software keyboard |
+| 2160 | `netdiag` | Network checks |
+| 2161 | `nfc::mifare` | Mifare |
+| 2162 | `err` | Errors |
+| 2163 | `fatal` | Fatal errors |
+| 2164 | `ec` | E-commerce services |
+| 2165 | `spsm` | Power state |
+| 2166 | `aoc` | Add-on content |
+| 2167 | `bgtc` | Background tasks |
+| 2168 | `creport` | Crash reports |
+| 2169 | `sasbus` | SAS bus |
+| 2170 | `pl` | Platform services |
+| 2171 | `cdmsc` | USB mass storage |
+| 2172 | `audioctrl` | Audio control |
+| 2173 | `lbl` | Light sensor |
+| 2175 | `jit` | JIT compilation |
+| 2176 | `hdcp` | HDCP |
+| 2177 | `omm` | Operation mode manager |
+| 2178 | `pdm` | Play statistics database |
+| 2179 | `olsc` | Online save storage |
+| 2180 | `srepo` | System reports |
+| 2181 | `dauth` | [Device authentication](#dauth-error-codes)|
+| 2182 | `stdfu` | ? |
+| 2183 | `dbg` | Debugging |
+| 2184 | `cdacm` | USB ACM |
+| 2185 | `tcap` | Thermal coordinator advanced policy |
+| 2186 | `dhcps` | DHCP services |
+| 2187 | `spi` | SPI |
+| 2188 | `avm` | Application version manager |
+| 2189 | `pwm` | PWM bus |
+| 2190 | `dnsserver` | DNS server |
+| 2191 | `rtc` | Real time clock |
+| 2192 | `regulator` | Regulator |
+| 2193 | `led` | LED |
+| 2194 | `htctool` | Host target connection tool |
+| 2195 | `sio` | Lite controller |
+| 2196 | `pcm` | Power / voltage reader |
+| 2197 | `clkrst` | Clock resets |
+| 2198 | `powctl` | Power controller |
+| 2199 | `hiddriver` | HID driver |
+| 2200 | `dma` | Direct memory access |
+| 2202 | `hid` | Humand interface device |
+| 2203 | `ldn` | Local device network |
+| 2204 | `cs` | ? |
+| 2205 | `irsensor` | IR sensor |
+| 2206 | `capsrv` | Screenshots |
+| 2207 | `mm` | ? |
+| 2208 | `manu` | Manufacturing services |
+| 2209 | `atk` | Audio toolkit (NintendoWare) |
+| 2210 | `web` | Web browser |
+| 2211 | `lcs` | Local content share |
+| 2212 | `grc` | Game recording |
+| 2213 | `repair` | Repair |
+| 2214 | `album` | Album |
+| 2215 | `rid` | Demo |
+| 2216 | `migration` | User migration |
+| 2217 | `migration::idc` | User migration (IDC) |
+| 2218 | `hidbus` | HID bus |
+| 2219 | `ens` | Extended network service (game-specific HTTP services) |
+| 2220 | `nd` | Neighbour detection |
+| 2221 | `ndd` | Neighbour device protocol |
+| 2306 | `nex` | [Game servers (old)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
+| 2321 | `npln` | Game servers (new) |
+| 2618 | `pia` | [Peer to peer](#pia-error-codes) |
+| 2623 | `eagle` | [Relay servers](#eagle-error-codes) |
+| 2815 | `coral` | [Voice chat](#coral-error-codes) |
 
 # SSL Error Codes
 | Error Codes | Description |
@@ -282,13 +436,13 @@ These errors are related to the [Switch account server](BAAS-Server).
 | 2124-7504 | 504 (Gateway Timeout) |
 | 2124-7505 | 505 (HTTP Version Not Supported) |
 
-# Curl Error Codes
+# HTTP Error Codes
 | Error Codes | Description |
 | --- | --- |
-| 0100 - 0599 | [HTTP errors](#curl-errors-http) |
-| 8000 - 8199 | [Curl errors](#curl-errors-curl) |
+| 0100 - 0599 | [HTTP errors](#http-errors-status) |
+| 8000 - 8199 | [Curl errors](#http-errors-curl) |
 
-## Curl Errors (HTTP)
+## HTTP Errors (Status)
 | Error Code | HTTP status |
 | --- | --- |
 | 2155-0100 | 100 (Continue) |
@@ -344,7 +498,7 @@ These errors are related to the [Switch account server](BAAS-Server).
 | 2155-0598 | Invalid (5xx) |
 | 2155-0599 | Invalid |
 
-## Curl Errors (Curl)
+## HTTP Errors (Curl)
 | Error Code | Description |
 | --- | --- |
 | 2155-8001 | CURLE_UNSUPPORTED_PROTOCOL |

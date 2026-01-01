@@ -15,6 +15,7 @@ On 21.0.0 and later, the account sysmodule uses https://m-lp1.baas.nintendo.com 
 * [Environments](#environments)
 
 ## Headers
+**e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com:**
 | Header | Description |
 | --- | --- |
 | Host | `e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com` |
@@ -38,6 +39,29 @@ If the content type is changed, and the request is performed by the account sysm
 | Content-Length | Content length |
 
 If the content type is changed, and the request is performed by the friends sysmodule, the `Content-Type` header appears between the `Accept` and `Authorization` headers instead.
+
+**m-lp1.baas.nintendo.com:**
+
+| Header | Description |
+| --- | --- |
+| Host | `m-lp1.baas.nintendo.com` |
+| Accept | `*/*` |
+| User-Agent | [User agent](#user-agents) |
+
+The following headers are only sent with specific requests:
+
+| Header | Description |
+| --- | --- |
+| Content-Type | Content type |
+| Authorization | Access token received from <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>, <code><a href="#post-100login">/1.0.0/login</a></code> or <code><a href="#post-100federation">/1.0.0/federation</a></code>, prefixed with `Bearer ` |
+| X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake) |
+| Content-Length | Content length |
+
+The `Content-Type` and `Content-Length` headers are only sent in POST, PUT, PATCH and DELETE requests.
+
+The `Authorization` header is sent in all requests except for `/application/token`.
+
+The `X-Nintendo-PowerState` header is only sent in the <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code> and <code><a href="#post-100login">/1.0.0/login</a></code> requests.
 
 ### User Agents
 The user agents below are taken from the account sysmodule. If the request is made by the friends sysmodule replace `nnAccount` by `nnFriends`.

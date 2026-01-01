@@ -21,7 +21,7 @@ On 21.0.0 and later, the account sysmodule uses https://m-lp1.baas.nintendo.com 
 | User-Agent | [User agent](#user-agents) |
 | Accept | `*/*` |
 | Authorization | Access token received from <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code>, <code><a href="#post-100login">/1.0.0/login</a></code> or <code><a href="#post-100federation">/1.0.0/federation</a></code>, prefixed with `Bearer `. Depends on the method. |
-| X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake). This header is only sent in the <code><a href="post-100applicationtoken">/1.0.0/application/token</a></code> and <code><a href="#post-100login">/1.0.0/login</a></code> requests. |
+| X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake). This header is only sent in the <code><a href="#post-100applicationtoken">/1.0.0/application/token</a></code> and <code><a href="#post-100login">/1.0.0/login</a></code> requests. |
 
 The following headers are only sent in POST, PUT, PATCH and DELETE requests.
 

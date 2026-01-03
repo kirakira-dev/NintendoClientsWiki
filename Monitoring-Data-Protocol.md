@@ -300,154 +300,235 @@ All fields are initialized to 0xFF.
 
 *Version 34:*
 
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 16 | [Header](#monitoring-data-header) |
-| 0x10 | 4 | Pia version |
-| 0x14 | 4 | Pia SDK version |
-| 0x18 | 4 | Game SDK version |
-| 0x1C | 4 | NPLN version |
-| 0x20 | 4 | Unknown |
-| 0x24 | 1 | Unknown |
-| 0x25 | 1 | Unknown |
-| 0x26 | 1 | Unknown |
-| 0x27 | 20 | Engine version |
-| 0x3B | 96 | Unknown |
-| 0x9B | 1 | [System language](#system-language) |
-| 0x9C | 4 | [Device location name hash](#device-location-name-hash) |
-| 0xA0 | ... | Unknown |
-| 0x384 | 2 | Number of buffers per station for event clone protocol |
-| 0x386 | 4 | Maximum id for atomic clone protocol |
-| 0x38A | ... | Unknown |
-| 0x434 | --- | End |
+| Offset | Size | Module | Description |
+| --- | --- | --- | --- |
+| 0x0 | 16 | Common | [Header](#monitoring-data-header) |
+| 0x10 | 4 | Common | Pia version |
+| 0x14 | 4 | Common | Pia SDK version |
+| 0x18 | 4 | Common | Game SDK version |
+| 0x1C | 4 | Common | NPLN version |
+| 0x20 | 4 | Common | Application matchmake version |
+| 0x24 | 1 | Common | Build bit |
+| 0x25 | 1 | Common | Build type |
+| 0x26 | 1 | Common | Platform type |
+| 0x27 | 20 | Common | Engine version |
+| 0x3B | 32 | Common | Android board |
+| 0x5B | 32 | Common | Android model |
+| 0x7B | 32 | Common | Android brand |
+| 0x9B | 1 | Common | [Country code](#country-code) |
+| 0x9C | 4 | Common | [Device location name hash](#device-location-name-hash) |
+| 0xA0 | 4 | Common | Pia revision |
+| 0xA4 | 4 | Common | Heap size |
+| 0xA8 | 1 | Common | Network type |
+| 0xA9 | 4 | Common | Average dispatch time |
+| 0xAD | 4 | Common | Maximum dispatch time |
+| 0xB1 | 4 | Common | Dispatch count |
+| 0xB5 | 2 | Common | Monitoring server dns resolution time |
+| 0xB7 | 3 | Common | Smart device system version |
+| 0xBA | 1 | Common | Reachability |
+| 0xBB | 16 | Common | Carrier name |
+| 0xCB | 8 | Common | Carrier type |
+| 0xD3 | 16 | Common | Local address IPv4 (1) |
+| 0xE3 | 16 | Common | Local address IPv4 (2) |
+| 0xF3 | 16 | Common | Local address IPv4 (3) |
+| 0x103 | 16 | Common | Local address IPv4 (4) |
+| 0x113 | 16 | Common | Local address IPv4 (used) |
+| 0x123 | 16 | Common | Local address IPv6 (1) |
+| 0x133 | 16 | Common | Local address IPv6 (2) |
+| 0x143 | 16 | Common | Local address IPv6 (3) |
+| 0x153 | 16 | Common | Local address IPv6 (4) |
+| 0x163 | 16 | Common | Local address IPv6 (used) |
+| 0x173 | 8 | Local | Local communication id |
+| 0x17B | 1 | Local | Maximum number of stations |
+| 0x17C | 1 | Local | Application communication version |
+| 0x17D | 1 | Local | Function enable flags |
+| 0x17E | 1 | Local | System communication version |
+| 0x17F | 1 | NAT | Is NAT 64 |
+| 0x180 | 1 | NAT | NAT mapping |
+| 0x181 | 1 | NAT | NAT filtering |
+| 0x182 | 2 | NAT | NAT port increment |
+| 0x184 | ... | ? | ? |
+| 0x384 | 2 | Clone | Number of buffers per station for event clone protocol |
+| 0x386 | 4 | Clone | Maximum id for atomic clone protocol |
+| 0x38A | ... | ? | ? |
+| 0x434 | --- | --- | End |
 
 *Version 43:*
 
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 16 | [Header](#monitoring-data-header) |
-| 0x10 | 4 | Pia version |
-| 0x14 | 4 | Pia SDK version |
-| 0x18 | 4 | Game SDK version |
-| 0x1C | 4 | NPLN version |
-| 0x20 | 4 | Unknown |
-| 0x24 | 1 | Unknown |
-| 0x25 | 1 | Unknown |
-| 0x26 | 1 | Unknown |
-| 0x27 | 20 | Engine version |
-| 0x3B | 96 | Unknown |
-| 0x9B | 1 | [System language](#system-language) |
-| 0x9C | 4 | [Device location name hash](#device-location-name-hash) |
-| 0xA0 | 4 | Unknown |
-| 0xA4 | 4 | Unknown |
-| 0xA8 | 1 | Unknown |
-| 0xA9 | 4 | Unknown |
-| 0xAD | 4 | Unknown |
-| 0xB1 | 4 | Unknown |
-| 0xB5 | 2 | Unknown |
-| 0xB7 | 1 x 188 | Unknown |
-| 0x173 | 8 | Unknown |
-| 0x17B | 1 x 7 | Unknown |
-| 0x182 | 2 | Unknown |
-| 0x184 | 1 | Unknown |
-| 0x185 | 4 | Public IP address |
-| 0x189 | 4 | Local IP address |
-| 0x18D | 2 | Unknown |
-| 0x18F | 2 | Unknown |
-| 0x191 | 2 | Unknown |
-| 0x193 | 2 | Unknown |
-| 0x195 | 2 | Unknown |
-| 0x197 | 1 | Unknown |
-| 0x198 | 1 | Unknown |
-| 0x199 | 2 | Unknown |
-| 0x19B | 4 x 6 | Unknown |
-| 0x1B3 | 8 | Unknown |
-| 0x1BB | 1 x 15 | Unknown |
-| 0x1CA | 2 x 12 | Unknown |
-| 0x1E2 | 1 | Unknown |
-| 0x1E3 | 4 | Unknown |
-| 0x1E7 | 4 | Unknown |
-| 0x1EB | 2 | Unknown |
-| 0x1ED | 1 | Unknown |
-| 0x1EE | 4 | Unknown |
-| 0x1F2 | 1 | Unknown |
-| 0x1F3 | 96 | Unknown |
-| 0x253 | 4 x 10 | Unknown |
-| 0x27B | 2 | Unknown |
-| 0x27D | 2 | Unknown |
-| 0x27F | 4 | Unknown |
-| 0x283 | 2 | Unknown |
-| 0x285 | 4 | Unknown |
-| 0x289 | 2 x 10 | Unknown |
-| 0x29D | 4 x 18 | Unknown |
-| 0x2E5 | 1 | Unknown |
-| 0x2E6 | 1 | Unknown |
-| 0x2E7 | 1 | Unknown |
-| 0x2E8 | 1 | Unknown |
-| 0x2E9 | 1 | Unknown |
-| 0x2EA | 4 x 8 | Unknown |
-| 0x30A | 8 | Unknown |
-| 0x312 | 1 | Unknown |
-| 0x313 | 2 | Unknown |
-| 0x315 | 1 | Unknown |
-| 0x316 | 1 | Unknown |
-| 0x317 | 1 | Unknown |
-| 0x318 | 4 | Unknown |
-| 0x31C | 1 | Unknown |
-| 0x31D | 1 | Unknown |
-| 0x31E | 1 | Unknown |
-| 0x31F | 2 x 15 | Unknown |
-| 0x33D | 1 | Unknown |
-| 0x33E | 2 | Unknown |
-| 0x340 | 1 | Unknown |
-| 0x341 | 2 | Unknown |
-| 0x343 | 4 | Unknown |
-| 0x347 | 4 | Unknown |
-| 0x34B | 4 | Unknown |
-| 0x34F | 1 x 6 | Unknown |
-| 0x355 | 2 | Unknown |
-| 0x357 | 2 | Unknown |
-| 0x359 | 1 | Unknown |
-| 0x35A | 2 | Unknown |
-| 0x35C | 1 | Unknown |
-| 0x35D | 2 | Unknown |
-| 0x35F | 4 | Unknown |
-| 0x363 | 2 | Unknown |
-| 0x365 | 1 | Unknown |
-| 0x366 | 2 | Unknown |
-| 0x368 | 1 | Unknown |
-| 0x369 | 2 | Unknown |
-| 0x36B | 1 | Unknown |
-| 0x36C | 2 | Unknown |
-| 0x36E | 1 | Unknown |
-| 0x36F | 1 | Unknown |
-| 0x370 | 2 | Unknown |
-| 0x372 | 1 | Unknown |
-| 0x373 | 2 | Unknown |
-| 0x375 | 1 | Unknown |
-| 0x376 | 2 | Unknown |
-| 0x378 | 1 | Unknown |
-| 0x379 | 2 | Unknown |
-| 0x37B | 1 | Unknown |
-| 0x37C | 2 | Unknown |
-| 0x37E | 1 | Unknown |
-| 0x37F | 2 | Unknown |
-| 0x381 | 1 | Unknown |
-| 0x382 | 2 | Unknown |
-| 0x384 | 1 | Unknown |
-| 0x385 | 2 | Unknown |
-| 0x387 | 1 | Unknown |
-| 0x388 | 1 | Unknown |
-| 0x389 | 1 | Unknown |
-| 0x38A | 4 | Unknown |
-| 0x38E | 2 | Unknown |
-| 0x390 | 2 | Unknown |
-| 0x392 | 4 | Unknown |
-| 0x396 | 2 | Unknown |
-| 0x398 | 1 | Unknown |
-| 0x399 | 2 | Unknown |
-| 0x39B | 1 | Unknown |
-| 0x39C | --- | End |
+| Offset | Size | Module | Description |
+| --- | --- | --- | --- |
+| 0x0 | 16 | Common | [Header](#monitoring-data-header) |
+| 0x10 | 4 | Common | Pia version |
+| 0x14 | 4 | Common | Pia SDK version |
+| 0x18 | 4 | Common | Game SDK version |
+| 0x1C | 4 | Common | NPLN version |
+| 0x20 | 4 | Common | Application matchmake version |
+| 0x24 | 1 | Common | Build bit |
+| 0x25 | 1 | Common | Build type |
+| 0x26 | 1 | Common | Platform type |
+| 0x27 | 20 | Common | Engine version |
+| 0x3B | 32 | Common | Android board |
+| 0x5B | 32 | Common | Android model |
+| 0x7B | 32 | Common | Android brand |
+| 0x9B | 1 | Common | [Country code](#country-code) |
+| 0x9C | 4 | Common | [Device location name hash](#device-location-name-hash) |
+| 0xA0 | 4 | Common | Pia revision |
+| 0xA4 | 4 | Common | Heap size |
+| 0xA8 | 1 | Common | Network type |
+| 0xA9 | 4 | Common | Average dispatch time |
+| 0xAD | 4 | Common | Maximum dispatch time |
+| 0xB1 | 4 | Common | Dispatch count |
+| 0xB5 | 2 | Common | Monitoring server dns resolution time |
+| 0xB7 | 3 | Common | Smart device system version |
+| 0xBA | 1 | Common | Reachability |
+| 0xBB | 16 | Common | Carrier name |
+| 0xCB | 8 | Common | Carrier type |
+| 0xD3 | 16 | Common | Local address IPv4 (1) |
+| 0xE3 | 16 | Common | Local address IPv4 (2) |
+| 0xF3 | 16 | Common | Local address IPv4 (3) |
+| 0x103 | 16 | Common | Local address IPv4 (4) |
+| 0x113 | 16 | Common | Local address IPv4 (used) |
+| 0x123 | 16 | Common | Local address IPv6 (1) |
+| 0x133 | 16 | Common | Local address IPv6 (2) |
+| 0x143 | 16 | Common | Local address IPv6 (3) |
+| 0x153 | 16 | Common | Local address IPv6 (4) |
+| 0x163 | 16 | Common | Local address IPv6 (used) |
+| 0x173 | 8 | Local | Local communication id |
+| 0x17B | 1 | Local | Maximum number of stations |
+| 0x17C | 1 | Local | Application communication version |
+| 0x17D | 1 | Local | Function enable flags |
+| 0x17E | 1 | Local | System communication version |
+| 0x17F | 1 | NAT | Is NAT 64 |
+| 0x180 | 1 | NAT | NAT mapping |
+| 0x181 | 1 | NAT | NAT filtering |
+| 0x182 | 2 | NAT | NAT port increment |
+| 0x184 | 1 | NAT | NAT attribute |
+| 0x185 | 4 | NAT | Public IP address |
+| 0x189 | 4 | NAT | Private IP address |
+| 0x18D | 2 | NAT | Public port |
+| 0x18F | 2 | NAT | Interface port |
+| 0x191 | 2 | NAT | NAT check server DNS resolution time |
+| 0x193 | 2 | NAT | NAT property detection time |
+| 0x195 | 2 | NAT | NAT port detection time |
+| 0x197 | 1 | NAT | NAT property detection count |
+| 0x198 | 1 | NAT | NAT TTL |
+| 0x199 | 2 | NET | Maximum number of stations |
+| 0x19B | 4 | NET | Create network processing time |
+| 0x19F | 4 | NET | Connect network processing time |
+| 0x1A3 | 4 | NET | Search network processing time |
+| 0x1A7 | 4 | NET | Auto connect network processing time |
+| 0x1AB | 4 | NET | Destroy network processing time |
+| 0x1AF | 4 | NET | Disconnect network processing time |
+| 0x1B3 | 8 | NET | Matchmake key |
+| 0x1BB | 40 | WAN | NAT traversal results (?) |
+| 0x1E3 | 4 | WAN | NAT traversal success time (milliseconds) |
+| 0x1E7 | 4 | WAN | Relay server address |
+| 0x1EB | 2 | WAN | Relay server port |
+| 0x1ED | 1 | WAN | Signaling failure count |
+| 0x1EE | 4 | WAN | Game unique id |
+| 0x1F2 | 1 | WAN | Unknown |
+| 0x1F3 | 96 | WAN | Attribute filtering query |
+| 0x253 | 4 | WAN | Join random room server response time |
+| 0x257 | 4 | WAN | Join room server response time |
+| 0x25B | 4 | WAN | Leave room server response time |
+| 0x25F | 4 | WAN | Find room server response time |
+| 0x263 | 4 | WAN | Find user server response time |
+| 0x267 | 4 | WAN | Search member list size |
+| 0x26B | 4 | Izumo | Create search index attribute id |
+| 0x26F | 4 | Izumo | Search index attribute id |
+| 0x273 | 4 | Transport | Protocol usage flag |
+| 0x277 | 4 | Transport | Keep alive interval |
+| 0x27B | 2 | Transport | Best RTT in all stations |
+| 0x27D | 2 | Transport | Best RTT variable id |
+| 0x27F | 4 | Transport | Worst RTT in all stations |
+| 0x283 | 2 | Transport | Worst RTT variable id |
+| 0x285 | 4 | Transport | Median RTT in all stations |
+| 0x289 | 2 | Transport | Maximum number of stations |
+| 0x28B | 2 | Transport | Number of send thread buffers per station |
+| 0x28D | 2 | Transport | Number of receive thread buffers per station |
+| 0x28F | 2 | Transport | Number of unreliable receive buffers per station |
+| 0x291 | 2 | Transport | Number of reliable send buffers per station |
+| 0x293 | 2 | Transport | Number of reliable receive buffers per station |
+| 0x295 | 2 | Transport | Number of broadcast reliable send buffers per station |
+| 0x297 | 2 | Transport | Number of broadcast reliable receive buffers per station |
+| 0x299 | 2 | Transport | Number of stream broadcast reliable send buffers per station |
+| 0x29B | 2 | Transport | Number of stream broadcast reliable receive buffers per station |
+| 0x29D | 4 x 18 | ? | ? |
+| 0x2E5 | 1 | ? | ? |
+| 0x2E6 | 1 | ? | ? |
+| 0x2E7 | 1 | ? | ? |
+| 0x2E8 | 1 | ? | ? |
+| 0x2E9 | 1 | ? | ? |
+| 0x2EA | 4 | Session | Join result |
+| 0x2EE | 4 | Session | Join error code |
+| 0x2F2 | 4 | Session | Join result filename hash |
+| 0x2F6 | 4 | Session | Join result line number |
+| 0x2FA | 4 | Session | Join processing time |
+| 0x2FE | 4 | Session | Join processing dispatch count |
+| 0x302 | 4 | Session | Join mesh processing time |
+| 0x306 | 4 | Session | Join mesh processing dispatch count |
+| 0x30A | 8 | Session | Join session id |
+| 0x312 | 1 | Session | Join order |
+| 0x313 | 2 | Session | Join variable id |
+| 0x315 | 1 | ? | ? |
+| 0x316 | 1 | ? | ? |
+| 0x317 | 1 | ? | ? |
+| 0x318 | 4 | ? | ? |
+| 0x31C | 1 | ? | ? |
+| 0x31D | 1 | ? | ? |
+| 0x31E | 1 | ? | ? |
+| 0x31F | 2 x 15 | ? | ? |
+| 0x33D | 1 | ? | ? |
+| 0x33E | 2 | ? | ? |
+| 0x340 | 1 | ? | ? |
+| 0x341 | 2 | ? | ? |
+| 0x343 | 4 | ? | ? |
+| 0x347 | 4 | ? | ? |
+| 0x34B | 4 | ? | ? |
+| 0x34F | 1 x 6 | ? | ? |
+| 0x355 | 2 | Evolution | Evolution version |
+| 0x357 | 2 | Evolution | WAN waiting probe response via server timeout |
+| 0x359 | 1 | Evolution | WAN waiting probe response via server timeout result |
+| 0x35A | 2 | Evolution | WAN waiting probe 1 timeout |
+| 0x35C | 1 | Evolution | WAN waiting probe 1 timeout result |
+| 0x35D | 2 | Evolution | WAN resolve IPv4 to IPv6 timeout |
+| 0x35F | 4 | Evolution | WAN resolve IPv4 to IPv6 time |
+| 0x363 | 2 | Evolution | ? |
+| 0x365 | 1 | Evolution | ? |
+| 0x366 | 2 | Evolution | ? |
+| 0x368 | 1 | Evolution | ? |
+| 0x369 | 2 | Evolution | ? |
+| 0x36B | 1 | Evolution | ? |
+| 0x36C | 2 | Evolution | ? |
+| 0x36E | 1 | Evolution | ? |
+| 0x36F | 1 | Evolution | ? |
+| 0x370 | 2 | Evolution | Photon wait event timeout search room |
+| 0x372 | 1 | Evolution | Photon wait event timeout search room result |
+| 0x373 | 2 | Evolution | Photon wait event timeout create room |
+| 0x375 | 1 | Evolution | Photon wait event timeout create room result |
+| 0x376 | 2 | Evolution | Photon wait event timeout join room |
+| 0x378 | 1 | Evolution | Photon wait event timeout join room result |
+| 0x379 | 2 | Evolution | Photon wait event timeout join random room |
+| 0x37B | 1 | Evolution | Photon wait event timeout join random room result |
+| 0x37C | 2 | Evolution | Photon wait event timeout leave room |
+| 0x37E | 1 | Evolution | Photon wait event timeout leave room result |
+| 0x37F | 2 | Evolution | Photon wait event timeout leave room action |
+| 0x381 | 1 | Evolution | NET wait disconnected timeout result |
+| 0x382 | 2 | Evolution | Photon wait event timeout local info |
+| 0x384 | 1 | Evolution | Photon wait event timeout local info result |
+| 0x385 | 2 | Evolution | Session join request send timeout |
+| 0x387 | 1 | Evolution | Session join request send timeout result |
+| 0x388 | 1 | Evolution | Session join mesh retry count max |
+| 0x389 | 1 | Evolution | Session join mesh retry count max result |
+| 0x38A | 4 | Evolution | Session Izumo host migration timeout |
+| 0x38E | 2 | Evolution | Session LAN host migration timeout |
+| 0x390 | 2 | Evolution | Session local host migration timeout |
+| 0x392 | 4 | Evolution | Session NPLN host migration timeout |
+| 0x396 | 2 | Evolution | Session Photon host migration timeout |
+| 0x398 | 1 | Evolution | Session host migration timeout result |
+| 0x399 | 2 | ? | ? |
+| 0x39B | 1 | ? | ? |
+| 0x39C | --- | --- | End |
 
 ### NexSessionSearchCriteria
 | Type | Description |
@@ -491,27 +572,27 @@ All fields are initialized to 0xFF.
 | 1 | Unreliable |
 | 2 | Failure or very unreliable |
 
-### System Language
-| ID | Language |
+### Country Code
+| ID | Country |
 | --- | --- |
-| 0 | Japanese |
-| 1 | English (US) |
-| 2 | French |
-| 3 | German |
-| 4 | Italian |
-| 5 | Spanish |
-| 6 | Chinese |
-| 7 | Korean |
-| 8 | Dutch |
-| 9 | Portuguese |
-| 10 | Russian |
-| 11 | Taiwanese |
-| 12 | English (UK) |
-| 13 | French (Canada) |
-| 14 | Spanish (Latin America) |
-| 15 | Chinese (simplified) |
-| 16 | Chinese (traditional) |
-| 17 | Portuguese (Brazil) |
+| 0 | Japan |
+| 1 | US |
+| 2 | France |
+| 3 | Germany |
+| 4 | Italy |
+| 5 | Spain |
+| 6 | China |
+| 7 | Korea |
+| 8 | Netherlands |
+| 9 | Portugal |
+| 10 | Russia |
+| 11 | Taiwan |
+| 12 | UK |
+| 13 | Canada |
+| 14 | Latin America |
+| 15 | China (simplified) |
+| 16 | China (traditional) |
+| 17 | Brazil |
 
 ### Device Location Name Hash
 This is calculated over the time zone name, from `nn::time::GetDeviceLocationName`.

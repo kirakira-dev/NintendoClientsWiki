@@ -163,9 +163,9 @@ The following module ids are currently known:
 | 2223 | `websocket` | Websockets |
 | 2224 | `socketio` | Socket I/O |
 | 2306 | `nex` | [Game servers (old)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
-| 2318 | `pia` | Peer to peer (new) |
+| 2318 | `pia` | [Peer to peer (new)](#pia-error-codes-new) |
 | 2321 | `npln` | Game servers (new) |
-| 2618 | `pia` | [Peer to peer](#pia-error-codes) (old) |
+| 2618 | `pia` | [Peer to peer (old)](#pia-error-codes) |
 | 2623 | `eagle` | [Relay servers](#eagle-error-codes) |
 | 2815 | `coral` | [Voice chat](#coral-error-codes) |
 
@@ -973,7 +973,131 @@ The following errors are shown when the [dragons server](Dragons-Servers) return
 | 2306-0510 | The destination Station did not authenticate itself properly. |
 | 2306-0511 | 3rd-party server or device answered with an error code according to protocol used e.g. HTTP error code |
 
-# PIA Error Codes
+# Pia Error Codes (New)
+| Error Code | Name |
+| --- | --- |
+| 2318-0001 | AllocationFailed |
+| 2318-0002 | AlreadyInitialized |
+| 2318-0003 | BufferShortage |
+| 2318-0004 | BrokenData |
+| 2318-0005 | Cancelled |
+| 2318-0006 | NetworkConnectionIsLost |
+| 2318-0007 | InvalidArgument |
+| 2318-0008 | InvalidState |
+| 2318-0009 | NoData |
+| 2318-0010 | NotFound |
+| 2318-0011 | NotImplemented |
+| 2318-0012 | NotInitialized |
+| 2318-0013 | BufferIsFull |
+| 2318-0014 | TimeOut |
+| 2318-0015 | AlreadyExists |
+| 2318-0016 | ContainerIsFull |
+| 2318-0017 | TemporaryUnavailable |
+| 2318-0019 | NotSet |
+| 2318-0030 | SocketAddressFamilyIncompatible |
+| 2318-0031 | NetworkConnectionIsLostDuringNatTraversalProcess |
+| 2318-0101 | MemoryLeak |
+| 2318-0102 | NetworkInterfaceIsNotFound |
+| 2318-0103 | UnexpectedNetworkInterfaceAddress |
+| 2318-0201 | NatCheckCommunicationFailed |
+| 2318-0202 | InUsed |
+| 2318-0203 | NatCheckDnsFailed |
+| 2318-0204 | MonitoringDnsFailed |
+| 2318-0302 | InvalidNode |
+| 2318-0304 | NegligibleFault |
+| 2318-0305 | InvalidConnection |
+| 2318-0308 | LocalCommunicationInvalidState |
+| 2318-0309 | NetworkIsNotFound |
+| 2318-0310 | NetworkIsFull |
+| 2318-0311 | LocalCommunicationLowerVersion |
+| 2318-0312 | LocalCommunicationHigherVersion |
+| 2318-0313 | WifiOff |
+| 2318-0314 | Sleep |
+| 2318-0315 | WirelessControllerCountLimitation |
+| 2318-0317 | NetworkConnectionRejected |
+| 2318-0401 | ConnectionFailed |
+| 2318-0402 | CreateStationFailed |
+| 2318-0403 | VersionMismatched |
+| 2318-0404 | IsNotInCommunication |
+| 2318-0405 | TableIsFull |
+| 2318-0406 | IncreaseDataSize |
+| 2318-0501 | RequestDenied |
+| 2318-0502 | StationConnectionFailed |
+| 2318-0506 | MeshIsFull |
+| 2318-0507 | InvalidMessage |
+| 2318-0510 | NatTraversalFailedUnknown |
+| 2318-0513 | NatTraversalFailedLocalEim |
+| 2318-0514 | NatTraversalFailedLocalEdm |
+| 2318-0515 | NatTraversalFailedLocalEimSamePublicAddress |
+| 2318-0516 | NatTraversalFailedLocalEdmSamePublicAddress |
+| 2318-0521 | NatTraversalRequestTimeout |
+| 2318-0522 | NatTraversalFailedByDuplicateGlobalAddress |
+| 2318-0533 | JoinSessionFailedByNetworkConnectionTimeout |
+| 2318-0534 | JoinSessionFailedByHostMigration |
+| 2318-0535 | JoinSessionFailedByNetworkHostMigration |
+| 2318-0536 | JoinSessionFailedBySystemDeniedResponse |
+| 2318-0537 | JoinSessionFailedByLocalStationNotFound |
+| 2318-0539 | JoinSessionFailedByCreateStation |
+| 2318-0540 | JoinSessionFailedByDuplicateConstantId |
+| 2318-0541 | SessionIsNotFound |
+| 2318-0542 | RoomIsFull |
+| 2318-0543 | DeniedByParticipant |
+| 2318-0544 | ParticipantInBlocklist |
+| 2318-0545 | SessionUserPasswordUnmatch |
+| 2318-0546 | SessionSystemPasswordUnmatch |
+| 2318-0547 | MeshConnectionIsLost |
+| 2318-0548 | SessionIsClosed |
+| 2318-0549 | CompanionStationIsOffline |
+| 2318-0550 | HostIsNotFriend |
+| 2318-0551 | SessionConnectionIsLost |
+| 2318-0552 | CompanionStationIsLeft |
+| 2318-0554 | SessionMigrationFailed |
+| 2318-0555 | SessionWrongState |
+| 2318-0557 | JoinSessionFailedByNetworkConnectionIsLostOnJoinRequest |
+| 2318-0561 | MatchmakeServerMaintenance |
+| 2318-0562 | MatchmakeServerProcessAborted |
+| 2318-0563 | SessionConnectionIsLostByHost |
+| 2318-0564 | SessionConnectionIsLostByHostMigrationFailure |
+| 2318-0565 | SessionConnectionIsLostByInconsistentInfo |
+| 2318-0566 | KickedOutFromSessionByInconsistentInfo |
+| 2318-0567 | KickedOutFromSessionByUser |
+| 2318-0571 | CreateCommunityFailedUpperLimit |
+| 2318-0572 | JoinCommunityFailedUpperLimit |
+| 2318-0573 | CommunityIsFull |
+| 2318-0574 | CommunityIsNotFound |
+| 2318-0575 | CommunityIsClosed |
+| 2318-0576 | CommunityUserPasswordUnmatch |
+| 2318-0577 | AlreadyJoinedCommunity |
+| 2318-0578 | UserAccountNotExisted |
+| 2318-0579 | DuplicateConstantId |
+| 2318-0590 | LicenseForNetworkServiceNotAvailable |
+| 2318-0591 | LicenseForNetworkServiceError |
+| 2318-0592 | LicenseForNetworkServiceSubscriptionError |
+| 2318-0593 | LicenseForNetworkServiceSubscriptionError2 |
+| 2318-0602 | SyncDataIsNotArrivedYet |
+| 2318-0606 | SyncDataIsNotSet |
+| 2318-0701 | SystemLowerVersion |
+| 2318-0702 | SystemHigherVersion |
+| 2318-0802 | InvalidClock |
+| 2318-1001 | SdkError |
+| 2318-1003 | CancelledByUser |
+| 2318-1101 | OutOfMemory |
+| 2318-1102 | LoginTimeout |
+| 2318-1103 | AlreadyLoggedIn |
+| 2318-1104 | MatchmakeServerAuthenticationFailed |
+| 2318-1105 | MatchmakeServerAuthenticationFailedByCommunicationVersion |
+| 2318-1106 | MatchmakeServerInvalidClientCommunicationVersion |
+| 2318-1107 | MatchmakeServerInvalidServerCommunicationVersion |
+| 2318-1200 | TurnDnsFailed |
+| 2318-1201 | SignalingServerProcessTimeout |
+| 2318-1202 | TurnServerProcessTimeout |
+| 2318-1203 | TurnFailedByDuplicateMappedAddress |
+| 2318-1500 | MatchmakeServerConnectionFailed |
+| 2318-1501 | MatchmakeServerProcessTimeout |
+| 2318-1502 | MatchmakeServerServiceClientError |
+| 2318-1800 | InvalidSocketError |
+
+# Pia Error Codes (Old)
 | Error Code | Name |
 | --- | --- |
 | 2618-0000 | ResultSdkViewerResultError |

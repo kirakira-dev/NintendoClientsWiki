@@ -48,6 +48,7 @@ Table of contents:
 #### Push Notifications
 * `https://god.p01.lp1.penne.srv.nintendo.net`
 * `https://val.p01.lp1.penne.srv.nintendo.net`
+* `https://fro-1.p01.lp1.penne.srv.nintendo.net`
 * `https://fro-2.p01.lp1.penne.srv.nintendo.net`
 
 #### System Updates

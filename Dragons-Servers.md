@@ -186,7 +186,7 @@ If the error code is `invalid_parameter`, the response may contain more details 
 | 400 | `license_active_on_lender_device` | |
 | 400 | `rights_has_already_lent` | |
 | 401 | `account_id_required` | Account ID is required |
-| 401 | `authentication_required` | |
+| 401 | `authentication_required` | Authentication is required |
 | 403 | `edge_token_not_grantable` | |
 | 403 | `invalid_rights_for_lending` | |
 | 403 | `invalid_migration_state` | |

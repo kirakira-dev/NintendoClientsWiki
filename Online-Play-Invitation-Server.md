@@ -8,6 +8,8 @@ This server manages online play invitations.
 * [Methods](#methods)
 * [Errors](#errors)
 
+Log in on [BaaS](BAAS-Server) in order to obtain an access token for this service.
+
 ## Methods
 
 | Method | URL |

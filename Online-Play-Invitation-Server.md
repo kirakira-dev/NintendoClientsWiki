@@ -10,25 +10,32 @@ This server manages online play invitations.
 
 Log in on [BaaS](BAAS-Server) in order to obtain an access token for this service.
 
+This server takes JSON-encoded requests and responds with JSON-encoding.
+
 ## Methods
 
 | Method | URL |
 | --- | --- |
+| GET | [`/v1/users/<id>/invitations/inbox`](#get-versionusersidinvitationsinbox) |
+| GET | [`/v2/users/<id>/invitations/inbox`](#get-versionusersidinvitationsinbox) |
+| GET | [`/v1/invitation_groups/<id>`](#get-v1invitation_groupsid) |
+| POST | [`/v1/invitation_groups`](#post-versioninvitation_groups) |
+| POST | [`/v2/invitation_groups`](#post-versioninvitation_groups) |
 | PATCH | `/v1/invitations` |
-| POST | `/v1/invitation_groups` |
-| GET | `/v1/invitation_groups/<id>` |
-| GET | [`/v1/users/<id>/invitations/inbox`](#get-v1usersidinvitationsinbox) |
 | PATCH | `/v1/users/<id>/invitations/mark_as_read` |
 
-### GET /v1/users/&lt;id&gt;/invitations/inbox
-This method returns incoming invitations. It takes two query parameters:
+### GET /&lt;version&gt;/users/&lt;id&gt;/invitations/inbox
+This method returns incoming invitations. The version is `v1` up to system version 19.0.1 and `v2` in system version 20.0.0 and later.
+
+This method takes the following query parmeters:
 
 | Param | Description |
 | --- | --- |
 | fields | Comma-separated list of fields that should be returned by the server |
 | read | Specifies whether the server should return only unread invitation (`false`) or all invitations (`true`) |
+| invitation_types | Hardcoded to `friend` (only present in `v2`) |
 
-The friends sysmodule currently either provides no parameters or `fields=count&read=false`.
+All parameters are optional. The friends sysmodule currently either sends `fields=count&read=false`, or does not send these parameters at all.
 
 Response on success:
 
@@ -52,6 +59,50 @@ An invitation has the following fields:
 | created_at | Creation timestamp |
 | updated_at | Update timestamp |
 
+### GET /v1/invitation_groups/&lt;id&gt;
+This method returns a specific [invitation group](#invitation-group).
+
+### POST /&lt;version&gt;/invitation_groups
+This method sends an invitation to other users. The version is `v1` up to system version 19.0.1 and `v2` in system version 20.0.0 and later.
+
+This method takes the following parameters:
+
+| Field | Description |
+| --- | --- |
+| receiver_ids | List of baas account ids |
+| invitation_type | Hardcoded to `friend`  (only present in `v2`) |
+| application_id | Title id from which the invitation was sent |
+| acd_index | Unknown (added in system version 19.0.0) |
+| application_group_id | Presence group id for the current title (usually the title id) |
+| application_data | Optional game-specific information (base64 encoded) |
+| messages | Dictionary containing a message per language. The following languages may be used: `en-US`, `en-GB`, `ja`, `fr`, `de`, `es-419`, `es`, `it`, `nl`, `fr-CA`, `pt`, `ru`, `zh-Hans`, `zh-Hant`, `ko`, `pt-BR` |
+| application_id_match | Unknown (always `false`) |
+
+Returns an [invitation group](#invitation-group) on success.
+
+### Invitation Group
+| Field | Description |
+| --- | --- |
+| id | Invitation group id |
+| sender_id | Baas user id of the sender |
+| invitation_type | The invitation type |
+| application_id | Title id |
+| application_group_id | Presence group id |
+| application_id_match | Unknown |
+| acd_index | Unknown |
+| application_data | Game-specific information |
+| messages | Messages |
+| created_at | Timestamp |
+| updated_at | Timestamp |
+| invitations | List of invitations |
+
+Every invitation has the following fields:
+
+| Field | Description |
+| --- | --- |
+| id | Invitation id |
+| receiver_id | Baas user id of receiver |
+
 ## Errors
 On error, the server sends the following response:
 
@@ -69,7 +120,7 @@ The error information is encoded like this:
 ### Known Errors
 | Code | Status | Message |
 | --- | --- | --- |
-| 0001 | ? | ? |
+| 0001 | 500 | Internal server error. |
 | 0002 | 400 | Invalid parameter. |
 | 0003 | 404 | Invalid request URI. |
 | 0004 | ? | ? |

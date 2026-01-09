@@ -1,7 +1,7 @@
 [Switch](#switch) > Push Notifications (Penne)
 ---
 
-Penne is the replacement for [NPNS](NPNS-Servers).
+Penne is the replacement for [NPNS](NPNS-Servers). It was introduced in system version 18.0.0.
 
 ### god
 * `/v1/accounts/<id>`

@@ -1,7 +1,7 @@
 [Switch](#switch) > Push Notifications (NPNS)
 ---
 
-NPNS has been replaced by [Penne](Penne-Servers).
+NPNS has been replaced by [Penne](Penne-Servers) in system version 18.0.0.
 
 ### broker
 | URL |

@@ -78,7 +78,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0xC | 8 | [AES-GCM nonce](#encryption) |
 | 0x14 | 8 | [AES-GCM authentication tag](#encryption) (first 8 bytes) |
 
-*6.40:*
+*6.40 - 6.41:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -103,9 +103,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 6.25 - 6.26 | 12 |
 | 6.29 - 6.30 | 13 |
 | 6.32 - 6.34 | 15 |
-| 6.40 | 16 |
-
-Mario Kart World has header version 16.
+| 6.40 - 6.41 | 16 |
 
 ### Connection ID
 During connection establishment, both consoles generate a random number between 2 and 255. This is the connection id. If packets are sent to a specific address, rather than station index, the connection id is set to 0.
@@ -216,7 +214,7 @@ Fields that are not present are copied from the previous message.
 | Bytes | Payload (protocol-specific) |
 | | Padding |
 
-*6.40:*
+*6.40 - 6.41:*
 
 Fields that are not present are copied from the previous message.
 

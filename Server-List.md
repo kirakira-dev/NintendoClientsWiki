@@ -49,8 +49,7 @@ Table of contents:
 #### Push Notifications
 * `https://god.p01.lp1.penne.srv.nintendo.net`
 * `https://val.p01.lp1.penne.srv.nintendo.net`
-* `https://fro-1.p01.lp1.penne.srv.nintendo.net`
-* `https://fro-2.p01.lp1.penne.srv.nintendo.net`
+* `https://fro-<id>.p01.lp1.penne.srv.nintendo.net`
 
 #### System Updates
 * `https://sun.p01.lp1.d4c.srv.nintendo.net`
@@ -250,7 +249,7 @@ Old ([docs](NPNS-Servers)):
 New ([docs](Penne-Servers)):
 * `https://god.hac.lp1.penne.srv.nintendo.net`
 * `https://val.hac.lp1.penne.srv.nintendo.net`
-* `https://fro-8.hac.lp1.penne.srv.nintendo.net`
+* `https://fro-<id>.p01.lp1.penne.srv.nintendo.net`
 
 #### Telemetry ([docs](Telemetry-Servers))
 * `https://receive-lp1.dg.srv.nintendo.net` (play reports)

@@ -167,6 +167,7 @@ The following module ids are currently known:
 | 2321 | `npln` | Game servers (new) |
 | 2618 | `pia` | [Peer to peer (old)](#pia-error-codes) |
 | 2623 | `eagle` | [Relay servers](#eagle-error-codes) |
+| 2811 | | Nintendo eShop |
 | 2815 | `coral` | [Voice chat](#coral-error-codes) |
 
 # SSL Error Codes

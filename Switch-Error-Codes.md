@@ -76,7 +76,7 @@ The following module ids are currently known:
 | 2134 | `usb::pd` | USB power delivery |
 | 2135 | `bpc` | Board power control |
 | 2136 | `psm` | Power management |
-| 2137 | `nim` | Network installation manager |
+| 2137 | `nim` | [Network installation manager](#nim-error-codes) |
 | 2138 | `psc` | Power state control |
 | 2139 | `tc` | Temperature control |
 | 2140 | `usb` | USB |
@@ -439,6 +439,32 @@ These errors are related to the [Switch account server](BAAS-Server).
 | 2124-7503 | 503 (Service Unavailable) |
 | 2124-7504 | 504 (Gateway Timeout) |
 | 2124-7505 | 505 (HTTP Version Not Supported) |
+
+# NIM Error Codes
+| Error Code | Description |
+| --- | --- |
+| 2137-4501 | unexpected-error |
+| 2137-4502 | api-not-found |
+| 2137-4503 | communication-failed |
+| 2137-4504 | invalid-params |
+| 2137-4505 | invalid-auth-token |
+| 2137-4506 | resource-not-found |
+| 2137-4508 | device-registration-limit-reached |
+| 2137-4509 | invalid-nearness-check-result |
+| 2137-4510 | operation-not-allowed |
+| 2137-4511 | invalid-certificate |
+| 2137-4512 | direct-message-failed |
+| 2137-4513 | direct-message-receiver-is-offline |
+| 2137-4514 | invalid-account-config-payload |
+| 2137-4515 | device-unregistration-limit-reached |
+| 2137-4516 | invalid-migration-state |
+| 2137-4517 | vermillion-app-call-failed |
+| 2137-4518 | atums-call-failed |
+| 2137-4519 | dragons-call-failed |
+| 2137-4520 | pegasus-call-failed |
+| 2137-4521 | baas-call-failed |
+| 2137-4522 | penne-call-failed |
+| 2137-4523 | nas-call-failed |
 
 # HTTP Error Codes
 | Error Codes | Description |

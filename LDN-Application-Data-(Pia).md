@@ -38,6 +38,21 @@ The application data starts with a short header, which is followed by game-speci
 | 0xC | 4 | Session param (random) |
 | 0x10 | | [Application data](#application-data) |
 
+6.41:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 2 | System property data size (0x5C) |
+| 0x2 | 1 | [System communication version](#system-communication-version) |
+| 0x3 | 2 | Application communication version |
+| 0x5 | 16 | User password |
+| 0x15 | 1 | Is player limit enabled |
+| 0x16 | 1 | Number of players |
+| 0x17 | 4 | Player name size |
+| 0x1B | 1 | Player name encoding (1 =  UTF-8, 2 = UTF-16) |
+| 0x1C | 64 | Player name |
+| 0x5C | | [Application data](#application-data) |
+
 ### System Communication Version
 | Version | Pia Version |
 | --- | --- |

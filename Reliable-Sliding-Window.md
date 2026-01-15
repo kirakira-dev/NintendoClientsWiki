@@ -40,7 +40,7 @@ When a reliable sliding window is used, messages are wrapped as follows:
 | 0x4 | 2 | Sequence id |
 | 0x6 | 2 | Lowest sequence id pending ack |
 | 0x8 | 1 | Number of multicast constant ids (N) |
-| 0x9 | 8*N | Multicast [constant ids](#constant-id) |
+| 0x9 | 8*N | Multicast [constant ids](Pia-Types#constant-id) |
 | | | Payload |
 
 *5.29 - 5.31:*
@@ -51,9 +51,9 @@ When a reliable sliding window is used, messages are wrapped as follows:
 | 0x1 | 1 | Stream id |
 | 0x2 | 2 | Payload size |
 | 0x4 | 2 | Sequence id |
-| 0x6 | 2 | Unknown |
-| 0x8 | 1 | Unknown |
-| 0x9 | 4*N | Unknown |
+| 0x6 | 2 | Lowest sequence id pending ack |
+| 0x8 | 1 | Number of multicast constant ids (N) |
+| 0x9 | 4*N | Multicast [constant ids](Pia-Types#constant-id) |
 | | | Payload |
 
 ### Flags

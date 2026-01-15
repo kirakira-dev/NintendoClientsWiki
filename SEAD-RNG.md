@@ -25,6 +25,9 @@ class Random:
         self.state[2] = self.state[3]
         self.state[3] = temp
         return temp
+
+    def u64(self):
+        return (self.u32() << 32) | self.u32()
     
     # Returns a random integer smaller than 'max'
     def uint(self, max):

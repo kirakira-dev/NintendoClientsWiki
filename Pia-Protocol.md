@@ -267,7 +267,7 @@ If encryption is enabled, the messages are encrypted with AES-GCM. The authentic
 
 The AES-GCM nonce depends on the network type and is generated as follows:
 
-**NEX** *(up to 5.45):*
+**NEX** *(up to 5.26):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -275,12 +275,28 @@ The AES-GCM nonce depends on the network type and is generated as follows:
 | 0x1 | 3 | `gathering_id & 0xFFFFFF` |
 | 0x4 | 8 | Nonce from [header](#header) |
 
-**LDN** *(up to 5.45):*
+**NEX** *(5.27 - 5.45):*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | [Source variable id](#header) `& 0xFF` |
+| 0x1 | 3 | `gathering_id & 0xFFFFFF` |
+| 0x4 | 8 | Nonce from [header](#header) |
+
+**LDN** *(up to 5.26):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 3 | First 3 bytes of CRC32 hash |
 | 0x3 | 1 | [Connection id](#header) |
+| 0x4 | 8 | Nonce from [header](#header) |
+
+**LDN** *(5.27 - 5.45):*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 3 | First 3 bytes of CRC32 hash |
+| 0x3 | 1 | [Source variable id](#header) `& 0xFF` |
 | 0x4 | 8 | Nonce from [header](#header) |
 
 The CRC32 hash is calculated over the following data:
@@ -297,12 +313,20 @@ The CRC32 hash is calculated over the following data:
 | 0x0 | 4 | XOR of network id and IP address of source |
 | 0x4 | 8 | Nonce from [header](#header) |
 
-**LAN** *(up to 5.45):*
+**LAN** *(up to 5.26):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | IP address of source |
 | 0x4 | 1 | [Connection id](#header) |
+| 0x5 | 7 | Last 7 bytes of nonce from [header](#header) |
+
+**LAN** *(5.27 - 5.45):*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | IP address of source |
+| 0x4 | 1 | [Source variable id](#header) `& 0xFF` |
 | 0x5 | 7 | Last 7 bytes of nonce from [header](#header) |
 
 **LAN** *(6.16 - 6.30):*

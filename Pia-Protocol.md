@@ -118,6 +118,8 @@ Let's say the timer of A is at 234 when A sends a packet to B. It takes 2 millis
 
 ![](https://www.dropbox.com/s/4fbobmcugbbokr3/rtt.png?raw=1)
 
+If no packet has been received from the target yet, the destination timer is set to 0. To avoid collisions, the destination timer is set to `0xFFFF` if it would otherwise be 0.
+
 ### Footer
 The footer is only used in LDN mode when a packet is sent to more than one console. It contains the [variable id](Pia-Types#variable-id) of all receiving consoles as 16-bit integers.
 

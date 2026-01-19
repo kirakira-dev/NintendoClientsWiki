@@ -111,6 +111,8 @@ During connection establishment, both consoles generate a random number between 
 ### Packet ID
 If the connection id is 0, the packet id is also 0. If the connection id is not 0, the packet id is an incrementing number starting at 1.
 
+When the packet id rolls over, the value 0 is skipped. This means that the next id after packet id 65535 is 1.
+
 ### RTT Calculation
 The RTT timers contain the number of milliseconds since the start of the session. Every client has its own session timer (they are independent from each other). Aside from its own timer, every client also keeps track of the timers of all other clients. When A sends a packet to B the destination timer is what A believes the session timer of B to be. Hopefully, an example will make this clear:
 

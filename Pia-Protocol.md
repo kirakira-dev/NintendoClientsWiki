@@ -78,7 +78,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0xC | 8 | [AES-GCM nonce](#encryption) |
 | 0x14 | 8 | [AES-GCM authentication tag](#encryption) (first 8 bytes) |
 
-*6.40 - 6.41:*
+*6.32 - 6.41:*
 
 | Offset | Size | Description |
 | --- | --- | --- |

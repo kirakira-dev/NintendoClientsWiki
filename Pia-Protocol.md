@@ -218,7 +218,7 @@ Fields that are not present are copied from the previous message.
 | Bytes | Payload (protocol-specific) |
 | | Padding |
 
-*6.40 - 6.41:*
+*6.32 - 6.40:*
 
 Fields that are not present are copied from the previous message.
 
@@ -228,23 +228,65 @@ Fields that are not present are copied from the previous message.
 | Uint8 | [Message flags](#message-flags). *Only present if `flags & 1`.* |
 | Uint16 | Payload size. *Only present if `flags & 2`.* |
 | Uint8 | [Protocol type](Pia-Protocols). *Only present if `flags & 4`.* |
-| Uint8 | Unknown. *Only present if `flags & 8`.* |
-| Uint8 | Unknown. *Only present if `flags & 16`.* |
+| Uint8 | Protocol port (protocol-specific). *Only present if `flags & 8`.* |
+| Uint8 | Protocol-specific. *Only present if `flags & 16`.* |
 | Bytes | Payload (protocol-specific) |
 | | Padding |
 
 ### Message flags
+*Up to 5.4:*
+
 | Mask | Description |
 | --- | --- |
-| 0x1 | The message is sent to multiple consoles (multicast) |
-| 0x2 | The message should be relayed to another console |
+| 0x1 | Destination is [constant id](Pia-Types#constant-id) |
+| 0x2 | The message needs be relayed to another console |
 | 0x4 | The message was relayed through another console |
 | 0x8 | The message may not be bundled with other messages in a single packet |
-| 0x10 | The message payload is zlib compressed. This was introduced around Pia version 5.14 and is only supported by some specific protocols. |
 
-Note: it seems that on version 5.2, the meaning of the multicast bit is flipped (unknown in which version this was changed).
+*5.6 - 5.12:*
+The meaning of the destination bit was flipped.
 
-Note: it seems like later pia versions use 0x20 for zlib compression instead.
+| Mask | Description |
+| --- | --- |
+| 0x1 | Destination is bitmap |
+| 0x2 | The message needs be relayed to another console |
+| 0x4 | The message was relayed through another console |
+| 0x8 | The message may not be bundled with other messages in a single packet |
+
+*5.14 - 5.26:*
+A number of protocols now support compression.
+
+| Mask | Description |
+| --- | --- |
+| 0x1 | Destination is bitmap |
+| 0x2 | The message needs be relayed to another console |
+| 0x4 | The message was relayed through another console |
+| 0x8 | The message may not be bundled with other messages in a single packet |
+| 0x10 | The message payload is zlib compressed (not all protocols support this) |
+
+*5.28 - 5.45:*
+
+| Mask | Description |
+| --- | --- |
+| 0x1 | Destination is bitmap |
+| 0x2 | The message needs to be relayed to a single console |
+| 0x4 | The message needs to be relayed to multiple consoles |
+| 0x8 | The message was relayed through another console |
+| 0x10 | The message may not be bundled with other messages in a single packet |
+| 0x20 | The message payload is zlib compressed (not all protocols support this) |
+
+*6.16 - 6.30:*
+
+| Mask | Description |
+| --- | --- |
+| 0x1 | Skip source [variable id](Pia-Types#variable-id) check |
+| 0x2 | The message needs to be relayed to a single console |
+| 0x4 | The message needs to be relayed to multiple consoles |
+| 0x8 | The message was relayed through another console |
+| 0x10 | The message may not be bundled with other messages in a single packet |
+| 0x20 | The message payload is zlib compressed (not all protocols support this) |
+| 0x40 | Unknown |
+| 0x80 | Unknown |
 
 ### Station index
 Every console in a mesh gets its own station index. The following station index values are special:
@@ -254,7 +296,9 @@ Every console in a mesh gets its own station index. The following station index 
 * **255:** Used for broadcast messages.
 
 ### Destination
-The content of this field depends on the [multicast bit](#message-flags). If the multicast bit is cleared, this field contains the [constant id](Pia-Types#constant-id) of the destination console. If the multicast bit is set, this field contains a bitmap where each bit represents one destination console (the bit number of a console is its station index: `1 << station_index`). If the destination field is 0, the message is broadcast to all consoles.
+The content of this field depends on the [message flags](#message-flags). It is either a [constant id](Pia-Types#constant-id) or a bitmap. In the latter case, each bit represents one destination console (the bit number of a console is its station index: `1 << station_index`). For messages that are broadcast to all consoles, the destination field is set to 0.
+
+If a message needs to be relayed, the destination id must always be a bitmap.
 
 ## Encryption
 Packets are encrypted and signed with the [session key](#session-key). The messages are padded with 0xFF before encryption such that their combined size is a multiple of 16 bytes.

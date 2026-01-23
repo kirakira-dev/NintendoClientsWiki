@@ -244,6 +244,7 @@ Fields that are not present are copied from the previous message.
 | 0x8 | The message may not be bundled with other messages in a single packet |
 
 *5.6 - 5.12:*
+
 The meaning of the destination bit was flipped.
 
 | Mask | Description |
@@ -254,6 +255,7 @@ The meaning of the destination bit was flipped.
 | 0x8 | The message may not be bundled with other messages in a single packet |
 
 *5.14 - 5.26:*
+
 A number of protocols now support compression.
 
 | Mask | Description |

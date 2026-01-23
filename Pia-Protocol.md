@@ -266,7 +266,7 @@ A number of protocols now support compression.
 | 0x8 | The message may not be bundled with other messages in a single packet |
 | 0x10 | The message payload is zlib compressed (not all protocols support this) |
 
-*5.28 - 5.45:*
+*5.27 - 5.45:*
 
 | Mask | Description |
 | --- | --- |

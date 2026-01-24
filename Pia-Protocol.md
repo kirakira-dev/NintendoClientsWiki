@@ -5,6 +5,8 @@ These packets are usually sent directly from one console to another through UDP,
 
 All packets consist of an unencrypted [header](#header), which is followed by one or more [messages](#messages), and sometimes an unencrypted [footer](#footer).
 
+The maximum packet size is 1472 bytes.
+
 ## Header
 *Up to 5.6:*
 

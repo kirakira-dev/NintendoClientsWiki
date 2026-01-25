@@ -5,6 +5,8 @@ This page describes the protocol that's used to find nearby consoles in LAN mode
 
 Every packet starts with a single byte that indicates its type.
 
+The maximum size of browse request and reply packets is 1364 bytes, although in practice they are always smaller.
+
 ## Packet types
 | Value | Description |
 | --- | --- |

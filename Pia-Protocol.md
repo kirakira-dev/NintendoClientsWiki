@@ -133,7 +133,7 @@ Let's say the timer of A is at 234 when A sends a packet to B. It takes 2 millis
 If no packet has been received from the target yet, the destination timer is set to 0. To avoid collisions, the destination timer is set to `0xFFFF` if it would otherwise be 0.
 
 ### Footer
-The footer is only used in LDN mode when a packet is sent to more than one console. It contains the [variable id](Pia-Types#variable-id) of all receiving consoles as 16-bit integers.
+In LAN mode and LDN mode, packets that are sent to multiple consoles at once are sent to the broadcast address of the network. In that case, the footer contains the [variable id](Pia-Types#variable-id) of all receiving consoles as 16-bit integers.
 
 ## Messages
 This part of the packet may be [encrypted](#encryption). A packet may contain more than one message  (the number of messages is determined from the size of packet).

@@ -106,10 +106,14 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 6.40 - 6.41 | 16 |
 
 ### Maximum Packet Size
+Pia can receive up to the following number of bytes per packet:
+
 | Pia Version | Maximum Size |
 | --- | --- |
 | Up to 6.33 | 1472 |
 | 6.34 - 6.40 | 1452 |
+
+For packet transmission, the maximum packet size depends on both the network type and Pia version.
 
 ### Connection ID
 During connection establishment, both consoles generate a random number between 2 and 255. This is the connection id. If packets are sent to a specific address, rather than station index, the connection id is set to 0.

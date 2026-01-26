@@ -72,6 +72,7 @@ Pokemon Legends Z-A:
 | Drag x Drive: Global Jam | `cb81dadf` |
 | Endless Ocean Luminous | `a71f7ea5` |
 | Hamster Playground | `b9dd3510` |
+| Kirby Air Riders | `216ab1b8` |
 | MACHI KORO With Everyone | ? |
 | Monster Hunter Rise | `e1c218b5` |
 | Monster Hunter Rise Demo | `f124d2cb` |

@@ -40,7 +40,7 @@ The application data starts with a short header, which is followed by game-speci
 | 0xC | 4 | Session param (random) |
 | 0x10 | | [Application data](#application-data) |
 
-6.41:
+6.26 - 6.41:
 
 | Offset | Size | Description |
 | --- | --- | --- |

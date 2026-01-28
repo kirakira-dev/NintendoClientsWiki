@@ -102,5 +102,5 @@ The host broadcasts this message on the network every 100 milliseconds.
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 6 | [Inet address](Pia-Types#inetaddress) |
+| 0x0 | 6 | [Inet address](Pia-Types#inetaddress) (IPv4) |
 | 0x6 | 2 | Extension address (always 0) |

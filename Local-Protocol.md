@@ -1,6 +1,8 @@
 [[Pia Protocols]] > Local Protocol
 ---
 
+This protocol is used in LDN mode.
+
 | Message Type | Description |
 | --- | --- |
 | 0x11 | [Update session](#update-session-message) |
@@ -12,10 +14,10 @@ The following version numbers are advertised during the [connection request](Sta
 
 | Pia version | Version |
 | --- | --- |
-| 5.19 - 5.43 | 0 |
+| 5.19 - 5.44 | 0 |
 
 ## Local message header
-*5.2 - 5.37:*
+*5.2 - 5.44:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -26,6 +28,8 @@ The following version numbers are advertised during the [connection request](Sta
 | 0xA | 2 | Padding |
 
 ## Update session message
+The host broadcasts this message on the network every 100 milliseconds.
+
 *5.2:*
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -37,7 +41,7 @@ The following version numbers are advertised during the [connection request](Sta
 | 0x19 | 7 | Padding |
 | 0x20 | | [Payload](#update-session-payload) |
 
-*5.7 - 5.37:*
+*5.7 - 5.44:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -53,7 +57,7 @@ The following version numbers are advertised during the [connection request](Sta
 | 0x30 | | [Payload](#update-session-payload) |
 
 ### Update session payload
-*5.2 - 5.37:*
+*5.2 - 5.44:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -86,7 +90,7 @@ The following version numbers are advertised during the [connection request](Sta
 | 0x10 | 4 | Always 0 |
 
 ## Local node
-*5.2 - 5.37:*
+*5.2 - 5.44:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -94,7 +98,7 @@ The following version numbers are advertised during the [connection request](Sta
 | 0x8 | 1 | Host migration ranking |
 
 ## Local address
-*5.2 - 5.37:*
+*5.2 - 5.44:*
 
 | Offset | Size | Description |
 | --- | --- | --- |

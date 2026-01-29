@@ -28,7 +28,7 @@ The following version numbers are advertised during the [connection request](Sta
 | 0xA | 2 | Padding |
 
 ## Update session message
-The host broadcasts this message on the network every 100 milliseconds.
+This message is sent by the host of the network whenever a station joins, leaves, or when the allow participation state is changed. It is resent every 100 milliseconds until all stations in the network have acknowledged the message.
 
 *5.2:*
 | Offset | Size | Description |
@@ -37,7 +37,7 @@ The host broadcasts this message on the network every 100 milliseconds.
 | 0xC | 4 | Sequence id |
 | 0x10 | 4 | Network id |
 | 0x14 | 4 | Host variable id |
-| 0x18 | 1 | Allow participating state |
+| 0x18 | 1 | Allow participation |
 | 0x19 | 7 | Padding |
 | 0x20 | | [Payload](#update-session-payload) |
 

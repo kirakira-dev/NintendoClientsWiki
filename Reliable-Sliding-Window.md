@@ -60,9 +60,9 @@ When a reliable sliding window is used, messages are wrapped as follows:
 | Flag | Description |
 | --- | --- |
 | 1 | Application data |
-| 2 | First fragment |
-| 4 | Last fragment |
-| 8 | Is initialize |
+| 2 | Message start (first fragment) |
+| 4 | Message end (last fragment) |
+| 8 | Is initialized |
 | 16 | Is compressed |
 | 32 | Reset |
 | 64 | Reset ack |

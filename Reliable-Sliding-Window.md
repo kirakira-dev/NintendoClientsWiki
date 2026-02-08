@@ -59,10 +59,25 @@ When a reliable sliding window is used, messages are wrapped as follows:
 ### Flags
 | Flag | Description |
 | --- | --- |
-| 1 | Has payload |
+| 1 | Application data |
 | 2 | First fragment |
 | 4 | Last fragment |
 | 8 | Is initialize |
 | 16 | Is compressed |
 | 32 | Reset |
 | 64 | Reset ack |
+
+## Ack Data
+When the application data flag is not set, the payload contains bulk acknowledgement information.
+
+*5.18:*
+
+The payload contains 32 copies of the following struct:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Stream id |
+| 0x1 | 2 | Acknowledgement id |
+| 0x3 | 16 | Acknowledgement mask |
+
+All sequence ids up to the acknowledgement id are marked as received. In addition, the acknowledgement mask allows up to 128 sequence ids behind a gap to be acknowledged. If `ack_mask & (1 << index)` is set, then `ack_id + 1 + index` is marked as received.

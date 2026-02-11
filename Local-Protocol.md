@@ -105,6 +105,8 @@ The oldest node in a network has host migration ranking 0. The next oldest node 
 
 The host migration ranking seems to be update only when a new node joins the network, but not when a node leaves the network.
 
+For unused entries in the list, the host migration ranking is set to 255, and the local address is cleared with zeros.
+
 ## Local address
 *5.2 - 5.44:*
 

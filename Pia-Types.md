@@ -200,19 +200,17 @@ The constant id is generated from your local IP address and port: `ip << 32 | po
 The constant id is generated from your MAC address: `mac[2] << 56 | mac[4] << 48 | mac[5] << 40 | mac[3] << 32 | mac[1] << 24 | mac[0] << 16`.
 
 ## Variable ID
-The variable id uniquely identifies a station in the current session. Unlike the [constant id](#constant-id), it may change across sessions. The variable id depends on the network type:
+The variable id uniquely identifies a station in the current session. Unlike the [constant id](#constant-id), it may change across sessions. The variable id depends on the network type. In old Pia versions, the variable id was called "connection id" instead.
+
+Up to Pia version 5.44, the variable id is a 32-bit integer. In Pia version 6.16 and later, it is a 16-bit integer instead.
 
 **NEX** *(Up to 5.44):*
 
 The variable id is the same as your connection id (CID).
 
-**LAN** *(Up to 5.9):*
+**LAN** / **LDN** *(Up to 5.44):*
 
-The variable is set to the current system tick (`nn::os::GetSystemTick()`) at the start of the session.
-
-**LDN** *(Up to 5.9):*
-
-The variable is set to the current system tick (`nn::os::GetSystemTick()`) at the start of the session.
+The exact method with which the variable id is generated varies per Pia version, but it is indiscernible from a random value.
 
 ## Service Variable ID
 Like the [variable id](#variable-id), the service variable id uniquely identifies a station in the current session and may change across sessions. The service variable id depends on the network type:

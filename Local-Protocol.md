@@ -1,7 +1,7 @@
 [[Pia Protocols]] > Local Protocol
 ---
 
-This protocol is used in LDN mode.
+This protocol is used in LDN mode. All messages seem to be encoded with little endian byte order.
 
 | Message Type | Description |
 | --- | --- |

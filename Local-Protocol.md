@@ -1,4 +1,4 @@
-[[Pia Protocols]] > Local Protocol
+[Pia](Pia-Overview) > [Protocols](Pia-Protocols) > Station Protocol
 ---
 
 This protocol is used in LDN mode. All messages seem to be encoded with little endian byte order.

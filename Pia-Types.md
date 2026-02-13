@@ -81,35 +81,35 @@ The station location holds information that allows Pia to connect to a given sta
 
 *5.2 - 5.9:*
 
-| Type | Description |
-| --- | --- |
-| [StationAddress](#stationaddress) | Station address |
-| Uint64 | [Constant id] (PID) |
-| Uint32 | [Variable id] (CID) |
-| Uint32 | [Service variable id] (RVCID) |
-| Uint8 | [URL type](#nex-url-type) |
-| Uint8 | NEX stream id (sid) |
-| Uint8 | NEX stream type (stream) |
-| Uint8 | [NAT mapping](#nat-mapping) (natm) |
-| Uint8 | [NAT filtering](#nat-filtering) (natf) |
-| Uint8 | [NAT location](#nat-location) (type) |
-| Uint8 | probeinit |
-| [InetAddress](#inetaddress) | Relay address |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 6 | [Station address](#stationaddress) |
+| 0x6 | 8 | [Constant id] (PID) |
+| 0xE | 4 | [Variable id] (CID) |
+| 0x12 | 4 | [Service variable id] (RVCID) |
+| 0x16 | 1 | [URL type](#nex-url-type) |
+| 0x17 | 1 | NEX stream id (sid) |
+| 0x18 | 1 | NEX stream type (stream) |
+| 0x19 | 1 | [NAT mapping](#nat-mapping) (natm) |
+| 0x1A | 1 | [NAT filtering](#nat-filtering) (natf) |
+| 0x1B | 1 | [NAT location](#nat-location) (type) |
+| 0x1C | 1 | probeinit |
+| 0x1D | 6 | Relay address ([InetAddress](#inetaddress)) |
 
 *5.10:*
 
-| Type | Description |
-| --- | --- |
-| [InetAddress](#inetaddress) | Public address |
-| [InetAddress](#inetaddress) | Private address |
-| [InetAddress](#inetaddress) | Relay address |
-| Uint64 | [Constant id] (PID) |
-| Uint32 | [Variable id] (CID) |
-| Uint32 | [Service variable id] (RVCID) |
-| Uint8 | `0x3`: [NAT filtering](#nat-filtering) (natf)<br>`0xC`: [NAT mapping](#nat-mapping) (natm)<br>`0xF0`: [NAT type](#nat-type) |
-| Uint8 | [NAT location](#nat-location) (type) |
-| Uint8 | probeinit |
-| Uint8 | Is private address available |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 6 | Public address ([InetAddress](#inetaddress)) |
+| 0x6 | 6 | Private address ([InetAddress](#inetaddress)) |
+| 0xC | 6 | Relay address ([InetAddress](#inetaddress)) |
+| 0x12 | 8 | [Constant id] (PID) |
+| 0x1A | 4 | [Variable id] (CID) |
+| 0x1E | 4 | [Service variable id] (RVCID) |
+| 0x22 | 1 | `0x3`: [NAT filtering](#nat-filtering) (natf)<br>`0xC`: [NAT mapping](#nat-mapping) (natm)<br>`0xF0`: [NAT type](#nat-type) |
+| 0x23 | 1 | [NAT location](#nat-location) (type) |
+| 0x24 | 1 | probeinit |
+| 0x25 | 1 | Is private address available |
 
 *5.11 - 5.44:*
 

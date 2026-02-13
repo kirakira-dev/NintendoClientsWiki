@@ -1,8 +1,6 @@
 [[Pia Protocols]] > Local Protocol
 ---
 
-> **Note:** in LDN mode, Pia does not use the [Station Protocol](https://github.com/kinnay/NintendoClients/wiki/Station-Protocol). Instead, new nodes are detected through the underlying LDN network and nodes are automatically assumed to be connected.
-
 This protocol is used in LDN mode. All messages seem to be encoded with little endian byte order.
 
 | Message Type | Description |

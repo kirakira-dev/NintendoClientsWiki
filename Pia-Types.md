@@ -132,10 +132,11 @@ The station location holds information that allows Pia to connect to a given sta
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 18 | [Station address](#stationaddress) |
-| 0x12 | 8 | [Constant id] |
-| 0x1A | 2 | [Variable id] |
-| 0x1C | 1 | `0x3`: [NAT filtering](#nat-filtering)<br>`0xC`: [NAT mapping](#nat-mapping)<br>`0x10`: Is IPv6 |
+| 0x0 | 1 | Station address size (always 18) |
+| 0x1 | 18 | [Station address](#stationaddress) |
+| 0x13 | 8 | [Constant id] |
+| 0x1B | 2 | [Variable id] |
+| 0x1D | 1 | `0x3`: [NAT filtering](#nat-filtering)<br>`0xC`: [NAT mapping](#nat-mapping)<br>`0x10`: Is IPv6 |
 
 ### NEX URL Type
 The URL type depends on the scheme of the given station url. It is always 0 or 1 in practice.

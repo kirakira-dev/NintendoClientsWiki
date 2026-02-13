@@ -41,7 +41,13 @@ This structure can represent both IPv4 and IPv6 addresses. Which encoding is use
 | 0x0 | 6 | [Inet address](#inetaddress) |
 | 0x6 | 2 | Extension id |
 
-*5.2 - 5.44:*
+*5.2 - 5.10:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 6 | [Inet address](#inetaddress) |
+
+*5.11 - 5.44:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -59,19 +65,19 @@ The station location holds information that allows Pia to connect to a given sta
 
 *Up to 4.10:*
 
-| Type | Description |
-| --- | --- |
-| [StationAddress](#stationaddress) | Station address |
-| Uint32 | [Constant id] (PID) |
-| Uint32 | [Variable id] (CID) |
-| Uint32 | [Service variable id] (RVCID) |
-| Uint8 | [URL type](#nex-url-type) |
-| Uint8 | NEX stream id (sid) |
-| Uint8 | NEX stream type (stream) |
-| Uint8 | [NAT mapping](#nat-mapping) (natm) |
-| Uint8 | [NAT filtering](#nat-filtering) (natf) |
-| Uint8 | [NAT location](#nat-location) (type) |
-| Uint8 | probeinit |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Station address](#stationaddress) |
+| 0x8 | 4 | [Constant id] (PID) |
+| 0xC | 4 | [Variable id] (CID) |
+| 0x10 | 4 | [Service variable id] (RVCID) |
+| 0x14 | 1 | [URL type](#nex-url-type) |
+| 0x15 | 1 | NEX stream id (sid) |
+| 0x16 | 1 | NEX stream type (stream) |
+| 0x17 | 1 | [NAT mapping](#nat-mapping) (natm) |
+| 0x18 | 1 | [NAT filtering](#nat-filtering) (natf) |
+| 0x19 | 1 | [NAT location](#nat-location) (type) |
+| 0x1A | 1 | probeinit |
 
 *5.2 - 5.9:*
 

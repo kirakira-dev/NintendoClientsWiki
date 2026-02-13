@@ -31,7 +31,7 @@ This structure can represent both IPv4 and IPv6 addresses. Which encoding is use
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 0, 4 or 16 | Address |
-| 0x10 | 2 | Port |
+| | 2 | Port |
 
 ## StationAddress
 *Up to 4.10:*

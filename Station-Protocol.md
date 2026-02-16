@@ -309,54 +309,54 @@ The protocol list contains the following for every available protocol.
 
 ## Player Info
 *3.3 - 3.10:*
-| Type | Description |
-| --- | --- |
-| Uint16 (16) | Player name (UTF-16) |
-| Uint8 | Player name length (number of characters) |
-| Uint8 | Language |
-| Uint16 | Padding |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 32 | Player name (UTF-16) |
+| 0x20 | 1 | Player name length (number of characters) |
+| 0x21 | 1 | Language |
+| 0x22 | 2 | Padding |
 
 *4.5 - 4.10:*
-| Type | Description |
-| --- | --- |
-| Uint16 (16) | Player name (UTF-16) |
-| Uint8 | Player name length (number of characters) |
-| Uint8 | Language |
-| Uint32 | Gathering id |
-| Uint16 | Padding |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 32 | Player name (UTF-16) |
+| 0x20 | 1 | Player name length (number of characters) |
+| 0x21 | 1 | Language |
+| 0x22 | 4 | Gathering id |
+| 0x26 | 2 | Padding |
 
 *5.2 - 5.6:*
-| Type | Description |
-| --- | --- |
-| Bytes (80) | Player name |
-| Uint8 | Player name encoding (1=UTF-8, 2=UTF-16) |
-| Bytes (40) | Account name |
-| Uint8 | Account name encoding (1=UTF-8, 2=UTF-16) |
-| Uint8 | Language |
-| Bytes (64) | Play history registration key |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 80 | Player name |
+| 0x50 | 1 | Player name encoding (1=UTF-8, 2=UTF-16) |
+| 0x51 | 40 | Account name |
+| 0x79 | 1 | Account name encoding (1=UTF-8, 2=UTF-16) |
+| 0x7A | 1 | Language |
+| 0x7B | 64 | Play history registration key |
 
 *5.7 - 5.19:*
-| Type | Description |
-| --- | --- |
-| Bytes (80) | Player name |
-| Uint8 | Player name encoding (1=UTF-8, 2=UTF-16) |
-| Bytes (40) | Account name |
-| Uint8 | Account name encoding (1=UTF-8, 2=UTF-16) |
-| Uint8 | Language |
-| Bytes (64) | Play history registration key |
-| Uint64 | Principal id |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 80 | Player name |
+| 0x50 | 1 | Player name encoding (1=UTF-8, 2=UTF-16) |
+| 0x51 | 40 | Account name |
+| 0x79 | 1 | Account name encoding (1=UTF-8, 2=UTF-16) |
+| 0x7A | 1 | Language |
+| 0x7B | 64 | Play history registration key |
+| 0xBB | 8 | Principal id |
 
 *5.27 - 5.43:*
 
-| Type | Description |
-| --- | --- |
-| Uint8 | Player name encoding (1=UTF-8, 2=UTF-16) |
-| Bytes (80) | Player name |
-| Uint8 | Account name encoding (1=UTF-8, 2=UTF-16) |
-| Bytes (40) | Account name |
-| Uint8 | Language |
-| Bytes (64) | Play history registration key |
-| Uint64 | Principal id |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Player name encoding (1=UTF-8, 2=UTF-16) |
+| 0x1 | 80 | Player name |
+| 0x51 | 1 | Account name encoding (1=UTF-8, 2=UTF-16) |
+| 0x52 | 40 | Account name |
+| 0x7A | 1 | Language |
+| 0x7B | 64 | Play history registration key |
+| 0xBB | 8 | Principal id |
 
 [Constant id]: Pia-Types#constant-id
 [Variable id]: Pia-Types#variable-id

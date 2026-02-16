@@ -322,7 +322,7 @@ The protocol list contains the following for every available protocol.
 | Uint16 (16) | Player name (UTF-16) |
 | Uint8 | Player name length (number of characters) |
 | Uint8 | Language |
-| Uint32 | Unknown |
+| Uint32 | Gathering id |
 | Uint16 | Padding |
 
 *5.2 - 5.6:*

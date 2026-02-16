@@ -302,10 +302,10 @@ In some Pia versions, the connection response may be fragmented, depending on th
 ## Protocol List
 The protocol list contains the following for every available protocol.
 
-| Type | Description |
-| --- | --- |
-| Uint8 | Protocol id |
-| Uint8 | Protocol version |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Protocol id |
+| 0x1 | 1 | Protocol version |
 
 ## Player Info
 *3.3 - 3.10:*

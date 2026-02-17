@@ -1,7 +1,7 @@
 [Pia](Pia-Overview) > [Protocols](Pia-Protocols) > Station Protocol
 ---
 
-This protocol is used in LDN mode. All messages seem to be encoded with little endian byte order.
+This protocol is used in LDN mode. Unless specified otherwise, the messages in this protocol are encoded with little endian byte order.
 
 | Message Type | Description |
 | --- | --- |
@@ -108,6 +108,8 @@ The host migration ranking seems to be update only when a new node joins the net
 For unused entries in the list, the host migration ranking is set to 255, and the local address is cleared with zeros.
 
 ## Local address
+Unlike the rest of the messages, a local address is encoded with big endian byte order.
+
 *5.2 - 5.44:*
 
 | Offset | Size | Description |

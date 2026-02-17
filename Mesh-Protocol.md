@@ -36,7 +36,7 @@ The following version numbers are advertised during the [connection request](Sta
 | 5.19 - 5.20 | 0 |
 | 5.21 - 5.27 | 1 |
 | 5.28 - 5.29 | 2 |
-| 5.30 - 5.43 | 3 |
+| 5.30 - 5.44 | 3 |
 
 # Join request
 *Up to 5.10:*

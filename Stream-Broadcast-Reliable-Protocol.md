@@ -14,6 +14,14 @@ The payload contains the following data:
 | 0x7 | 4 | Payload size |
 | 0xB | | Payload |
 
+
+The following version numbers are advertised during the [connection request](Station-Protocol):
+
+| Pia version | Version |
+| --- | --- |
+| 5.29 | 2 |
+| 5.44 | 4 |
+
 ### Packet Types
 | Type | Description |
 | --- | --- |

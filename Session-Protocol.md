@@ -20,3 +20,9 @@
 | 20 | Completion invitation |
 | 21 | Answer to completion invitation |
 | 22 | Completion failure response |
+
+The following version numbers are advertised during the [connection request](Station-Protocol):
+
+| Pia version | Version |
+| --- | --- |
+| 5.29 - 5.44 | 1 |

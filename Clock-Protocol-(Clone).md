@@ -10,3 +10,10 @@ The clock protocol provides a game-specific clock that is synchronized across al
 | 0x2 | 8 | Request clock value |
 | 0xA | 8 | Response clock value |
 
+The following version number is advertised during the [connection request](Station-Protocol):
+
+| Pia version | Version |
+| --- | --- |
+| 5.19 - 5.44 | 0 |
+
+

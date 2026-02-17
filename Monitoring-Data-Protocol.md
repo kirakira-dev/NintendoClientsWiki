@@ -9,6 +9,12 @@ Wii U games send the monitoring data to the NEX server instead, through the [Sen
 
 Up to Pia version 5.23, the monitoring data protocol was called the "feedback protocol".
 
+The following version number is advertised during the [connection request](Station-Protocol):
+
+| Pia version | Version |
+| --- | --- |
+| 5.19 - 5.44 | 0 |
+
 ## Packet Format
 Every packet consists of:
 * An unencrypted [header](#monitoring-data-header)

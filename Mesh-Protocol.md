@@ -1,4 +1,4 @@
-[[Pia Protocols]] > Mesh Protocol
+[Pia](Pia-Overview) > [Protocols](Pia-Protocols) > Station Protocol
 ---
 
 | Protocol Port | Description |

@@ -1,4 +1,4 @@
-[[Pia Protocols]] > Stream Broadcast Reliable Protocol
+[Pia](Pia-Overview) > [Protocols](Pia-Protocols) > Stream Broadcast Reliable Protocol
 ---
 
 The stream broadcast reliable protocol is meant for larger data streams. A console can request a certain data stream from another console, after which the other console will start transmitting the stream. A [[reliable sliding window]] is used to ensure that all packets arrive in the correct order.

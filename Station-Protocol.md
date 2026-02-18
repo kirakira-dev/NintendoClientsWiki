@@ -37,7 +37,7 @@ In version 5.19, the `StationProtocol` was renamed to `MeshStationProtocol` and 
 | --- | --- |
 | 5.19 - 5.23 | 0 |
 | 5.24 - 5.26 | 1 |
-| 5.27 - 5.43 | 2 |
+| 5.27 - 5.44 | 2 |
 
 ## Connection Request
 In versions where applicable, the inverse connection id must be the connection id that was previously received from the other station.
@@ -250,7 +250,7 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | Uint32 | [Variable id] |
 | Uint8 | Connection id |
 
-*5.27 - 5.43:*
+*5.27 - 5.44:*
 
 | Type | Description |
 | --- | --- |

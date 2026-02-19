@@ -40,6 +40,8 @@ The following version numbers are advertised during the [connection request](Sta
 | 5.30 - 5.44 | 3 |
 
 # Join request
+The join request is sent to the host of the mesh. It is retransmitted every 500 milliseconds until acknowledged. If no reply is received after 10 seconds, Pia considers the join request to have failed.
+
 *Up to 5.10:*
 
 | Type | Description |

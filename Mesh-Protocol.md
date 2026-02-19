@@ -116,7 +116,29 @@ If the join response is too big to be sent in a single packet it is split into f
 | [StationInfo] (xN) | Station info list |
 | Uint32 | Ack id |
 
-# Join response (denying)
+*5.44*
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Message type (2) |
+| Uint8 | Number of stations in mesh, including joining station |
+| Uint8 | Index of host station |
+| Uint8 | Index of joining station |
+| Uint8 | Number of fragments |
+| Uint8 | Fragment index |
+| Uint8 | Number of station info entries in current fragment (N) |
+| Uint8 | Base index of station info entries in current fragment |
+| Uint8 | Maximum number of stations in first mesh |
+| Uint8 | Maximum number of stations in second mesh |
+| Uint8 | Maximum number of stations (total) |
+| Uint8 | Padding |
+| Uint32 | Update counter (incremented on each mesh update) |
+| [StationInfo] (xN) | Station info list |
+| Uint32 | Ack id |
+
+# Join response (refused)
+*Up to 5.44:*
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Message type (2) |
@@ -180,13 +202,30 @@ Because this message is sent through the reliable mesh protocol it does not need
 | Uint8 | Station index |
 | | Padding such that the size becomes a multiple of 4 bytes. |
 
-*5.10 - 5.18:*
+*5.10 - 5.19:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 0x3E | [StationLocation](Pia-Types#stationlocation). If it takes up less than 0x3E bytes the remaining bytes are filled with 0's. |
+| 0x0 | 62 | [StationLocation](Pia-Types#stationlocation). If it takes up less than 62 bytes the remaining bytes are filled with 0's. |
 | 0x3E | 1 | Station index |
 | 0x3F | 1 | Padding |
+
+*5.27 - 5.29:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 64 | [StationLocation](Pia-Types#stationlocation). If it takes up less than 64 bytes the remaining bytes are filled with 0's. |
+| 0x40 | 1 | Station index |
+| 0x41 | 3 | Padding |
+
+*5.31 - 5.44:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 64 | [StationLocation](Pia-Types#stationlocation). If it takes up less than 64 bytes the remaining bytes are filled with 0's. |
+| 0x40 | 1 | Station index |
+| 0x41 | 2 | Join order |
+| 0x43 | 1 | Padding |
 
 [StationInfo]: #stationinfo
 

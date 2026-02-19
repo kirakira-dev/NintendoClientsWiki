@@ -19,6 +19,7 @@
 | 0x22 | Dummy message |
 | 0x23 | Dummy ack |
 | 0x24 | Connection failure notice |
+| 0x25 | Inconsistent notice |
 | 0x40 | Greeting |
 | 0x41 | Migration finish |
 | 0x42 | Greeting response |

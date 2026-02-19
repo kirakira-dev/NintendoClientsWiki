@@ -2,8 +2,6 @@ This page describes the protocol behind the Animal Crossing: New Horizons island
 
 | ID | Description |
 | --- | --- |
-| 0 | Unknown |
-| 1 | Unknown |
 | 2 | Unknown |
 | 3 | Unknown |
 | 4 | Unknown |
@@ -14,6 +12,11 @@ This page describes the protocol behind the Animal Crossing: New Horizons island
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 84 | Unknown |
+
+## Record Type 3
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | Unknown |
 
 ## Record Type 4
 | Offset | Size | Description |

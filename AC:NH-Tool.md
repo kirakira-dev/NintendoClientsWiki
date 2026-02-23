@@ -2,8 +2,8 @@ This page describes the protocol behind the Animal Crossing: New Horizons island
 
 | ID | Description |
 | --- | --- |
-| 2 | Unknown |
-| 3 | Unknown |
+| 2 | Peer info |
+| 3 | Synchronization state |
 | 4 | Unknown |
 | 5 | Unknown |
 | 6 | Unknown |
@@ -11,12 +11,21 @@ This page describes the protocol behind the Animal Crossing: New Horizons island
 ## Record Type 2
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 84 | Unknown |
+| 0x0 | 4 | Unknown |
+| 0x4 | 9 * 8 | Peers (8x) |
+| 0x4C | 1 * 8 | Flags (8x) |
+
+Every peer entry has the following fields:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Constant id](Pia-Types#constant-id) |
+| 0x8 | 1 | Unknown |
 
 ## Record Type 3
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 4 | Unknown |
+| 0x0 | 4 | Synchronized from record type 2 field 0 |
 | 0x4 | 1 | Always 0 |
 | 0x5 | 3 | Padding |
 

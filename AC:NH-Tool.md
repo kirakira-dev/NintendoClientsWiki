@@ -17,7 +17,7 @@ This page describes the protocol behind the Animal Crossing: New Horizons island
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Unknown |
-| 0x4 | 1 | Unknown |
+| 0x4 | 1 | Always 0 |
 | 0x5 | 3 | Padding |
 
 ## Record Type 4

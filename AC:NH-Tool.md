@@ -4,7 +4,7 @@ This page describes the protocol behind the Animal Crossing: New Horizons island
 | --- | --- |
 | 2 | Peer info |
 | 3 | Peer info ack |
-| 4 | Unknown |
+| 4 | Network state |
 | 5 | Unknown |
 | 6 | Unknown |
 
@@ -36,9 +36,13 @@ This record seems to be used to notify the host that the peer info has been rece
 | 0x5 | 3 | Padding |
 
 ## Record Type 4
+This record seems to hold information about the state of the network.
+
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 3 | Unknown |
+| 0x0 | 1 | Unknown |
+| 0x1 | 1 | Unknown |
+| 0x2 | 1 | Unknown |
 
 ## Record Type 5
 | Offset | Size | Description |

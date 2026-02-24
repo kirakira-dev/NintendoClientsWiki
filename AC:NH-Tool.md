@@ -82,6 +82,6 @@ This stream type transmits the save data. The data is encoded in little endian b
 | 0x4 | 4 | Always 120 (`x`) |
 | 0x8 | 4 | Always 109 (`m`) |
 | 0xC | 256 | Filename (ascii) |
-| 0x10C | 1 | Unknown |
+| 0x10C | 1 | Is last file |
 | 0x10D | 3 | Padding |
 | 0x110 | | Payload |

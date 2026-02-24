@@ -8,7 +8,7 @@ This page describes the protocol behind the Animal Crossing: New Horizons island
 | 5 | Streaming |
 | 6 | Unknown |
 
-Record type 0 and 1 seem to be unused. This suggests that they are either only present in a debug build, or they were present in an early version of the tool but later removed.
+Record type 0 and 1 seem to be unused.
 
 In addition, the following stream ids are used for the [[stream broadcast reliable protocol]]:
 

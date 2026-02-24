@@ -14,7 +14,7 @@ In addition, the following stream ids are used for the [[stream broadcast reliab
 
 | ID | Description |
 | --- | --- |
-| 17 | Unknown |
+| 17 | Save data |
 | 18 | Unknown |
 
 Note: theoretically, the implementation seems to support stream id 0 up to 20. But only 17 and 18 seem to be used?
@@ -72,3 +72,16 @@ This record contains information about the [[stream broadcast reliable protocol]
 | --- | --- | --- |
 | 0x0 | 4 | Unknown |
 | 0x4 | 4 | Unknown |
+
+## Stream Type 17
+This stream type transmits the save data. The data is encoded in little endian byte order.
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | Murmur hash of payload |
+| 0x4 | 4 | Always 120 (`x`) |
+| 0x8 | 4 | Always 109 (`m`) |
+| 0xC | 256 | Filename (ascii) |
+| 0x10C | 1 | Unknown |
+| 0x10D | 3 | Padding |
+| 0x110 | | Payload |

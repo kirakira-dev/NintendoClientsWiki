@@ -15,9 +15,8 @@ In addition, the following stream ids are used for the [[stream broadcast reliab
 | ID | Description |
 | --- | --- |
 | 17 | Save data |
-| 18 | Unknown |
 
-Note: theoretically, the implementation seems to support stream id 0 up to 20. But only 17 and 18 seem to be used?
+Note: theoretically, the implementation seems to support stream id 0 up to 20. But only 17 seems to be used.
 
 ## Record Type 2
 This record contains information about the peers that are connected to the network. Interestingly, this record has room for up to 8 peers, even though the underlying LDN network only allows two nodes to be connected at once.

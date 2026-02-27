@@ -103,7 +103,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 6.25 - 6.26 | 12 |
 | 6.29 - 6.30 | 13 |
 | 6.32 - 6.34 | 15 |
-| 6.40 - 6.41 | 16 |
+| 6.39 - 6.41 | 16 |
 
 ### Maximum Packet Size
 Pia can receive up to the following number of bytes per packet:

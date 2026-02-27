@@ -65,7 +65,7 @@ The application data starts with a short header, which is followed by game-speci
 | 5 | 5.18 |
 | 8 | 5.29 - 5.39 |
 | 21 | 6.26 |
-| 22 | 6.41 |
+| 22 | 6.39 - 6.41 |
 
 ### Application Data
 The application data depends on the game:

@@ -368,7 +368,7 @@ The CRC32 hash is calculated over the following data:
 
 The session id is stored in little-endian byte order.
 
-**LDN** *(6.16 - 6.30):*
+**LDN** *(6.16 - 6.39):*
 
 | Offset | Size | Description |
 | --- | --- | --- |

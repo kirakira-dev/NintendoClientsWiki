@@ -216,9 +216,9 @@ Up to Pia version 5.44, the variable id is a 32-bit integer. In Pia version 6.16
 
 The variable id is the same as your connection id (CID).
 
-**LAN** / **LDN** *(Up to 5.44):*
+**LAN** / **LDN** *(Up to 6.39):*
 
-The exact method with which the variable id is generated varies per Pia version, but it is indiscernible from a random value.
+The exact method with which the variable id is generated varies per Pia version, but it is indiscernible from a random value. In Pia 6.x, it is ensured that the variable id is always at least 2.
 
 ## Service Variable ID
 Like the [variable id](#variable-id), the service variable id uniquely identifies a station in the current session and may change across sessions. The service variable id depends on the network type. In old Pia versions, the service variable id was called "service connection id (scid)" instead.

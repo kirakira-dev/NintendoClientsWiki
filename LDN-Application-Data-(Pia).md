@@ -2,7 +2,7 @@ The application data field allows the host of an [LDN network](LDN-Protocol) to 
 
 The application data starts with a short header, which is followed by game-specific application data.
 
-**Note:** the values in this header seem to be stored in little-endian byte order.
+**Note:** in Pia 5.x, the values in this header seem to be stored in little-endian byte order. In Pia 6.x, they are stored in big-endian byte order.
 
 5.2 - 5.7:
 

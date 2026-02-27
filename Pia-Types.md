@@ -203,7 +203,7 @@ The constant id is the same as your principal id (pid).
 
 The constant id is generated from your local IP address and port: `ip << 32 | port`
 
-**LDN** *(Up to 5.44):*
+**LDN** *(Up to 6.39):*
 
 The constant id is generated from your MAC address: `mac[2] << 56 | mac[4] << 48 | mac[5] << 40 | mac[3] << 32 | mac[1] << 24 | mac[0] << 16`.
 

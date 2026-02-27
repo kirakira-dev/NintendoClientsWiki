@@ -1,6 +1,15 @@
-[[Pia Protocols]] > Session Protocol
+[Pia](Pia-Overview) > [Protocols](Pia-Protocols) > Session Protocol
 ---
-| Message Type | Description |
+
+The following version numbers are advertised during the [connection request](Station-Protocol):
+
+| Pia version | Version |
+| --- | --- |
+| 5.19 | 0 |
+| 5.29 - 5.44 | 1 |
+
+*Up to 5.44:*
+| Type | Description |
 | --- | --- |
 | 3 | Next session id |
 | 4 | Prepared for migrate session |
@@ -20,9 +29,3 @@
 | 20 | Completion invitation |
 | 21 | Answer to completion invitation |
 | 22 | Completion failure response |
-
-The following version numbers are advertised during the [connection request](Station-Protocol):
-
-| Pia version | Version |
-| --- | --- |
-| 5.29 - 5.44 | 1 |

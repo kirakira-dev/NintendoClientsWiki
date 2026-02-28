@@ -375,6 +375,8 @@ The session id is stored in little-endian byte order.
 | 0x0 | 4 | XOR of network id and IP address of source |
 | 0x4 | 8 | Nonce from [header](#header) |
 
+The network id is the CRC32 hash of all bytes of the SSID except for the first (`ssid[1:16]`).
+
 **LAN** *(up to 5.26):*
 
 | Offset | Size | Description |

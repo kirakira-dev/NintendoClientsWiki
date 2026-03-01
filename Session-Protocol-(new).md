@@ -1,7 +1,7 @@
 [Pia](Pia-Overview) > [Protocols](Pia-Protocols) > Session Protocol (new)
 ---
 
-This page describes the session protocol that can be found in Pia version 6.x. It seems to be similar to the [[mesh protocol]] that was found in Pia 5.x.
+This page describes the session protocol that can be found in Pia version 6.x. It seems to combine the functions of the [[station protocol]] and [[mesh protocol]] into one.
 
 *Added in 6.16 or earlier:*
 | Type | Description |

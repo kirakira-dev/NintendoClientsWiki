@@ -306,6 +306,13 @@ A number of protocols now support compression.
 | 0x40 | Unknown |
 | 0x80 | Unknown |
 
+*6.32 - 6.39:*
+
+| Mask | Description |
+| --- | --- |
+| 0x20 | Unknown |
+| 0x40 | Unknown |
+
 ### Station index
 Every console in a mesh gets its own station index. The following station index values are special:
 

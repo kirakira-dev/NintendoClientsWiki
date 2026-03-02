@@ -44,7 +44,7 @@ The network property request and response messages were later renamed to session
 | 0x1A | 1 | Is network open |
 | 0x1B | 2 | Station list size (N) |
 | 0x1D | 1 | Is migrating host |
-| 0x1E | | [Payload](#update-network-connection-status-payload) |
+| 0x1E | | Payload |
 
 The payload contains N copies of the [NetStation](#netstation) structure.
 

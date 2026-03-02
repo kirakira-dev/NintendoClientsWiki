@@ -536,7 +536,7 @@ The Pia library was redesigned for NPLN.
 | ID | Protocol |
 | --- | --- |
 | 0x08 | Keep Alive Protocol |
-| 0x2C | Net Protocol |
+| 0x2C | [[Net Protocol]] |
 | 0x30 | Turn Protocol |
 | 0x58 | [[RTT Protocol]] |
 | 0x65 | Sync Protocol |
@@ -561,7 +561,7 @@ All protocol ids were changed.
 
 | ID | Protocol |
 | --- | --- |
-| 1 | Net Protocol |
+| 1 | [[Net Protocol]] |
 | 2 | Turn Protocol |
 | 3 | [[RTT Protocol]] |
 | 4 | Sync Protocol |

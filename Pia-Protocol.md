@@ -84,7 +84,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | --- | --- | --- |
 | 0x0 | 4 | Magic number: `32 AB 98 64` |
 | 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) (11, 12 or 13) |
-| 0x5 | 1 | `0xF0`: Padding size<br>`0x0F`: Flags |
+| 0x5 | 1 | `0xF0`: Padding size<br>`0x0F`: [Flags](#packet-flags) |
 | 0x6 | 2 | Destination [variable id](Pia-Types#variable-id) |
 | 0x8 | 2 | Source [variable id](Pia-Types#variable-id) |
 | 0xA | 2 | [Packet id](#packet-id) |
@@ -134,6 +134,12 @@ If no packet has been received from the target yet, the destination timer is set
 
 ### Footer
 In LAN mode and LDN mode, packets that are sent to multiple consoles at once are sent to the broadcast address of the network. In that case, the footer contains the [variable id](Pia-Types#variable-id) of all receiving consoles as 16-bit integers.
+
+### Packet Flags
+| Flag | Description |
+| --- | --- |
+| 1 | Payload is compressed with ZSTD |
+| 2 | Unknown |
 
 ## Messages
 This part of the packet may be [encrypted](#encryption). A packet may contain more than one message  (the number of messages is determined from the size of packet).

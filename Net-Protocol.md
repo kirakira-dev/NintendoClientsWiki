@@ -8,7 +8,7 @@ This protocol is the successor of the [[local protocol]] that was found in Pia 5
 ## Message Types
 | Type | Description |
 | --- | --- |
-| 0x11 | Update network connection status |
+| 0x11 | [Update network connection status](#update-network-connection-status) |
 | 0x12 | Update network connection status ack |
 | 0x13 | Destroy network |
 | 0x20 | Network property request |

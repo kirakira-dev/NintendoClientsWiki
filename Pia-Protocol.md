@@ -236,7 +236,7 @@ Fields that are not present are copied from the previous message.
 
 *6.32 - 6.40:*
 
-Fields that are not present are copied from the previous message.
+Fields that are not present are copied from the previous message. It seems that the messages are no longer padded to a multiple of 4 bytes.
 
 | Type | Description |
 | --- | --- |

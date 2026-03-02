@@ -42,9 +42,20 @@ The network property request and response messages were later renamed to session
 | 0xA | 8 | Host [constant id] |
 | 0x12 | 8 | Network id |
 | 0x1A | 1 | Is network open |
-| 0x1B | 2 | Station list size |
+| 0x1B | 2 | Station list size (N) |
 | 0x1D | 1 | Is migrating host |
-| 0x1E | | Payload |
+| 0x1E | | [Payload](#update-network-connection-status-payload) |
+
+The payload contains N copies of the [NetStation](#netstation) structure.
+
+## NetStation
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Host migration state |
+| 0x1 | 1 | Host migration ranking |
+| 0x2 | 1 | Disconnection candidate |
+| 0x3 | 1 | Kicking |
+| 0x4 | 18 | [Station address](Pia-Types#stationaddress) |
 
 [constant id]: Pia-Types#constant-id
 [variable id]: Pia-Types#variable-id

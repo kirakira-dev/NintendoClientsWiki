@@ -549,7 +549,7 @@ The Pia library was redesigned for NPLN.
 | 0x7C | [[Reliable Protocol]] |
 | 0x80 | [[Broadcast Reliable Protocol]] |
 | 0x81 | [[Stream Broadcast Reliable Protocol]] |
-| 0x98 | Session Protocol (new) |
+| 0x98 | [[Session Protocol (new)]] |
 | 0xA0 | NAT Traversal Result Protocol |
 | 0xA4 | [[Monitoring Data Protocol]] |
 | 0xAC | WAN NAT Protocol |
@@ -573,7 +573,7 @@ All protocol ids were changed.
 | 10 | [[Reliable Protocol]] |
 | 11 | [[Broadcast Reliable Protocol]] |
 | 12 | [[Stream Broadcast Reliable Protocol]] |
-| 13 | Session Protocol |
+| 13 | [[Session Protocol (new)]] |
 | 14 | NAT Traversal Result Protocol |
 | 15 | [[Monitoring Data Protocol]] |
 | 16 | WAN NAT Traversal Protocol |

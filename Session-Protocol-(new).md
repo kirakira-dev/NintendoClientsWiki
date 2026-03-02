@@ -36,11 +36,13 @@ This page describes the session protocol that can be found in Pia version 6.x. I
 | 17 | ? |
 
 ## Join Request
+*6.26:*
+
 | Type | Description |
 | --- | --- |
 | Uint8 | Message type (0) |
 | Uint8 | Number of protocols (N) |
-| Uint8 (N * 2) | Protocol list (see below) |
+| [ProtocolInfo](#protocolinfo) (N) | Protocol info |
 | Uint32 | Random value |
 | Uint64 | Source constant id |
 | Uint16 | Source variable id |
@@ -54,8 +56,28 @@ This page describes the session protocol that can be found in Pia version 6.x. I
 | Uint8 | Number of participants |
 | [PlayerInfo](#playerinfo) (P) | Player info |
 
-The protocol list contains the following for every available protocol.
+*6.39:*
 
+| Type | Description |
+| --- | --- |
+| Uint8 | Message type (0) |
+| Uint8 | Number of protocols (N) |
+| [ProtocolInfo](#protocolinfo) (N) | Protocol info |
+| Uint16 | Unknown |
+| Uint32 | Unknown |
+| Uint64 | Source constant id |
+| Uint16 | Source variable id |
+| Uint8 | NAT mapping |
+| Uint8 | Is private IPv6 |
+| Uint8 (32) | Identification token (ascii) |
+| Uint64 | Destination constant id |
+| Uint16 | Destination variable id |
+| Uint8 | Number of players (P) |
+| Uint8 | Number of participants |
+| [StationAddress](#stationaddress) | Station address (IPv4 or IPv6) |
+| [PlayerInfo](#playerinfo) (P) | Player info |
+
+## ProtocolInfo
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Protocol id |

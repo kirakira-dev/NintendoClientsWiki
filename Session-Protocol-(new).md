@@ -6,7 +6,7 @@ This page describes the session protocol that can be found in Pia version 6.x. I
 *Added in 6.16 or earlier:*
 | Type | Description |
 | --- | --- |
-| 0 | Join request |
+| 0 | [Join request](#join-request) |
 | 1 | Join request ack |
 | 2 | Join response |
 | 3 | Leave request |

@@ -56,7 +56,7 @@ Whenever the network changes, this method is broadcast every 500 milliseconds un
 The payload contains N copies of the [NetStation](#netstation) structure.
 
 ## NetUpdateNetworkConnectionStatusAckMessage
-*6.26:*
+*6.26 - 6.39:*
 
 | Offset | Size | Description |
 | --- | --- | --- |

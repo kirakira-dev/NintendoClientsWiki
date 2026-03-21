@@ -30,7 +30,6 @@ The following module ids are known:
 | 156 | UDS | Local wireless |
 | 157 | ACP | Title launch |
 | 158 | | System settings |
-| 159 | | Security |
 | 160 | | System error |
 | 162 | MCP | Title management |
 | 165 | VPAD | Gamepad |

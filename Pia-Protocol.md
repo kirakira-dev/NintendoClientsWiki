@@ -425,7 +425,7 @@ The session key is used for packet encryption and signature calculation.
 
 **NEX** *(Up to 5.45):*
 
-The session key is obtained from the game server during [matchmaking](Match-Making-Types#matchmakesession-structure).
+The session key is obtained from the game server during [matchmaking](Match-Making-Types#matchmakesession-structure). Pia always uses 128-bit AES. If the game server sends a key that is longer than 16 bytes, Pia only uses the first 16 bytes of the key.
 
 **LDN** *(Up to 5.6):*
 

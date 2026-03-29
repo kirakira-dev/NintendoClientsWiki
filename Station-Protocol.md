@@ -186,6 +186,28 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | [PlayerInfo](#player-info) (2 or 4) | Player info, may be [fragmented](#fragment-id). |
 | Uint32 | Ack id |
 
+*5.19:*
+
+**Note:** due to a bug in Nintendo's code, the last byte of the last player info entry is dropped. The packet therefore contains one less byte than expected.
+
+| Type | Description |
+| --- | --- |
+| Uint8 | Message type (2) |
+| Uint8 | [Connection result](#connection-result) (accepted) |
+| Uint8 | Station protocol id (always `0x14`) |
+| Uint8 | Station protocol [version number](#version-numbers) |
+| Uint8 | [Platform id](#platform-id) |
+| Uint8 | [Fragment id](#fragment-id) |
+| Uint64 | Target [constant id] |
+| Uint32 | Target [variable id] |
+| Uint8 (32) | Identification token (ascii) |
+| Uint32 | [Session id](Pia-Types#session-id) |
+| Uint8 | Number of players |
+| Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
+| Uint8 | Number of player infos |
+| [PlayerInfo](#player-info) (2 or 4) | Player info, may be [fragmented](#fragment-id). |
+| Uint32 | Ack id |
+
 *5.27 - 5.43:*
 
 | Type | Description |

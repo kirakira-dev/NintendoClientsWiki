@@ -59,7 +59,7 @@ This packet is sent through port 35000 instead.
 | --- | --- | --- |
 | 0x0 | 1 | Packet type (0) |
 | 0x1 | 4 | Size of search network setting (0x20) |
-| 0x2 | 0x20 | [LanSearchNetworkSetting](#lansearchnetworksetting) |
+| 0x2 | 0x20 | [LanSearchNetworkSetting](#lansearchnetworksetting) (encrypted) |
 | 0x32 | 0x13B | [Crypto challenge](#crypto-challenge) |
 
 ### LanSessionSearchCriteria

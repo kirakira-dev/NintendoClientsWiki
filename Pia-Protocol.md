@@ -78,12 +78,12 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 0xC | 8 | [AES-GCM nonce](#encryption) |
 | 0x14 | 8 | [AES-GCM authentication tag](#encryption) (first 8 bytes) |
 
-*6.32 - 6.41:*
+*6.32 - 7.2:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Magic number: `32 AB 98 64` |
-| 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) (11, 12 or 13) |
+| 0x4 | 1 | This byte consists of two parts:<br>`0x80`: Encryption enabled<br>`0x7F`: [Version number](#version) (15 or 16) |
 | 0x5 | 1 | `0xF0`: Padding size<br>`0x0F`: [Flags](#packet-flags) |
 | 0x6 | 2 | Destination [variable id](Pia-Types#variable-id) |
 | 0x8 | 2 | Source [variable id](Pia-Types#variable-id) |
@@ -103,7 +103,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 6.25 - 6.26 | 12 |
 | 6.29 - 6.30 | 13 |
 | 6.32 - 6.34 | 15 |
-| 6.39 - 6.41 | 16 |
+| 6.39 - 7.2 | 16 |
 
 ### Maximum Packet Size
 Pia can receive up to the following number of bytes per packet:

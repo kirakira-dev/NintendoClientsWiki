@@ -85,6 +85,7 @@ Monitoring was added to Pia in version 3.4.
 | 6.32 - 6.33 | 38 |
 | 6.34 | 39 |
 | 6.40 - 6.41 | 43 |
+| 7.2 | 45 |
 
 ### Data Types
 The content of the payload depends on the version number and data type in the monitoring data header.

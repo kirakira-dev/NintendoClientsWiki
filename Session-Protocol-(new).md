@@ -135,4 +135,4 @@ The player name may consist of up to 20 characters.
 | 0xF | 1 | Number of players |
 | 0x10 | 1 | Number of participants |
 | 0x11 | 32 | Identification token |
-| 0x31 | | [PlayerInfo] (one per player) |
+| 0x31 | | [PlayerInfo](#playerinfo) (one per player) |

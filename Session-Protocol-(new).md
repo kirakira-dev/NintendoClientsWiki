@@ -11,9 +11,9 @@ This page describes the session protocol that can be found in Pia version 6.x. I
 | 2 | Join response |
 | 3 | Leave request |
 | 4 | ? |
-| 5 | Update session |
+| 5 | [Update session](#update-session) |
 | 6 | Update session ack |
-| 7 | Left station sync |
+| 7 | [Left station sync](#left-station-sync) |
 | 8 | Left station sync ack |
 | 9 | Start host migration |
 | 10 | Start host migration ack |
@@ -61,6 +61,43 @@ In addition to the above:
 | [StationAddress](#stationaddress) | Station address (IPv4 or IPv6) |
 | [PlayerInfo](#playerinfo) (P) | Player info |
 
+## Update Session
+This message may be split into fragments.
+
+*6.42:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 3 | Header |
+| 0x3 | 1 | Number of fragments |
+| 0x4 | 1 | Fragment index |
+| 0x5 | 2 | Fragment offset |
+| 0x7 | | Fragment data |
+
+## Left Station Sync
+This message may be split into fragments.
+
+*6.42:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 11 | Header |
+| 0xB | 1 | Number of fragments |
+| 0xC | 1 | Fragment index |
+| 0xD | 2 | Fragment offset |
+| 0xF | | Fragment data |
+
+After reassembling the fragments:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (7) |
+| 0x1 | 8 | Sender constant id |
+| 0x9 | 2 | Unknown |
+| 0xB | 1 | Number of entries |
+| 0xC | 2 | Unknown |
+| 0xE | | [LeftStationInfo](#leftstationinfo) entries |
+
 ## ProtocolInfo
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -84,3 +121,18 @@ The player name may consist of up to 20 characters.
 | 0x10 | 4 | Player name size (in bytes) |
 | 0x14 | 1 | Player name encoding (1 = UTF-8, 2 = UTF-16) |
 | 0x15 | | Player name |
+
+## LeftStationInfo
+*6.42:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | Constant id |
+| 0x8 | 2 | Variable id |
+| 0xA | 2 | Join order |
+| 0xC | 2 | Left join order |
+| 0xE | 1 | Station index |
+| 0xF | 1 | Number of players |
+| 0x10 | 1 | Number of participants |
+| 0x11 | 32 | Identification token |
+| 0x31 | | [PlayerInfo] (one per player) |

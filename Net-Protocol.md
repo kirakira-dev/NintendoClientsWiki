@@ -16,8 +16,8 @@ This protocol is the successor of the [[local protocol]] that was found in Pia 5
 | 0x21 | Network property response |
 | 0x30 | Disconnect network |
 | 0x31 | Disconnect network ack |
-| 0x32 | Connect network |
-| 0x33 | Connect network ack |
+| 0x32 | [Connect network](#netconnectnetworkmessage) |
+| 0x33 | [Connect network ack](#netconnectnetworkackmessage) |
 | 0x40 | Start host migration |
 | 0x41 | Update network host |
 | 0x50 | Update network property |
@@ -62,6 +62,17 @@ The payload contains N copies of the [NetStation](#netstation) structure.
 | --- | --- | --- |
 | 0x0 | 4 | [Net message header](#netmessageheader) |
 | 0x4 | 4 | Sequence id |
+
+## NetConnectNetworkMessage
+*6.42:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | [Net message header](#netmessageheader) |
+| 0x4 | 1 | System communication version |
+| 0x5 | 2 | Application communication version |
+| 0x7 | 1 | Number of players |
+| 0x8 | 16 | User password |
 
 ## NetConnectNetworkAckMessage
 *6.16 - 6.39:*

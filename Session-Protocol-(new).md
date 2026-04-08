@@ -74,6 +74,21 @@ This message may be split into fragments.
 | 0x5 | 2 | Fragment offset |
 | 0x7 | | Fragment data |
 
+After reassembling the fragments:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (5) |
+| 0x1 | 2 | Unknown |
+| 0x3 | 8 | Constant id |
+| 0xB | 2 | Variable id |
+| 0xD | 1 | Number of station info entries |
+| 0xE | 1 | Number of left station info entries |
+| 0xF | 2 | Sequence id |
+| 0x11 | 2 | Unknown |
+| 0x13 | | Station info entries |
+| | | [LeftStationInfo](#leftstationinfo) entries |
+
 ## Left Station Sync
 This message may be split into fragments.
 

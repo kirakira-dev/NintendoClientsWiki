@@ -4,3 +4,4 @@
 | --- | --- |
 | Mario Kart 8 Deluxe | `MarioKart8Delux` followed by 17 null bytes |
 | Super Mario Maker 2 | `LunchPack2DefaultPhrase` |
+| Tomodachi Life: Living the Dream | `ABCDEFGHIJKLMNOPQRSTUVWXYZ` |

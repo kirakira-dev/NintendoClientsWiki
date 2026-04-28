@@ -73,6 +73,13 @@ This is not a normal time stamp. Instead, it consists of a bunch of bit fields:
 | 11 - 6 | Minute |
 | 5 - 0 | Second |
 
+Two special date time values are predefined:
+
+| Name | Value |
+| --- | --- |
+| Never | `0000-00-00 00:00:00` |
+| Future | `9999-12-31 23:59:59` |
+
 # StationURL
 | Type | Description |
 | --- | --- |

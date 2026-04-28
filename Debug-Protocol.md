@@ -11,7 +11,7 @@ This protocol seems to log your RMC requests.
 | 4 | [GetApiCalls](#4-getapicalls) |
 | 5 | SetExcludeJoinedMatchmakeSession |
 | 6 | GetExcludeJoinedMatchmakeSession |
-| 7 | GetApiCallSummary |
+| 7 | [GetApiCallSummary](#7-getapicallsummary) |
 
 # (1) EnableApiRecorder
 This method does not take any parameters and does not return anything.
@@ -35,8 +35,8 @@ This method returns `RendezVous::InvalidConfiguration` if the api recorder is di
 | Type | Description |
 | --- | --- |
 | [List]&lt;[PID]&gt; | Pids |
-| [DateTime] | Unknown |
-| [DateTime] | Unknown |
+| [DateTime] | Start time |
+| [DateTime] | End time |
 
 ## Response
 | Type | Description |
@@ -49,6 +49,33 @@ This method returns `RendezVous::InvalidConfiguration` if the api recorder is di
 | [String] | Method name |
 | [DateTime] | Call time |
 | [PID] | User id |
+
+# (7) GetApiCallSummary
+This method returns `RendezVous::InvalidConfiguration` if the api recorder is disabled.
+
+## Request
+| Type | Description |
+| --- | --- |
+| [PID] | Target user to request summaries for |
+| [DateTime] | Start time |
+| [DateTime] | End time |
+| Bool | Only includes summaries where the rate limit has been exceeded |
+
+## Response
+| Type | Description |
+| --- | --- |
+| [List]&lt;[ApiCallSummary](#apicallsummary-structure)&gt; | Api call summary |
+
+### ApiCallSummary ([Structure])
+| Type | Description |
+| --- | --- |
+| [String] | Method name |
+| Uint32 | Rate limit exceeded (0 or 1) |
+| Uint32 | Rate limit duration |
+| Uint32 | Rate limit max calls |
+| [DateTime] | Start time |
+| Uint32 | Number of calls above rate limit |
+| Uint32 | Total number of calls |
 
 [Result]: NEX-Common-Types#result
 [String]: NEX-Common-Types#string

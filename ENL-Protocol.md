@@ -97,4 +97,59 @@ In the tables below, the values of P (maximum number of players) and Q (maximum 
 | 0x9 | 1 | Is disconnected |
 | 0xA | 6 | Padding (always 0) |
 
+## Reverse Engineering Notes
+A content transporter vtable has the following methods:
+
+```c
+init()
+getSendBuffer()
+getSendBufferSize()
+isNeedSend()
+getContentID()
+getPacketNo()
+setPacketNo(int)
+send(bool)
+startIdling()
+endIdling()
+isIdling()
+sendCommit()
+receiveCommit(const char &)
+onCheckReceive(const char &, uint8_t *, uint32_t)
+onReceived(const char &, uint8_t *, uint32_t)
+onDisconnect(const char &, const char &)
+onDisconnectGone(const char &, const char &)
+readySendStream(enl::RamWriteStream &)
+readyReceiveStream(enl::RamReadStream &, enl::Buffer *, uint32_t)
+setLocalPlayerNum(uint8_t)
+setSendInterval(uint8_t)
+resetReceive()
+getReceivedAIDBmp()
+checkReceive(const char &)
+checkAnybodyReceive()
+onConnectInitialize()
+isNeedCheckTwiceReceive()
+updateSendTarget(const enl::UniqueID &, enl::UniqueID &)
+getLastReceiveTime(const char &)
+calcSendInterval(const sead::BitFlag<uint64_t> &)
+checkDerivedRuntimeTypeInfo(const sead::RuntimeTypeInfo::Interface *)
+getRuntimeTypeInfo()
+getMySendData()
+getMySendData()
+getReceiveDataByAID(const char &)
+getReceiveDataByPlayerID(const char &)
+getReceiveDataByUniqueID(const enl::UniqueID &)
+clearAllReceivedData()
+checkAllReceive()
+postInit_()
+onReceivedCore_(const char &, enl::SystemInformation *, uint32_t)
+onCheckReceiveCore_(const char &, enl::SystemInformation *, uint32_t)
+getSendData()
+getSendData()
+```
+
+Most of these have a standard implementation, but the following methods are interested:
+* `getSendBufferSize` returns the size of the payload.
+* `getMySendData` is usually called to obtain a pointer to the payload. By looking for cross references to `getMySendData` it is possible to find functions that modify the payload.
+* `send` sets a flag that indicates whether the record should be transmitted or not.
+
 [Constant id]: Pia-Types#constant-id

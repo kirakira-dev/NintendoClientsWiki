@@ -395,6 +395,8 @@ This packet is sent through UDP broadcast port 49152 and is encapsulated in a [P
 ## Crypto Challenge
 In Pia version 5.7 and later, the [browse request](#0-browse-request) contains a cryptographic challenge that must be correctly answered in the [browse reply](#1-browse-reply). Both the challenge and the response have the following format.
 
+The challenge key and challenge data are randomized for every packet that is transmitted.
+
 *5.7 - 6.33:*
 
 | Offset | Size | Description |

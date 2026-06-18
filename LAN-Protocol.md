@@ -19,14 +19,18 @@ The maximum size of browse request and reply packets is 1364 bytes, although in 
 | 7 | [Keep alive message](#7-keep-alive-message) |
 
 ## (0) Browse Request
+### Transport Method
+The browse request is not encapsulated in a [Pia packet](Pia-Protocol).
+
 *Up to 5.44:*
 
-This packet is sent through UDP broadcast port 30000. It is sent in plain text, and is not encapsulated in a [Pia packet](Pia-Protocol).
+The packet is broadcasted through UDP port 30000.
 
-*6.16 - 6.30:*
+*6.16 - 7.2:*
 
-This packet is sent through port 35000 instead.
+The packet is broadcasted through UDP port 35000.
 
+### Packet Format
 *Up to 5.6:*
 
 | Offset | Size | Description |
@@ -149,7 +153,7 @@ These flags indicate which fields are compared against the active session to det
 | 0x10 | Vacant only |
 
 ## (1) Browse reply
-This packet is sent to the source of the [browse request](#browse-request) in plain text, and is not encapsulated in a [Pia packet](Pia-Protocol).
+This packet is sent to the source of the [browse request](#browse-request). It is not encapsulated in a [Pia packet](Pia-Protocol).
 
 *Up to 5.6:*
 
